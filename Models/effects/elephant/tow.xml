@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+    #######################################################################################################
+    Arcraft development for Flightgear by Herbert Wagner 2014-2015                            Model: MI-6PS
+    Antonov AN-12BK, AN-22A, AN-225-Mrija,
+    Tuplev Tu-95MR,
+    Mil Mi-6PS
+    Yak 58, Yak-53,
+    Berijev Be-200Altair
+    SpaceShuttle
+    Development is ongoing, see latest versions: www.github.com/HerbyW
+    
+    This file is licenced under the terms mentioned in the LICENCE.txt file.
+    Mi6dev was initially started by Moritz Röhrich (Blender3D) 2010-2012 as CC 3.0 BY NC SA.
+    The 3D-model still holds the CC 3.0 BY NC SA license, everything else is GNU GPL v3 License.
+    
+    This version is now going forward and will give you a full automatic flight control-system,
+    lots of animations, instrumentation and full Multiplayer support for Parachuters and Elephant transport.
+    Liveries, Fire fighting and SAR rescue is in preparation.
+    Removing this header is probited.    
+    ########################################################################################################
+-->
+
+<PropertyList>
+  
+  <path>line2.ac</path>
+  
+ 
+  
+  <animation>
+    <type>select</type>	  
+    <condition>      
+      <and>      
+      <equals>
+	<property>sim/multiplay/generic/int[3]</property>
+	<value>1</value>
+      </equals>
+      <less-than>
+	<property>sim/multiplay/generic/float[12]</property>
+	<value>25</value>
+      </less-than>
+      </and>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>scale</type>
+    <object-name>Cylinder</object-name>
+    <property>sim/multiplay/generic/float[12]</property>
+    <offset>1</offset>
+    <x-max>1.0</x-max>
+    <y-max>1.0</y-max>
+    <z-max>10.0</z-max>
+    <x-factor>1.0</x-factor>
+    <y-factor>1.0</y-factor>
+    <z-factor>1.0</z-factor>
+  </animation>
+  
+  <animation>
+    <type>scale</type>
+    <object-name>Cone</object-name>
+    <property>sim/multiplay/generic/float[12]</property>
+    <offset>1</offset>
+    <x-max>4.0</x-max>
+    <y-max>4.0</y-max>
+    <z-max>4.0</z-max>
+    <x-factor>1.0</x-factor>
+    <y-factor>1.0</y-factor>
+    <z-factor>1.0</z-factor>
+  </animation>
+  
+    <!-- +forward -backward -->
+  <animation>
+    <type>translate</type>    
+    <property>sim/multiplay/generic/int[3]</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 0.0 </dep></entry>      
+      <entry><ind> 1.0 </ind><dep> -3.30 </dep></entry>
+    </interpolation>
+    <axis>
+      <x>-1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- +down -up -->
+ <animation>
+    <type>translate</type>    
+    <property>sim/multiplay/generic/int[3]</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 0.0 </dep></entry>      
+      <entry><ind> 1.0 </ind><dep>  13.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z>-1 </z>
+    </axis>
+  </animation>
+  
+    <!-- +right -left -->
+ <animation>
+    <type>translate</type>    
+    <property>sim/multiplay/generic/int[3]</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 0.0 </dep></entry>      
+      <entry><ind> 1.0 </ind><dep> 0.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y>-1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+    <!-- +down -up at ground and start up-->
+ <animation>
+    <type>translate</type>    
+    <property>sim/multiplay/generic/float[12]</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> -7.5 </dep></entry>
+      <entry><ind> 5.0 </ind><dep> -7.5 </dep></entry>
+      <entry><ind> 16.0 </ind><dep> 0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z>-1 </z>
+    </axis>
+  </animation>
+  
+    <!-- +forward -backward at ground and start up-->
+ <animation>
+    <type>translate</type>    
+    <property>sim/multiplay/generic/float[12]</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 0 </dep></entry>
+      <entry><ind> 5.0 </ind><dep> 0 </dep></entry>
+      <entry><ind> 16.0 </ind><dep> 0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y>-1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  
+  </PropertyList>
+      

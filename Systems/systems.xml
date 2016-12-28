@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	<electrical>
+		<name>electrical</name>
+		<number>0</number>
+		<path>Aircraft/MI-6PS/Systems/electrical.xml</path>
+	</electrical>
+	
+	<pitot>
+		<name>pitot</name>
+		<number>0</number>
+	</pitot>
+	
+	<static>
+		<name>static</name>
+		<number>0</number>
+		<tau>1</tau>
+	</static>
+	
+</PropertyList>

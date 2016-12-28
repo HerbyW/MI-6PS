@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Copyright (C) Herbert Wagner 2015-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
+-->
+<PropertyList>
+
+  <title>Mil-Mi6-Poschar</title>
+
+  <key>
+    <name>}</name>
+    <desc>Fire up engines</desc>
+  </key>
+  <key>
+    <name>{</name>
+    <desc>Shut down engines</desc>
+  </key>
+  <key>
+    <name>R</name>
+    <desc>Rotor Brake on</desc>
+  </key>
+  <key>
+    <name>r</name>
+    <desc>Rotor Brake off</desc>
+  </key>
+  <key>
+    <name>f</name>
+    <desc>Flares on-off</desc>
+  </key>  
+  <key>
+    <name>D</name>
+    <desc>Open/Close Cargo door</desc>
+  </key>
+  <key>
+    <name>d</name>
+    <desc>Open/Close Towing doors</desc>
+  </key>
+  <key>
+    <name>&lt;</name>
+    <desc>Change Pilot Engineer View</desc>
+  </key>
+  <key>
+    <name>y</name>
+    <desc>Change Pilot - Navigator -Towing View</desc>
+  </key>
+  <key>
+    <name>l</name>
+    <desc>Landing Lights</desc>
+  </key>  
+  <key>
+    <name>L</name>
+    <desc>Search Light</desc>
+  </key>  
+  <key>
+    <name>f</name>
+    <desc>Taxi Lights</desc>
+  </key>  
+  <key>
+    <name>F</name>
+    <desc>Change to floating mode</desc>
+  </key>
+  <key>
+    <name>e</name>
+    <desc>Change to Landing Configuration</desc>
+  </key>
+  <key>
+    <name>E</name>
+    <desc>Rescue Holding</desc> 
+  </key>  
+
+<text>Welcome to Mil-Mi6-Poschar heavy cargo helicoptor by HerbyW and Moritz Roehrich
++++++++++++++++++++++++++++++++Developer:++++++++++++++++++++++++++++++++++++++
+
+Made by Moritz Roehrich (Blender3D) 2010-2012
+
+Updated 3D-model, FDM, Animations, Instruments by Herbert Wagner 10-2015 - 12-2016
+
+Version: 4.0.2
+
+                                  ABOUT
+
+Russian made Helicopter. First flight in 1957.
+Main Rotor diameter: 35 m (114 ft 10 in)
+Tail Rotor diameter: 6 m 30 cm
+Fuselage length: 33 m 18 cm (108 ft 10 in)
+Total length: 41 m 74 cm
+Powerplant: 2x Solowjow D-25W (gas turbine) 4101 kW each
+MaxTakeOff 93696 lb  Variant Poschar up to 20 tons of cargo
+
+Exclusively made for FlightGear (www.flightgear.org)
+
+Get ready:
+Start up the engines by opening the red box in the overhead panel and click on the switch, middle mouse click will shut down the engines.
+Set the Reference Compass at the engineer panel, magnetic variation is shown as tool-tip, set needle to marker position.
+Altitude and/or pressure settings in the Altimeters in inHG, mmHG or hPa (as tool-tip), the Autopilot will work with this values (not with the HUD-infos).
+Check cargo and/or payload: press y to switch to the towing control and open the red box, for loading cargo (elephant) and/or paratroopers.
+
+The Autopilot in the cockpit will control most of your flight, do not use the generic one or mix them together.
+
+Rudder Control with : Couple
+Elevator-Trim with  : IAS and Floating Pitch
+Collective(Throttle): ALT, VS, APPR and Floating Pitch
+Ailerion-Trim  : AP (wing-leveler), HDG, NAV, GPS and Floating Pitch
+
+There is a wheel for Rotor-Tilt: -5 is for high speed, +5 is for backwards flight, 1,88 is a good value for normal take off, you may control your speed with it.
+There is a wheel for Rotor-Roll-Tilt: -5 is for high speed, -0,62 is for backwards flight, -1.25 is a good value for normal take off, it is very hard depending on the Rotor-Tilt, so be carefull!
+There is a wheel for Floating-Pitch: this is a full automatic vertical hoovering control for landing and starting, -5 is about 450 cm per second down, +5 is 450 cm up.
+Be aware of the ground effect, a Floating-Pitch of -3 lets you descent but not land, you will hoover around in 2-5 meter high, finally set it to -5.
+There is now a new wheel for controlling the tail horzontal stabilisator from -0,30 to +0,30. A value of -0,15 gives you the maximum speed, be aware that if your speed is to high you may lost control.
+
+In all flight situations the Coup (rudder-trim control) should be active.
+Use the rudder to set your heading in floating conditions.
+For more speed than 90 kt the elevator-trim has to be at the top (+1) position, with a rotor tilt of -5 and rotor-roll-tilt: -5.0. You will get 160-180 kt speed then.
+Use the elevator-trim to reduce the speed before approaching or let this be done by the IAS, then change to Floating-Pitch control and use only the rudder for heading and rotor tilt for speed control.
+
+For additional comfort the HUD will show you the values of the controlled axis and some more information.
+Some instruments will show you metric values, some ft/knots.
+
+On the very left side you have a panel with 5 green lamps, the lower 3 are for trim-neutralisation, used after the Autopilot is disabled.
+The upper two you may press to get the latest METAR info on screen.
+
+Usage of the Autopilot panel in the top middle console:
+
+- Heading Control: Heading Bug (HDG) is to set in the HSI (Horizontal Situation Indicator (with 4 green markers).
+- Velocity Control: Speed with Pitch are set in the Speed Indicator, push IAS and turn needle (left from HSI), do not use for speed below 70 kt.
+- Pitch/Attitude Control: pitch and altitude wheels changes values.
+- Wing leveler is active when you push the AP button, it is also the AP activating/deactivating Button.
+- APRP is used for intercepting the Glide Slope.
+- GPS for flying routes from the Route Manager.
+- ALT is holding your attitude.
+- ILS/NAV is activated by the left MP-Kurs radio in the engineer panel.
+
+For ILS Landing you may use the HSI, it gives you the indication that ILS and/or Glide Scope is intercepted (if not, red flags coming up). ILS heading works even far out the stream, for the glidescope you should wait till the indicator is in nearly horizontal position (yellow line).
+
+There are 3 Altimeters: the left one is electrical and gets the information from Radio or GPS signals, in meter and mmHG, the upper one is in meter and mmHG, a tooltip shows you the Value in hPa, the lower one is in ft and inHG, they are connected and you should set them to the ATIS information of the airport before starting or landing.
+
+The compass is cleared of the magnetic variation if you set the reference compass in the engineer panel to the orange marker position.
+
+On top of the horizontal heading indicator (HSI) is a white scale, it will show you the wind drift derivation.
+
+There are indicators for Flares, over-loading and parking brake.
+
+Besides the starter switch is the switch for rotor brake on and off.
+
+Paratroopers can be set up in the payload menu, each is 120 lb, they need a open back door to jump out, use the switch on the panel to give the signal :)
+An Elephant is waiting to go back to Africa, press y to go to the towing control. A red lamp shows you the activ elephant, clicking on it deactivate it.
+You find some instruments in this additional ramppanel, the middle instrument is for ground- and air-speed with a switch on the bottom. There is a warning light for overload (sign: BEC).
+In the navigator seat you may control a water canon, implementation of deleting wildfires and crashes is working now. You may create a fire by holding Strg+Shift and click on the ground.
+There is also a switch for a water-pipe, to load water from a lake or the see. Go into floating mode and descent to 25-28 ft, and hold this altitude with a floating pitch of -0,35. When loading water you have to adjust this setting to +1.00 or more, depending on the weight of water. You may fill up to 10000 liters.
+
+In fire fighting situations you will get all informations in the cockpit from your friendly copilot. To install the addons for this, read the txt-file in the read-me-for-wildfire folder and install the files.
+
+All animations are working in MP-mode.
+
+Latest Update: Now with 6 different modes for starting, landing, changing the flight modus and more. After one modus is fully activated you may click on the clear button. then you may click an other mode.
+               Now with ice system for windows and rotor implemented, switches in the overhead panel for heating.
+	       Now with landing and taxi lights and a search light, manageable via switches or shortcuts, special ambient lights, new view definitions with shortcuts
+	       Now with windcompass and working speed indicator for ground- and airspeed
+	       Now with beacon and strobe lights and switches
+
+Values for setting the rotor-tilt and the rotor-roll-tilt:
+   In floating mode:     4.50/-0.62 (speed 3)
+                         3.75/-0.75 (speed 13)
+		          2.5/-0.37 (speed 19)
+		            0/-0.37 (speed 37)
+		         -2.5/-1.25 (speed 53)
+		           -5/-2.5  (speed 72)
+   In normal speed flight:  -5/-5   (speed 160)
+   for landing          -1.88/-1.25 (speed 115)
+                        -1.25/-1.00 (speed 100)
+   for starting         -1.88/-1.88 (speed 70) or -2/-2 (speed 90)
+
+Have fun and get the latest version at: https://www.dropbox.com/s/igw2deat1ew69f8/MI-6PS.zip?dl=0
+For An-12BK, An-22A, An-225-Mrija, Tu-95MR and Yak-53 look to: github.com/HerbyW
+For ideas and impovements feel free to post in the FG-forum.
+http://wiki.flightgear.org/Mil_Mi-6
+
+</text>
+  
+</PropertyList>

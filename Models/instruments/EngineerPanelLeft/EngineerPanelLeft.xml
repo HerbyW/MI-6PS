@@ -1,0 +1,341 @@
+<PropertyList>
+
+<!--
+    #######################################################################################################
+    Arcraft development for Flightgear by Herbert Wagner 2014-2015                            Model: MI-6PS
+    Antonov AN-12BK, AN-22A, AN-225-Mrija,
+    Tuplev Tu-95MR,
+    Mil Mi-6PS
+    Yak 58, Yak-53,
+    Berijev Be-200Altair
+    SpaceShuttle
+    Development is ongoing, see latest versions: www.github.com/HerbyW
+    
+    This file is licenced under the terms mentioned in the LICENCE.txt file.
+    Mi6dev was initially started by Moritz Röhrich (Blender3D) 2010-2012 as CC 3.0 BY NC SA.
+    The 3D-model still holds the CC 3.0 BY NC SA license, everything else is GNU GPL v3 License.
+    
+    This version is now going forward and will give you a full automatic flight control-system,
+    lots of animations, instrumentation and full Multiplayer support for Parachuters and Elephant transport.
+    Liveries, Fire fighting and SAR rescue is in preparation.
+    Removing this header is probited.    
+    ########################################################################################################
+-->
+  
+	<path>EngineerPanelLeft.ac</path>
+	
+	<animation>
+		<name>EngineerPanelLeft</name>
+		<object-name>EngineerPanelLeft</object-name>
+		<object-name>Schalterkappe</object-name>
+		<object-name>Schalterkappe.001</object-name>
+		<object-name>Schalterkappe.002</object-name>
+		<object-name>Schalterkappe.003</object-name>
+		<object-name>Schalterkappe.004</object-name>
+		<object-name>Schalterkappe.005</object-name>
+		<object-name>Schalterkappe.006</object-name>
+	</animation>
+	
+	<animation>
+		<type>range</type>
+		<object-name>EngineerPanelLeft</object-name>
+		<min-m>0</min-m>
+		<max-m>7</max-m>
+	</animation>
+	
+		<!--6 Tank valves-->
+	<!--6.1 1-->
+          <animation>
+		<type>pick</type>
+		<object-name>fuel_tank_valve_1</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>consumables/fuel/tank[0]/selected</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>fuel_tank_valve_1</object-name>
+		<property>consumables/fuel/tank[0]/selected</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-4.733</x-m>
+			<y-m>-1.068</y-m>
+			<z-m>2.847</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		</animation>
+	<!--6.2 2-->
+	<animation>
+		<type>pick</type>
+		<object-name>fuel_tank_valve_2</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>consumables/fuel/tank[1]/selected</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>fuel_tank_valve_2</object-name>
+		<property>consumables/fuel/tank[1]/selected</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-4.733</x-m>
+			<y-m>-1.043</y-m>
+			<z-m>2.847</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<!--6.3 3-->
+	<animation>
+		<type>pick</type>
+		<object-name>fuel_tank_valve_3</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>consumables/fuel/tank[2]/selected</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>fuel_tank_valve_3</object-name>
+		<property>consumables/fuel/tank[2]/selected</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-4.733</x-m>
+			<y-m>-1.021</y-m>
+			<z-m>2.847</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<!--6.4 4-->
+	<animation>
+		<type>pick</type>
+		<object-name>fuel_tank_valve_4</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>consumables/fuel/tank[3]/selected</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>fuel_tank_valve_4</object-name>
+		<property>consumables/fuel/tank[3]/selected</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-4.733</x-m>
+			<y-m>-0.997</y-m>
+			<z-m>2.847</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	 <!--6.5 6 -->
+	<animation>
+		<type>pick</type>
+		<object-name>fuel_tank_valve_5</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>consumables/fuel/tank[4]/selected</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>fuel_tank_valve_5</object-name>
+		<property>consumables/fuel/tank[4]/selected</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-4.733</x-m>
+			<y-m>-0.974</y-m>
+			<z-m>2.847</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>fuel_tank_valve_6</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>consumables/fuel/tank[5]/selected</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>fuel_tank_valve_6</object-name>
+		<property>consumables/fuel/tank[5]/selected</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-4.733</x-m>
+			<y-m>-0.947</y-m>
+			<z-m>2.847</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--7 heating-->
+	<!--7.1 windows-->
+<!--	<animation>
+		<type>pick</type>
+		<object-name>glass-heating</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>systems/heating/windows</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>glass-heating</object-name>
+		<property>systems/heating/windows</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>0.141</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>     -->
+	
+	<!--7.2 rotors-->
+<!--	<animation>
+		<type>pick</type>
+		<object-name>rotor-heating</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>systems/heating/rotors</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rotor-heating</object-name>
+		<property>systems/heating/rotors</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>0.167</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>     -->
+	
+	<!--7.3 instruments-->
+<!--	<animation>
+		<type>pick</type>
+		<object-name>instrument-heating</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>systems/heating/instruments</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>instrument-heating</object-name>
+		<property>systems/heating/instruments</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>0.195</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>     -->
+	
+	
+</PropertyList>

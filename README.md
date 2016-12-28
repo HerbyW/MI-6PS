@@ -1,2 +1,4 @@
 # MI-6PS
-Mil-Mi-6 (Heavy Transport Helicopter)
+for Flightgear Flightsimulator
+
+Mil-Mi-6PS (Heavy Transport Helicopter for Fire Fighting)

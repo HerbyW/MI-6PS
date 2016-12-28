@@ -1,0 +1,36 @@
+<PropertyList>
+	<path>Yadro.ac</path>
+	
+	<animation>
+		<name>Yadro</name>
+		<object-name>Case</object-name>
+		<object-name>Knob1</object-name>
+		<object-name>Knob2</object-name>
+		<object-name>Knob3</object-name>
+		<object-name>KnobZT12</object-name>
+		<object-name>KnobZT3</object-name>
+		<object-name>KnobZT4</object-name>
+		<object-name>KnobZT56</object-name>
+		<object-name>ZT1_Yadro</object-name>
+		<object-name>ZT2_Yadro</object-name>
+		<object-name>ZT3_Yadro</object-name>
+		<object-name>ZT4_Yadro</object-name>
+		<object-name>ZT5_Yadro</object-name>
+		<object-name>ZT6_Yadro</object-name>
+		<object-name>red_light</object-name>
+	</animation>
+	
+	<animation>
+		<type>range</type>
+		<object-name>Yadro</object-name>
+		<min-m>0</min-m>
+		<max-m>7</max-m>
+	</animation>
+
+       <!--
+       Rotation axis for knobs/dials
+       <x>-0.21639</x>
+       <y<0.0</y>
+       <z>0.97596</z>-->
+</PropertyList>
+

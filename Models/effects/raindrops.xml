@@ -1,0 +1,108 @@
+<PropertyList>
+	<particlesystem>
+		<name>raindrops</name>
+		<texture>raindrop.png</texture>
+		
+		<emissive type="bool">false</emissive>
+		<lighting type="bool">false</lighting>
+		
+		<condition>
+		</condition>
+		
+		<attach>local</attach>
+		
+		<placer>
+			<type>segments</type>
+			<segments>
+				<vertex>
+					<x-m>-5.850</x-m>
+					<y-m>-0.612</y-m>
+					<z-m>3.512</z-m>
+				</vertex>
+				<vertex>
+					<x-m>-5.596</x-m>
+					<y-m>-0.912</y-m>
+					<z-m>3.419</z-m>
+				</vertex>
+				<vertex>
+					<x-m>-5.886</x-m>
+					<y-m>-0.966</y-m>
+					<z-m>3.061</z-m>
+				</vertex>
+				<vertex>
+					<x-m>-6.070</x-m>
+					<y-m>-0.650</y-m>
+					<z-m>3.177</z-m>
+				</vertex>
+			</segments>
+		</placer>
+		
+		<shooter>
+			<theta-min-deg>0</theta-min-deg>
+			<theta-max-deg>0</theta-max-deg>
+			<phi-min-deg>0</phi-min-deg>
+			<phi-max-deg>0</phi-max-deg>
+			<speed-mps>
+				<value>0</value>
+				<spread>0</spread>
+			</speed-mps>
+			<rotation-speed>
+				<x-min-deg-sec>0</x-min-deg-sec>
+				<y-min-deg-sec>0</y-min-deg-sec>
+				<z-min-deg-sec>0</z-min-deg-sec>
+				<x-max-deg-sec>0</x-max-deg-sec>
+				<y-max-deg-sec>0</y-max-deg-sec>
+				<z-max-deg-sec>0</z-max-deg-sec>
+			</rotation-speed>
+		</shooter>
+		
+		<counter>
+			<particles-per-sec>
+				<value>15</value>
+				<spread>10</spread>
+			</particles-per-sec>
+		</counter>
+		
+		<align>billboard</align>
+		
+		<particle>
+			<start>
+				<color>
+					<red><value>   1.0 </value></red>
+					<green><value> 1.0 </value></green>
+					<blue><value>  1.0 </value></blue>
+					<alpha><value> 1.0 </value></alpha>
+				</color>
+				<size>
+					<value>0.01</value>
+				</size>
+			</start>
+			
+			<end>
+				<color>
+					<red><value>   1.0 </value></red>
+					<green><value> 1.0 </value></green>
+					<blue><value>  1.0 </value></blue>
+					<alpha><value> 1.0 </value></alpha>
+				</color>
+				<size>
+					<value>0.01</value>
+				</size>
+			</end>
+			
+			<life-sec>
+				<value>10</value>
+			</life-sec>
+			
+			<mass-kg>  0.0005 </mass-kg>
+			<radius-m> 0.0025 </radius-m>
+		</particle>
+		
+		<program>
+			<fluid>               air  </fluid>
+			<gravity type="bool"> true </gravity>
+			<wind typ="bool">     true </wind>
+		</program>
+		
+	</particlesystem>
+</PropertyList> 

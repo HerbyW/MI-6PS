@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+
+<!--
+#######################################################################################################
+Arcraft development for Flightgear by Herbert Wagner 2014-2016                            Model: MI-6PS
+Antonov AN-12BK, AN-22A, AN-225-Mrija,
+Tuplev Tu-95MR,
+Mil Mi-6PS
+Yak 58, Yak-53,
+Berijev Be-200Altair
+SpaceShuttle
+Development is ongoing, see latest versions: www.github.com/HerbyW
+
+This file is licenced under the terms mentioned in the LICENCE.txt file.
+Mi6dev was initially started by Moritz Röhrich (Blender3D) 2010-2012 as CC 3.0 BY NC SA.
+The 3D-model still holds the CC 3.0 BY NC SA license, everything else is GNU GPL v3 License.
+
+This version is now going forward and will give you a full automatic flight control-system,
+lots of animations, instrumentation and full Multiplayer support for Parachuters and Elephant transport.
+Liveries, Fire fighting and SAR rescue is in preparation.
+Removing this header is probited.    
+########################################################################################################
+-->
+
+<PropertyList include="views.xml">
+  
+  
+  <controls>
+    <lighting>
+       <nav-lights type="int">0</nav-lights>
+       <beacon type="bool">false</beacon>
+       <strobe type="bool">false</strobe>
+    </lighting>
+    <engines>
+      <engine n="0">
+	<throttle type="double">1</throttle>
+	<magnetos>0</magnetos>
+      </engine>
+      <engine n="1">
+	<throttle type="double">1</throttle>
+	<magnetos>0</magnetos>
+      </engine>
+    </engines>
+    <gear>
+      <brake-parking>1</brake-parking>
+    </gear>
+    <rotor>
+      <reltarget>1</reltarget>
+      <maxreltorque>1</maxreltorque>
+    </rotor>
+    <switches>      
+      <gauge-light type="int">1</gauge-light>
+      <adf-1-selector type="double">0</adf-1-selector>
+      <adf-2-selector type="double">0</adf-2-selector>
+      <ushdb-sel-1 type="double">0</ushdb-sel-1>
+      <ushdb-sel-2 type="double">0</ushdb-sel-2>
+      <metar type="bool">0</metar>
+      <autopilot type="bool">0</autopilot>
+      <friction type="bool">0</friction>
+      <hydro-damping type="bool">0</hydro-damping>
+      <landinglight type="bool">0</landinglight>
+      <taxilight type="bool">0</taxilight>
+      <search type="bool">0</search>
+      <glass-heating type="bool">0</glass-heating>
+      <rotor-heating type="bool">0</rotor-heating>
+      <instrument-heating type="bool">0</instrument-heating>
+      <fan type="bool">0</fan>
+      <external-suspension type="bool">0</external-suspension>
+      <jettison-cargo type="bool">0</jettison-cargo>
+      
+    </switches>
+    <flight>
+      <floating-pitch type="double">0.0</floating-pitch>
+      <tilt type="double">0.0</tilt>
+      <tilt-roll type="double">0.0</tilt-roll>
+      <stab type="double">0.0</stab>
+      <slowspeed type="double">0</slowspeed>      
+    </flight>
+    <paratroopers>
+      <paratroopers type="int">0</paratroopers>
+      <weight type="double">0</weight>      
+    </paratroopers>
+    <water>
+      <pos-up type="int">0</pos-up>
+      <pos-yaw type="int">0</pos-yaw>
+    </water>
+  </controls>
+  
+  <scenery><share-events type="bool">true</share-events></scenery>
+  
+  <sim>
+    <description>Mil Mi-6PS (Hook)</description>
+    <status>development</status>
+    <rating>
+      <FDM type="int">5</FDM>
+      <systems type="int">5</systems>
+      <cockpit type="int">5</cockpit>
+      <model type="int">5</model>
+      <multiplayer type="int">5</multiplayer>
+    </rating>
+    <author>Herbert Wagner, Moritz Roehrich</author>
+    <flight-model>yasim</flight-model>
+    <aero>mi6-yasim</aero>
+    <version>4.0.2</version>
+    
+    <fuel-fraction>0.8</fuel-fraction>
+    
+    <startup>
+      <splash-texture>Aircraft/MI-6PS/Mi-6_splash.png</splash-texture>
+    </startup>
+    
+    <sound>
+      <path>Aircraft/MI-6PS/Sound/sound.xml</path>
+    </sound>
+    
+    <instrumentation>
+      <path>Aircraft/MI-6PS/Systems/instrumentation.xml</path>
+    </instrumentation>
+    
+    <model>
+      <path>Aircraft/MI-6PS/Models/MI-6PS.xml</path>
+        <livery archive="y">
+	  <file type="string">MI-6PS</file>
+	</livery>
+      <mi6>
+	<state type="int">0</state>
+	<engine type="float">0</engine>
+	<rotor-step-deg type="float">-1</rotor-step-deg>
+	<elephant type="int">0</elephant>
+	<flares type="int">0</flares>
+	<waterpipe type="int">0</waterpipe>
+	<watercanon type="int">0</watercanon>
+	<version type="string">4.0.2</version>
+	<wings type="int">1</wings>
+	<anti-ice-alpha type="float">1</anti-ice-alpha>
+	<anti-ice-rotor type="float">1</anti-ice-rotor>
+	<iceing type="float">1</iceing>
+      </mi6>
+    </model>
+    
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+	<int type="int" n="0" alias="/gear/gear[1]/wow"/>
+	<int type="int" n="1" alias="/sim/model/mi6/watercanon"/>
+	<int type="int" n="2" alias="/controls/paratroopers/jump-signal">  0 </int>
+	<int type="int" n="3" alias="/sim/model/mi6/elephant"/>
+	<int type="int" n="4" alias="/sim/model/mi6/state"/>
+	<int type="int" n="5" alias="/controls/switches/gauge-light"/>
+	<int type="int" n="6" alias="/controls/water/pos-up">  0 </int>
+	<int type="int" n="7" alias="/controls/water/pos-yaw">  0 </int>
+	<int type="int" n="8" alias="/sim/model/mi6/flares"/>
+	<int type="int" n="9" alias="/sim/model/mi6/waterpipe"/>
+	<int type="int" n="10" alias="/fdm/jsbsim/environment/terrain-solid"/>
+	<int type="int" n="11" alias="/sim/model/mi6/wings"/>
+	<int type="int" n="12" alias="/controls/switches/landinglight"/>
+	<int type="int" n="13" alias="/controls/switches/taxilight"/>
+	<int type="int" n="14" alias="/controls/switches/search"/>
+	<int type="int" n="15" alias="/sim/initialized"/>
+	<int type="int" n="16" alias="/controls/lighting/beacon-state/state"/>
+	<int type="int" n="17" alias="/controls/lighting/strobe-state/state"/>
+	
+	<float n="0" alias="/sim/model/door-positions/n/position-norm"/>
+	<float n="1" alias="/sim/model/door-positions/pr/position-norm"/>
+	<float n="2" alias="/sim/model/door-positions/pl/position-norm"/>
+	<float n="3" alias="/sim/model/door-positions/e/position-norm"/>
+	<float n="4" alias="/sim/model/door-positions/c/position-norm"/>
+	<float n="5" alias="/rotors/main/tilt/pitch-deg"/>
+	<float n="6" alias="/rotors/main/blade[0]/incidence-deg"/>
+	<float n="7" alias="/rotors/main/blade[1]/incidence-deg"/>
+	<float n="8" alias="/rotors/main/blade[2]/incidence-deg"/>
+	<float n="9" alias="/rotors/main/blade[3]/incidence-deg"/>
+	<float n="10" alias="/rotors/main/blade[4]/incidence-deg"/>
+	<float n="11" alias="/sim/model/door-positions/BK/position-norm"/>
+	<float n="12" alias="/position/gear-agl-m"> 0 </float>
+	<float n="13" alias="/surface-positions/stab-pos-norm"> 0 </float>
+	<float n="14" alias="/rotors/main/torque"/>
+	<float n="15" alias="/rotors/main/tilt/roll-deg"/>
+	<float n="16" alias="/sim/model/mi6/iceing"/> <!-- the icing on the windshield -->
+	
+	<string  alias="/sim/multiplay/callsign"/>
+	<string n="1" type="string" alias="/sim/model/mi6/version"/>
+       </generic>
+      </multiplay> 
+      
+      <weight n="0">
+	<name>Cargo</name>
+	<weight-lb type="double">16113</weight-lb>
+	<max-lb type="double">26455</max-lb>
+	<min-lb type="double">600</min-lb>
+      </weight>
+      
+      <weight n="1">
+	<name>Parachuters a 120 lb</name>
+	<weight-lb type="double">0.0</weight-lb>
+	<max-lb type="double">12000.0</max-lb>
+	<min-lb type="double">0.0</min-lb>
+      </weight>
+      
+      <weight n="2">
+	<name>Water</name>
+	<weight-lb type="double">100.0</weight-lb>
+	<max-lb type="double">12000.0</max-lb>
+	<min-lb type="double">0.0</min-lb>
+      </weight>
+      
+      <systems>  
+	<autopilot>
+	  <name>Autopilot</name>
+	  <path>Aircraft/MI-6PS/Systems/autopilot-mi6.xml</path>
+	</autopilot>
+      </systems>
+      
+      <import>
+	<path>Huds/Sets/controls.xml</path>
+	<x-offset>-100</x-offset>
+	<y-offset>70</y-offset>
+      </import> 
+      
+      <help include="Systems/help.xml"/>
+      <menubar include="Dialogs/MI-6PS-menu.xml"/>
+      
+      </sim>      
+      
+      <fdm><jsbsim><environment><terrain-solid type="bool">true</terrain-solid></environment></jsbsim></fdm>
+      
+      <instrumentation>
+	<gsdi>
+	  <serviceable type="bool">true</serviceable>
+	  <on type="bool">false</on>
+	</gsdi>
+	
+	<drift type="double">0</drift>
+	
+	<inst-vertical-speed-indicator>
+	  <serviceable type="bool">true</serviceable>
+	</inst-vertical-speed-indicator>
+	
+	<heading-indicator n="0">
+	  <serviceable type="int">0</serviceable>
+	</heading-indicator>
+	
+	<adf n="0">
+	  <mode>adf</mode>
+	  <serviceable type="bool">false</serviceable>
+	  <frequencies>
+	    <selected-khz type="int">490</selected-khz>  <!-- NDB "DVI" (Donaueschingen) -->
+	    <standby-khz type="int">401</standby-khz>    <!-- EDTM ancient military airbase -->
+	  </frequencies>
+	  <error-deg type="double">0</error-deg>
+	  <power-btn type="bool">false</power-btn>
+	  <operable type="bool">true</operable>
+	  <volume type="double">0.10</volume>
+	</adf>
+	
+	<adf n="1">  
+	  <mode>adf</mode>  
+	  <serviceable type="bool">false</serviceable>
+	  <frequencies>
+	    <selected-khz type="int">0</selected-khz>  <!--442 EDNY near the lake of constance -->
+	    <standby-khz type="int">0</standby-khz>    <!-- 473 EDSN ancient military airbase -->
+	  </frequencies>
+	  <error-deg type="double">0</error-deg>
+	  <power-btn type="bool">false</power-btn>
+	  <operable type="bool">true</operable>
+	  <volume type="double">0.10</volume>
+	  <indicated-bearing-deg type="double">90</indicated-bearing-deg>
+	</adf>
+	
+	<nav n="0">
+	  
+	  <volume type="double">0.10</volume>
+	  <radials>
+	    <reciprocal-radial-deg type="double">90</reciprocal-radial-deg>    
+	  </radials>
+	  <power-btn type="bool">false</power-btn>
+	  <serviceable type="bool">false</serviceable>
+	  <operable type="bool">false</operable>  
+	</nav>
+	
+	<nav n="1">
+	  
+	  <volume type="double">0.10</volume>
+	  <radials>
+	    <reciprocal-radial-deg type="double">90</reciprocal-radial-deg>
+	  </radials>
+	  <power-btn type="bool">false</power-btn>
+	  <serviceable type="bool">false</serviceable>
+	  <operable type="bool">false</operable>  
+	</nav>
+	
+	<ushdb><compass type="double">0</compass></ushdb>
+	
+	</instrumentation>
+	
+	<input>
+	  <keyboard include="Systems/mi6-keyboard.xml"/>
+	  </input>
+	  
+	  <rotors>
+	    <main>
+	      <rpm type="double">0</rpm>
+	      <cone-deg type="double">0</cone-deg>
+	      <cone1-deg type="double">0</cone1-deg>
+	      <cone2-deg type="double">0</cone2-deg>
+	      <cone3-deg type="double">0</cone3-deg>
+	      <cone4-deg type="double">0</cone4-deg>
+	    </main>
+	  </rotors>
+	  
+	  <nasal>    
+	    <doors>
+	      <file>Aircraft/MI-6PS/Nasal/doors.nas</file>
+	    </doors>
+	    <help>
+	      <file>Aircraft/MI-6PS/Nasal/km-5-1.nas</file>
+	    </help>
+	    <mi6>
+	      <file>Aircraft/MI-6PS/Nasal/liveries.nas</file>
+	      <file>Aircraft/MI-6PS/Nasal/light.nas</file>
+	      <file>Aircraft/MI-6PS/Nasal/mi6.nas</file>
+	      <file>Aircraft/MI-6PS/Nasal/start.nas</file>
+	      <file>Aircraft/MI-6PS/Nasal/autopilot.nas</file>
+	    </mi6>
+	    <para>
+	      <file>Aircraft/MI-6PS/Nasal/paratroopers.nas</file>
+	    </para>
+	    <terrain>
+	      <file>Aircraft/MI-6PS/Nasal/terrain.nas</file>
+	    </terrain>
+	  </nasal>  
+	  
+	  <!--  <tutorials include="Tutorials/mi6-tutorials.xml"/>     -->
+	  
+	  <consumables>  
+	    <fuel>
+	      <tank n="0">
+		<tank-num type="int">0</tank-num>
+		<kill-when-empty type="bool">false</kill-when-empty>
+	      </tank>
+	      <tank n="1">
+		<tank-num type="int">1</tank-num>
+		<kill-when-empty type="bool">false</kill-when-empty>
+	      </tank>
+	      <tank n="2">
+		<tank-num type="int">2</tank-num>
+		<kill-when-empty type="bool">false</kill-when-empty>
+	      </tank>
+	      <tank n="3">
+		<tank-num type="int">3</tank-num>
+		<kill-when-empty type="bool">false</kill-when-empty>
+	      </tank>
+	      <tank n="4">
+		<tank-num type="int">4</tank-num>
+		<kill-when-empty type="bool">false</kill-when-empty>
+	      </tank>
+	      <tank n="5">
+		<tank-num type="int">5</tank-num>
+		<kill-when-empty type="bool">false</kill-when-empty>
+	      </tank>
+	      <tank n="6">
+		<tank-num type="int">6</tank-num>
+		<kill-when-empty type="bool">false</kill-when-empty>
+	      </tank>
+	      <tank n="7">
+		<tank-num type="int">7</tank-num>
+		<kill-when-empty type="bool">false</kill-when-empty>
+	      </tank>
+	      <tank n="8">
+		<tank-num type="int">8</tank-num>
+		<kill-when-empty type="bool">false</kill-when-empty>
+	      </tank>
+	      <tank n="9">
+		<tank-num type="int">9</tank-num>
+		<kill-when-empty type="bool">false</kill-when-empty>
+	      </tank>
+	      <tank n="10">
+		<tank-num type="int">10</tank-num>
+		<kill-when-empty type="bool">false</kill-when-empty>
+	      </tank>
+	      <tank n="11">
+		<tank-num type="int">11</tank-num>
+		<kill-when-empty type="bool">false</kill-when-empty>
+	      </tank>
+	      <tank n="12">
+		<tank-num type="int">12</tank-num>
+		<kill-when-empty type="bool">false</kill-when-empty>
+	      </tank>
+	      
+	      </fuel>
+	    </consumables>    
+	    
+	    </PropertyList>
+	    

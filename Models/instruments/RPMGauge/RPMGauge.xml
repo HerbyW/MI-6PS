@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<path>RPMGauge.ac</path>
+	
+	<animation>   
+	  <object-name>AltitudeIndicator.000</object-name>
+	  <object-name>rpm_percent_needle_1</object-name>
+	  <object-name>rpm_percent_needle_2</object-name>   
+	</animation>
+	
+	<animation>
+    <type>material</type>
+    <object-name>AltitudeIndicator.000</object-name>
+	  <object-name>rpm_percent_needle_1</object-name>
+	  <object-name>rpm_percent_needle_2</object-name>  
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+  </animation>
+	
+	
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rpm_percent_needle_1</object-name>
+		<property>/rotors/main/rpm</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>123</ind>
+				<dep>315</dep>
+			</entry>
+			<entry>
+				<ind>140</ind>
+				<dep>346.5</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-4.735</x-m>
+			<y-m>-0.620</y-m>
+			<z-m>3.053</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rpm_percent_needle_2</object-name>
+		<property>/rotors/tail/rpm</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>617</ind>
+				<dep>315</dep>
+			</entry>
+			<entry>
+				<ind>670</ind>
+				<dep>346.5</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-4.735</x-m>
+			<y-m>-0.620</y-m>
+			<z-m>3.053</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+</PropertyList> 

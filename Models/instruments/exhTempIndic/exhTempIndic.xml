@@ -1,0 +1,101 @@
+<PropertyList>
+	<path>exhTempIndic.ac</path>
+	
+	<animation>
+		<name>exhTempIndic</name>
+		<object-name>exhTempL</object-name>
+		<object-name>exhTempR</object-name>
+		<object-name>exhTempGlass</object-name>
+		<object-name>exhTempScale</object-name>
+		<object-name>exhTempGauge</object-name>
+	</animation>
+	
+	<animation>
+    <type>noshadow</type>
+    <object-name>exhTempGlass</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>exhTempGlass</object-name>
+  </animation>
+  
+  
+  <animation>
+    <type>material</type>
+    <object-name>exhTempL</object-name>
+		<object-name>exhTempR</object-name>
+		<object-name>exhTempGlass</object-name>
+		<object-name>exhTempScale</object-name>
+		
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+  </animation>
+	
+	<animation>
+		<type>range</type>
+		<object-name>exhTempIndic</object-name>
+		<min-m>0</min-m>
+		<max-m>7</max-m>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>exhTempR</object-name>
+		<property>/rotors/main/rpm</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>130</ind>
+				<dep>126.802</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-4.738</x-m>
+			<y-m>-0.599</y-m>
+			<z-m>3.154</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>exhTempL</object-name>
+		<property>/rotors/main/rpm</property>
+		<factor> 6.5 </factor>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>130</ind>
+				<dep>126.802</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-4.738</x-m>
+			<y-m>-0.641</y-m>
+			<z-m>3.154</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+</PropertyList>

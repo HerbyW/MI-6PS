@@ -1,0 +1,1316 @@
+<?xml version="1.0"?>
+
+<!--
+    #######################################################################################################
+    Arcraft development for Flightgear by Herbert Wagner 2014-2015                            Model: MI-6PS
+    Antonov AN-12BK, AN-22A, AN-225-Mrija,
+    Tuplev Tu-95MR,
+    Mil Mi-6PS
+    Yak 58, Yak-53,
+    Berijev Be-200Altair
+    SpaceShuttle
+    Development is ongoing, see latest versions: www.github.com/HerbyW
+    
+    This file is licenced under the terms mentioned in the LICENCE.txt file.
+    Mi6dev was initially started by Moritz Röhrich (Blender3D) 2010-2012 as CC 3.0 BY NC SA.
+    The 3D-model still holds the CC 3.0 BY NC SA license, everything else is GNU GPL v3 License.
+    
+    This version is now going forward and will give you a full automatic flight control-system,
+    lots of animations, instrumentation and full Multiplayer support for Parachuters and Elephant transport.
+    Liveries, Fire fighting and SAR rescue is in preparation.
+    Removing this header is probited.    
+    ########################################################################################################
+-->
+
+<PropertyList>
+	<path>Overhead_Panel.ac</path>
+	
+	<animation>
+		<name>Overhead_Panel</name>
+		<object-name>Plane.016</object-name>
+		<object-name>Plane.017</object-name>
+		<object-name>Plane.217</object-name>
+		<object-name>Plane.218</object-name>
+		<object-name>Plane.219</object-name>
+		<object-name>Plane.220</object-name>
+		<object-name>Plane.228</object-name>
+		<object-name>Plane.229</object-name>
+		<object-name>Screws</object-name>
+		<object-name>Switch.010</object-name>
+		<object-name>Switch.011</object-name>
+		<object-name>Switch.012</object-name>
+		<object-name>Switch.013</object-name>
+		<object-name>Switch.014</object-name>
+		<object-name>Switch.015</object-name>
+		<object-name>Switch.016</object-name>
+		<object-name>Switch.017</object-name>
+		<object-name>Switch.020</object-name>
+		<object-name>Switch.021</object-name>
+		<object-name>Switch.025</object-name>
+		<object-name>Switch.029</object-name>
+		<object-name>Switch.032</object-name>
+		<object-name>Switch.034</object-name>
+		<object-name>Switch.035</object-name>
+		<object-name>Switch.036</object-name>
+		<object-name>Switch.037</object-name>
+		<object-name>Switch.038</object-name>
+		<object-name>Switch.181</object-name>
+		<object-name>Switch.182</object-name>
+		<object-name>Switch.183</object-name>
+		<object-name>Switch.184</object-name>
+		<object-name>Switch.185</object-name>
+		<object-name>Switch.186</object-name>
+		<object-name>Switch.187</object-name>
+		<object-name>Switch.188</object-name>
+		<object-name>Switch.189</object-name>
+		<object-name>Switch.190</object-name>
+		<object-name>Switch.191</object-name>
+		<object-name>Switch.192</object-name>
+		<object-name>Switch.193</object-name>
+		<object-name>Switch.194</object-name>
+		<object-name>Switch.195</object-name>
+		<object-name>Switch.196</object-name>
+		<object-name>Switch.197</object-name>
+		<object-name>Switch.198</object-name>
+		<object-name>Switch.217</object-name>
+		<object-name>Switch.218</object-name>
+		<object-name>Switch_Protectors</object-name>
+		<object-name>autopilot</object-name>
+		<object-name>external-suspension</object-name>
+		<object-name>fan</object-name>
+		<object-name>friction</object-name>
+		<object-name>glass-heating</object-name>
+		<object-name>hydro-damping</object-name>
+		<object-name>instrument-heating</object-name>
+		<object-name>jettison-cargo</object-name>
+		<object-name>landinglight-l</object-name>
+		<object-name>landinglight-l-ctrl</object-name>
+		<object-name>landinglight-r</object-name>
+		<object-name>landinglight-r-ctrl</object-name>
+		<object-name>main_ai</object-name>
+		<object-name>reserve_ai</object-name>
+		<object-name>rotor-heating</object-name>
+	</animation>
+	
+	<animation>
+		<type>range</type>
+		<object-name>Overhead_Panel</object-name>
+		<min-m>0</min-m>
+		<max-m>7</max-m>
+	</animation>
+	
+	<animation>
+    <type>material</type>
+        <object-name>Overhead_Panel</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.2 </red>
+      <green> 0.2 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+	
+	<!--Main Engines Cover and Switch-->
+	
+	<animation>
+		<type>pick</type>
+		<object-name>Plane.016</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/switches/engines-main-cover</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+	  <type>rotate</type>
+	  <object-name>Plane.016</object-name>
+	  <property>controls/switches/engines-main-cover</property>
+	  <factor>-90</factor>
+	  <center>
+	    <x-m>-5.775</x-m>
+	    <y-m>-0.148</y-m>
+	    <z-m>3.600</z-m>
+	  </center>
+	  <axis>
+	    <x>0</x>
+	    <y>1</y>
+	    <z>0</z>
+	  </axis>
+	</animation>
+	
+	<animation>
+	  <type>pick</type>
+	  <object-name>Switch.188</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>nasal</command>
+	      <script>mi6.engines(1)</script>
+	    </binding>
+	  </action>
+	  <hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>Engine</tooltip-id>      
+		<label>Engine</label>
+	      </binding>
+	    </hovered>
+	</animation>
+	
+	<animation>
+	  <type>pick</type>
+	  <object-name>Switch.188</object-name>
+	  <action>
+	    <button>1</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>nasal</command>
+	      <script>mi6.engines(0)</script>
+	    </binding>
+	  </action>
+	</animation>
+	
+	<animation>
+	  <type>rotate</type>
+	  <object-name>Switch.188</object-name>
+	  <property>sim/model/mi6/engine</property>
+	  <factor>-90</factor>
+	  <center>
+	    <x-m>-5.801</x-m>
+	    <y-m>0.139</y-m>
+	    <z-m>3.605</z-m>
+	  </center>
+	  <axis>
+	    <x>0</x>
+	    <y>1</y>
+	    <z>0</z>
+	  </axis>
+	</animation>
+	
+	<!--Rotor Brake Switch-->
+	<animation>
+	  <type>pick</type>
+	  <object-name>Switch.187</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>nasal</command>
+	      <script>interpolate("/controls/rotor/brake", 1.0, 2)</script>
+	    </binding>
+	  </action>
+	</animation>
+	
+	<animation>
+	  <type>pick</type>
+	  <object-name>Switch.187</object-name>
+	  <action>
+	    <button>1</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>nasal</command>
+	      <script>interpolate("/controls/rotor/brake", 0.0, 2)</script>
+	    </binding>
+	  </action>
+	  <hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>Rotor Brake</tooltip-id>      
+		<label>Rotor Brake</label>
+	      </binding>
+	    </hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Switch.187</object-name>
+		<property>/controls/rotor/brake</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.801</x-m>
+			<y-m>0.179</y-m>
+			<z-m>3.605</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--Main Attitude Indicator Switch-->
+	<animation>
+		<type>pick</type>
+		<object-name>main_ai</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/attitude-indicator[0]/power</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+		<hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>ALT</tooltip-id>      
+		<label>Altitude main</label>
+	      </binding>
+	    </hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>main_ai</object-name>
+		<property>instrumentation/attitude-indicator[0]/power</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>0.032</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--Backup Attitude Indicator Switch-->
+	<animation>
+		<type>pick</type>
+		<object-name>reserve_ai</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/attitude-indicator[1]/power</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+		<hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>ALTres</tooltip-id>      
+		<label>Altitude res</label>
+	      </binding>
+	    </hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>reserve_ai</object-name>
+		<property>instrumentation/attitude-indicator[1]/power</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>0.032</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--Main Power Switch-->
+	<animation>
+		<type>pick</type>
+		<object-name>Switch.181</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>/controls/electric/battery-switch</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+		<hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>MainPower</tooltip-id>      
+		<label>Main Power</label>
+	      </binding>
+	    </hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Switch.181</object-name>
+		<property>/controls/electric/battery-switch</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.801</x-m>
+			<y-m>-0.334</y-m>
+			<z-m>3.605</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--Main Instrument Lights Switch-->
+	<animation>
+		<type>pick</type>
+		<object-name>Switch.182</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>/controls/switches/gauge-light</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+		<hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>InstrumentLights</tooltip-id>      
+		<label>Instrument Lights</label>
+	      </binding>
+	    </hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Switch.182</object-name>
+		<property>/controls/switches/gauge-light</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.801</x-m>
+			<y-m>-0.315</y-m>
+			<z-m>3.605</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--Main Nav Lights Switch-->
+	<animation>
+		<type>pick</type>
+		<object-name>Switch.183</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>/controls/lighting/nav-lights</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+		<hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>NAV-lights</tooltip-id>      
+		<label>NAV-lights</label>
+	      </binding>
+	    </hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Switch.183</object-name>
+		<property>/controls/lighting/nav-lights</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.801</x-m>
+			<y-m>-0.292</y-m>
+			<z-m>3.605</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--Beacon Lights Switch-->
+	<animation>
+		<type>pick</type>
+		<object-name>Switch.184</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>/controls/lighting/beacon</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+		<hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>Beacon-lights</tooltip-id>      
+		<label>Beacon-lights</label>
+	      </binding>
+	    </hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Switch.184</object-name>
+		<property>/controls/lighting/beacon</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.801</x-m>
+			<y-m>-0.271</y-m>
+			<z-m>3.605</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--Strobe Lights Switch-->
+	<animation>
+		<type>pick</type>
+		<object-name>Switch.185</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>/controls/lighting/strobe</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+		<hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>Strobe-lights</tooltip-id>      
+		<label>Strobe-lights</label>
+	      </binding>
+	    </hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Switch.185</object-name>
+		<property>/controls/lighting/strobe</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.801</x-m>
+			<y-m>-0.250</y-m>
+			<z-m>3.605</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--ADF 1 Power Switch-->
+	<animation>
+		<type>pick</type>
+		<object-name>Switch.012</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>/instrumentation/adf[0]/power-btn</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+		<hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>ADF1</tooltip-id>      
+		<label>ADF 1</label>
+	      </binding>
+	    </hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Switch.012</object-name>
+		<property>/instrumentation/adf[0]/power-btn</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>-0.160</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--ADF 2 Power Switch-->
+	<animation>
+		<type>pick</type>
+		<object-name>Switch.013</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>/instrumentation/adf[1]/power-btn</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+		<hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>ADF2</tooltip-id>      
+		<label>ADF 2</label>
+	      </binding>
+	    </hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Switch.013</object-name>
+		<property>/instrumentation/adf[1]/power-btn</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>-0.132</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--HSI Power Switch-->
+	<animation>
+		<type>pick</type>
+		<object-name>Switch.014</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>/instrumentation/heading-indicator[0]/serviceable</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+		<hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>HSI</tooltip-id>      
+		<label>HSI</label>
+	      </binding>
+	    </hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Switch.014</object-name>
+		<property>/instrumentation/heading-indicator[0]/serviceable</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>-0.106</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--NAV 1 Power Switch-->
+	<animation>
+		<type>pick</type>
+		<object-name>Switch.015</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>/instrumentation/nav[0]/power-btn</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+		<hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>NAV 1</tooltip-id>      
+		<label>NAV 1</label>
+	      </binding>
+	    </hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Switch.015</object-name>
+		<property>/instrumentation/nav[0]/power-btn</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>-0.08018</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--NAV 2 Power Switch-->
+	<animation>
+		<type>pick</type>
+		<object-name>Switch.016</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>/instrumentation/nav[1]/power-btn</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+		<hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>NAV 2</tooltip-id>      
+		<label>NAV 2</label>
+	      </binding>
+	    </hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Switch.016</object-name>
+		<property>/instrumentation/nav[1]/power-btn</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>-0.08018</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--Transponder Power Switch-->
+	<animation>
+	  <type>pick</type>
+	  <object-name>Switch.017</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/instrumentation/transponder/serviceable</property>
+	      <value>0</value>
+	      <value>1</value>
+	    </binding>
+	   </action> 
+	    <hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>Skawk</tooltip-id>      
+		<label>Skwak</label>
+	      </binding>
+	    </hovered>	  
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Switch.017</object-name>
+		<property>/instrumentation/transponder/serviceable</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>-0.02433</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!--First row-->
+	<animation>
+	  <type>pick</type>
+	  <object-name>autopilot</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/controls/switches/autopilot</property>
+	      <value>0</value>
+	      <value>1</value>
+	    </binding>
+	   </action> 
+	    <hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>Autopilot</tooltip-id>      
+		<label>Autopilot</label>
+	      </binding>
+	    </hovered>	  
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>autopilot</object-name>
+		<property>/controls/switches/autopilot</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.493</x-m>
+			<y-m>-0.315</y-m>
+			<z-m>3.676</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+	  <type>pick</type>
+	  <object-name>friction</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/controls/switches/friction</property>
+	      <value>0</value>
+	      <value>1</value>
+	    </binding>
+	   </action> 
+	    <hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>friction</tooltip-id>      
+		<label>Friction</label>
+	      </binding>
+	    </hovered>	  
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>friction</object-name>
+		<property>/controls/switches/friction</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.493</x-m>
+			<y-m>-0.289</y-m>
+			<z-m>3.676</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+	  <type>pick</type>
+	  <object-name>hydro-damping</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/controls/switches/hydro-damping</property>
+	      <value>0</value>
+	      <value>1</value>
+	    </binding>
+	   </action> 
+	    <hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>hydro-damping</tooltip-id>      
+		<label>hydro-damping</label>
+	      </binding>
+	    </hovered>	  
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>hydro-damping</object-name>
+		<property>/controls/switches/hydro-damping</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.493</x-m>
+			<y-m>-0.198</y-m>
+			<z-m>3.676</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+<!--2nd row-->
+	
+	<animation>
+	  <type>pick</type>
+	  <object-name>landinglight-l-ctrl</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/controls/switches/landinglight</property>
+	      <value>0</value>
+	      <value>1</value>
+	    </binding>
+	   </action> 
+	    <hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>landinglight-l</tooltip-id>      
+		<label>landinglight</label>
+	      </binding>
+	    </hovered>	  
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>landinglight-l-ctrl</object-name>
+		<property>/controls/switches/landinglight</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>-0.327</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+	  <type>pick</type>
+	  <object-name>landinglight-l</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/controls/switches/search</property>
+	      <value>0</value>
+	      <value>1</value>
+	    </binding>
+	   </action> 
+	    <hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>searchlight</tooltip-id>      
+		<label>searchlight</label>
+	      </binding>
+	    </hovered>	  
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>landinglight-l</object-name>
+		<property>/controls/switches/search</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>-0.296</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+	  <type>pick</type>
+	  <object-name>landinglight-r-ctrl</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/controls/switches/taxilight</property>
+	      <value>0</value>
+	      <value>1</value>
+	    </binding>
+	   </action> 
+	    <hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>taxilight-r-ctrl</tooltip-id>      
+		<label>taxilight</label>
+	      </binding>
+	    </hovered>	  
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>landinglight-r-ctrl</object-name>
+		<property>/controls/switches/taxilight</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>-0.269</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+	  <type>pick</type>
+	  <object-name>landinglight-r</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/controls/switches/taxilight</property>
+	      <value>0</value>
+	      <value>1</value>
+	    </binding>
+	   </action> 
+	    <hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>landinglight-r</tooltip-id>      
+		<label>taxilight</label>
+	      </binding>
+	    </hovered>	  
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>landinglight-r</object-name>
+		<property>/controls/switches/taxilight</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>-0.243</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<model>
+	<path>Aircraft/MI-6PS/Models/instruments/redlamp/red-lamp-glassheating.xml</path>
+	<offsets>
+	  <x-m>-5.56</x-m>
+	  <y-m>0.141</y-m>
+	  <z-m>3.679</z-m> 
+	  <roll-deg>    0 </roll-deg>
+	  <pitch-deg>   74 </pitch-deg>
+	  <heading-deg> 0 </heading-deg>
+	</offsets>
+	</model>
+	
+	<animation>
+	  <type>pick</type>
+	  <object-name>glass-heating</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/controls/switches/glass-heating</property>
+	      <value>0</value>
+	      <value>1</value>
+	    </binding>
+	  </action> 
+	  <hovered>
+	    <binding>
+	      <command>set-tooltip</command>
+	      <tooltip-id>glass-heating</tooltip-id>      
+	      <label>glass-heating</label>
+	    </binding>
+	  </hovered>	  
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>glass-heating</object-name>
+		<property>/controls/switches/glass-heating</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>0.141</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<model>
+	<path>Aircraft/MI-6PS/Models/instruments/redlamp/red-lamp-rotorheating.xml</path>
+	<offsets>
+	  <x-m>-5.56</x-m>
+	  <y-m>0.167</y-m>
+	  <z-m>3.679</z-m> 
+	  <roll-deg>    0 </roll-deg>
+	  <pitch-deg>   74 </pitch-deg>
+	  <heading-deg> 0 </heading-deg>
+	</offsets>
+	</model>
+	
+	<animation>
+	  <type>pick</type>
+	  <object-name>rotor-heating</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/controls/switches/rotor-heating</property>
+	      <value>0</value>
+	      <value>1</value>
+	    </binding>
+	   </action> 
+	    <hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>rotor-heating</tooltip-id>      
+		<label>rotor-heating</label>
+	      </binding>
+	    </hovered>	  
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rotor-heating</object-name>
+		<property>/controls/switches/rotor-heating</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>0.167</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<model>
+	<path>Aircraft/MI-6PS/Models/instruments/redlamp/red-lamp-instrumentheating.xml</path>
+	<offsets>
+	  <x-m>-5.56</x-m>
+	  <y-m>0.195</y-m>
+	  <z-m>3.679</z-m> 
+	  <roll-deg>    0 </roll-deg>
+	  <pitch-deg>   74 </pitch-deg>
+	  <heading-deg> 0 </heading-deg>
+	</offsets>
+	</model>
+	
+	<animation>
+	  <type>pick</type>
+	  <object-name>instrument-heating</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/controls/switches/instrument-heating</property>
+	      <value>0</value>
+	      <value>1</value>
+	    </binding>
+	   </action> 
+	    <hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>instrument-heating</tooltip-id>      
+		<label>instrument-heating</label>
+	      </binding>
+	    </hovered>	  
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>instrument-heating</object-name>
+		<property>/controls/switches/instrument-heating</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>0.195</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+	  <type>pick</type>
+	  <object-name>fan</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/controls/switches/fan</property>
+	      <value>0</value>
+	      <value>1</value>
+	    </binding>
+	   </action> 
+	    <hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>fan</tooltip-id>      
+		<label>fan</label>
+	      </binding>
+	    </hovered>	  
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>fan</object-name>
+		<property>/controls/switches/fan</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>0.246</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+	  <type>pick</type>
+	  <object-name>external-suspension</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/controls/switches/external-suspension</property>
+	      <value>0</value>
+	      <value>1</value>
+	    </binding>
+	   </action> 
+	    <hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>external-suspension</tooltip-id>      
+		<label>external-suspension</label>
+	      </binding>
+	    </hovered>	  
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>external-suspension</object-name>
+		<property>/controls/switches/external-suspension</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>0.272</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+	  <type>pick</type>
+	  <object-name>jettison-cargo</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/controls/switches/jettison-cargo</property>
+	      <value>0</value>
+	      <value>1</value>
+	    </binding>
+	   </action> 
+	    <hovered>
+	      <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>jettison-cargo</tooltip-id>      
+		<label>jettison-cargo</label>
+	      </binding>
+	    </hovered>	  
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>jettison-cargo</object-name>
+		<property>/controls/switches/jettison-cargo</property>
+		<factor>-90</factor>
+		<center>
+			<x-m>-5.590</x-m>
+			<y-m>0.298</y-m>
+			<z-m>3.658</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+	
+</PropertyList>

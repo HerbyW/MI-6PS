@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!--
+    #############################################################################
+    #    (C) 2006 by Yurik V. Nikiforoff - port for FGFS,  FDM,   	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
+<!--
+    #######################################################################################################
+    Arcraft development for Flightgear by Herbert Wagner 2014-2015                            Model: MI-6PS
+    Antonov AN-12BK, AN-22A, AN-225-Mrija,
+    Tuplev Tu-95MR,
+    Mil Mi-6PS
+    Yak 58, Yak-53,
+    Berijev Be-200Altair
+    SpaceShuttle
+    Development is ongoing, see latest versions: www.github.com/HerbyW
+    
+    This file is licenced under the terms mentioned in the LICENCE.txt file.
+    Mi6dev was initially started by Moritz Röhrich (Blender3D) 2010-2012 as CC 3.0 BY NC SA.
+    The 3D-model still holds the CC 3.0 BY NC SA license, everything else is GNU GPL v3 License.
+    
+    This version is now going forward and will give you a full automatic flight control-system,
+    lots of animations, instrumentation and full Multiplayer support for Parachuters and Elephant transport.
+    Liveries, Fire fighting and SAR rescue is in preparation.
+    Removing this header is probited.    
+    ########################################################################################################
+-->
+<!-- Red lamp
+3D instrument for Tu-154 -->
+<PropertyList>
+ <path>red_lamp.ac</path>
+<!--External panel lighting-->
+<animation>
+  <type>material</type>
+  <object-name>_c_1</object-name>
+  <object-name>_c_2</object-name>
+  <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+</animation>
+<!--Brightness-->
+<animation>
+  <type>material</type>
+  <object-name>_d_2</object-name>
+  <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+</animation>
+
+<!--Set-->
+<animation>
+  <type>select</type>
+  <object-name>_d_2</object-name>
+  <condition>
+    <greater-than>
+     <property>sim/multiplay/generic/int[3]</property>    
+     <value>0</value>
+    </greater-than>
+  </condition>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>_d_2</object-name>
+  <object-name>_c_1</object-name>
+  <object-name>_c_2</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>    
+    <binding>
+      <command>property-assign</command>
+      <property>sim/multiplay/generic/int[3]</property>
+      <value>0</value>
+    </binding>    
+  </action>
+</animation>
+
+</PropertyList>

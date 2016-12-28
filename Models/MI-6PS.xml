@@ -1,0 +1,1027 @@
+<?xml version="1.0"?>
+
+<!--
+    #######################################################################################################
+    Arcraft development for Flightgear by Herbert Wagner 2014-2015                            Model: MI-6PS
+    Antonov AN-12BK, AN-22A, AN-225-Mrija,
+    Tuplev Tu-95MR,
+    Mil Mi-6PS
+    Yak 58, Yak-53,
+    Berijev Be-200Altair
+    SpaceShuttle
+    Development is ongoing, see latest versions: www.github.com/HerbyW
+    
+    This file is licenced under the terms mentioned in the LICENCE.txt file.
+    Mi6dev was initially started by Moritz Röhrich (Blender3D) 2010-2012 as CC 3.0 BY NC SA.
+    The 3D-model still holds the CC 3.0 BY NC SA license, everything else is GNU GPL v3 License.
+    
+    This version is now going forward and will give you a full automatic flight control-system,
+    lots of animations, instrumentation and full Multiplayer support for Parachuters and Elephant transport.
+    Liveries, Fire fighting and SAR rescue is in preparation.
+    Removing this header is probited.    
+    ########################################################################################################
+-->
+
+<PropertyList>
+  <!--Mi6 Main Model XML File-->
+  <path>mi6-63.ac</path>
+  
+  
+  
+  <animation>
+		<type>range</type>
+		<object-name>Interior</object-name>
+		<min-m>0</min-m>
+		<max-m>100</max-m>
+	</animation>
+  
+  <nasal>
+    <load>      
+      var livery_update = aircraft.livery_update.new("Aircraft/MI-6PS/Models/Liveries", 10);
+      
+      var self = cmdarg();
+      
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      var float_2 = self.getNode("sim/multiplay/generic/float[2]", 1);
+      var float_3 = self.getNode("sim/multiplay/generic/float[3]", 1);
+      var float_4 = self.getNode("sim/multiplay/generic/float[4]", 1);
+      var float_11 = self.getNode("sim/multiplay/generic/float[11]", 1);
+      
+      var n_door = self.getNode("instrumentation/doors/n/position-norm", 1);
+      var pr_door = self.getNode("instrumentation/doors/pr/position-norm", 1);
+      var pl_door = self.getNode("instrumentation/doors/pl/position-norm", 1);
+      var e_door = self.getNode("instrumentation/doors/e/position-norm", 1);
+      var c_door = self.getNode("instrumentation/doors/c/position-norm", 1);
+      var BK_door = self.getNode("instrumentation/doors/BK/position-norm", 1);
+      
+      n_door.alias(float_0);
+      pr_door.alias(float_1);
+      pl_door.alias(float_2);
+      e_door.alias(float_3);
+      c_door.alias(float_4);
+      BK_door.alias(float_11);
+      
+      </load>
+      
+      <unload>
+	livery_update.stop();
+	n_door.unalias();
+	pr_door.unalias();
+	pl_door.unalias();
+	e_door.unalias();
+	c_door.unalias();
+	BK_door.unalias();
+	
+	</unload>
+      </nasal>
+      
+      <sound>
+	<path>Aircraft/MI-6PS/Sound/sound-MP.xml</path>
+      </sound>
+      
+      <model>
+	<path>Aircraft/MI-6PS/Models/instruments.xml</path>
+      </model>
+      <model>
+	<path>Aircraft/MI-6PS/Models/instruments/instruments.xml</path>
+      </model>
+      
+      <model>
+	<path>Aircraft/MI-6PS/Models/rotors.xml</path>
+      </model>
+      
+      <model>
+	<path>Aircraft/MI-6PS/Models/effects/elephant/elephant.xml</path>
+	<offsets>
+	  <x-m>45.50</x-m>
+	  <y-m>0.0</y-m>
+	  <z-m>-0.40</z-m> 
+	  <roll-deg><property>0</property></roll-deg>
+	  <pitch-deg><property>0</property></pitch-deg>
+	  <heading-deg> -90 </heading-deg>
+	</offsets>
+	</model>
+	
+	<model>
+	<path>Aircraft/MI-6PS/Models/effects/elephant/tow.xml</path>
+	<offsets>
+	  <x-m>0.00</x-m>
+	  <y-m>0.0</y-m>
+	  <z-m>6.0</z-m> 
+	  <roll-deg>    0 </roll-deg>
+	  <pitch-deg>   0 </pitch-deg>
+	  <heading-deg> 0 </heading-deg>
+	</offsets>
+	</model>
+	
+	<model>
+	<path>Aircraft/MI-6PS/Models/effects/elephant/tow-elephant.xml</path>
+	<offsets>
+	  <x-m>3.30</x-m>
+	  <y-m>0.0</y-m>
+	  <z-m>-26.0</z-m> 
+	  <roll-deg>    0 </roll-deg>
+	  <pitch-deg>   0 </pitch-deg>
+	  <heading-deg> -90 </heading-deg>
+	</offsets>
+	</model>
+	
+	<model>
+	<path>Aircraft/MI-6PS/Models/effects/smoke/watercanon.xml</path>
+	<offsets>
+	  <x-m>-7.5</x-m>
+	  <y-m>0.0</y-m>
+	  <z-m>1.8</z-m> 
+	  <roll-deg>    0 </roll-deg>
+	  <pitch-deg>   18 </pitch-deg>
+	  <heading-deg> 180 </heading-deg>
+	</offsets>
+	</model>
+      
+      <model>
+	<path>Aircraft/MI-6PS/Models/effects/waterpipe/waterpipe.xml</path>
+	<offsets>
+	  <x-m>-0.5</x-m>
+	  <y-m>-0.80</y-m>
+	  <z-m>-5.3</z-m>  
+	</offsets>
+	</model>
+	
+	<model>
+	<path>Aircraft/MI-6PS/Models/effects/waterpipe/loading.xml</path>
+	<offsets>
+	  <x-m>-0.5</x-m>
+	  <y-m>-0.80</y-m>
+	  <z-m>2</z-m>  
+	</offsets>
+	</model>
+	
+	<!-- the ice effect -->
+	
+	<effect>
+	  <inherits-from>Effects/model-transparent</inherits-from>
+	  <object-name>icing</object-name>
+	  <object-name>icing.001</object-name>
+	  <object-name>icing.002</object-name>
+	  <object-name>icing.003</object-name>
+	  <object-name>icing.004</object-name>
+	</effect>
+	
+	<animation>
+	  <type>select</type>
+	  <object-name>icing</object-name>
+	  <object-name>icing.001</object-name>
+	  <object-name>icing.002</object-name>
+	  <object-name>icing.003</object-name>
+	  <object-name>icing.004</object-name>
+	  <condition>		
+	    <less-than>
+	      <property>sim/multiplay/generic/float[16]</property>
+	      <value>0.95</value>
+	    </less-than>
+	  </condition>
+	</animation>	
+	
+	<animation>
+	  <type>blend</type>
+	  <object-name>icing</object-name>
+	  <object-name>icing.001</object-name>
+	  <object-name>icing.002</object-name>
+	  <object-name>icing.003</object-name>
+	  <object-name>icing.004</object-name>
+	  <property>sim/multiplay/generic/float[16]</property>
+	  <factor>1</factor>
+	</animation>
+
+	<animation>
+    <type>material</type>
+    <object-name>BackDoorL</object-name>
+    <object-name>BackDoorR</object-name>
+    <object-name>BackDoorL.001</object-name>
+    <object-name>BackDoorR.001</object-name>
+    <object-name>BackDoorM</object-name>
+    <object-name>BodenKlappeAL</object-name>
+    <object-name>BodenKlappeAR</object-name>
+    <object-name>BodenKlappeL</object-name>
+    <object-name>BodenKlappeR</object-name>
+    <object-name>BodenRing</object-name>
+    <object-name>E-Door</object-name>
+    <object-name>E-Door.002</object-name>
+    <object-name>Elevator</object-name>
+    <object-name>Fuselage</object-name>
+    <object-name>Fuselage.020</object-name>
+    <object-name>Fuselage.091</object-name>
+    <object-name>Interior</object-name>
+    <object-name>N-Door</object-name>
+    <object-name>N-Door.001</object-name>
+    <object-name>PilotDoorL</object-name>
+    <object-name>PilotDoorL.002</object-name>
+    <object-name>PilotDoorR</object-name>
+    <object-name>PilotDoorR.002</object-name>
+    <object-name>Tankmounting</object-name>
+    <object-name>Wings</object-name>
+    
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>MI-6PS.png</texture>
+    
+    <emission>
+      <factor-prop>/sim/time/sun-angle-rad</factor-prop>
+      <red>   0.05 </red>
+      <green> 0.05 </green>
+      <blue>  0.05 </blue>
+    </emission>
+  </animation>
+	
+	<!-- Wings on/off-->
+	
+	<animation>
+	  <type>select</type>
+	  <object-name>Wings</object-name>
+	  <object-name>Antenna</object-name>
+	  <condition>      
+	    <equals>
+	      <property>sim/multiplay/generic/int[11]</property>
+	      <value>1</value>
+	    </equals>
+	</condition>
+      </animation>
+      
+      <animation>
+	<type>pick</type>
+	<object-name>Wings</object-name>
+	<object-name>Antenna</object-name>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+	    <command>property-assign</command>
+	    <property>sim/multiplay/generic/int[11]</property>
+	    <value>0</value>
+	  </binding>
+	</action>
+      </animation>
+      
+      <animation>
+	<object-name>PilotDoorL.001</object-name>
+	<object-name>PilotDoorR.001</object-name>
+	<object-name>N-Door-glass</object-name>
+	<object-name>E-Door.001</object-name>
+	<object-name>FrontGlass</object-name>
+	<object-name>window01</object-name>
+	<object-name>window02</object-name>
+      </animation>
+      
+      <animation>
+	<type>noshadow</type>
+	<object-name>PilotDoorL.001</object-name>
+	<object-name>PilotDoorR.001</object-name>
+	<object-name>N-Door-glass</object-name>
+	<object-name>E-Door.001</object-name>
+	<object-name>FrontGlass</object-name>
+	<object-name>window01</object-name>
+	<object-name>window02</object-name>
+      </animation>
+      
+      <animation>
+	<type>shader</type>
+	<shader>chrome</shader>
+	<texture>Aircraft/MI-6PS/Models/glass_shader.png</texture>
+	<object-name>PilotDoorL.001</object-name>
+	<object-name>PilotDoorR.001</object-name>
+	<object-name>N-Door-glass</object-name>
+	<object-name>E-Door.001</object-name>
+	<object-name>FrontGlass</object-name>
+	<object-name>window01</object-name>
+	<object-name>window02</object-name>
+      </animation>
+      
+      <animation>
+	<type>material</type>
+	<object-name>PilotDoorL.001</object-name>
+	<object-name>PilotDoorR.001</object-name>
+	<object-name>N-Door-glass</object-name>
+	<object-name>E-Door.001</object-name>
+	<object-name>FrontGlass</object-name>
+	<object-name>window01</object-name>
+	<object-name>window02</object-name>
+	<emission>
+	  <factor-prop>sim/multiplay/generic/int[5]</factor-prop>
+	  <red>   0.15 </red>
+          <green> 0.15 </green>
+          <blue>  0.60 </blue>
+	</emission>
+      </animation>
+      
+      <animation>
+	<object-name>PilotDoorL.001</object-name>
+	<object-name>PilotDoorR.001</object-name>
+	<object-name>N-Door-glass</object-name>
+	<object-name>E-Door.001</object-name>
+	<object-name>FrontGlass</object-name>
+	<object-name>window01</object-name>
+	<object-name>window02</object-name>
+      </animation>
+      
+      <animation>
+	<type>noshadow</type>
+	<object-name>PilotDoorL.001</object-name>
+	<object-name>PilotDoorR.001</object-name>
+	<object-name>N-Door-glass</object-name>
+	<object-name>E-Door.001</object-name>
+	<object-name>FrontGlass</object-name>
+	<object-name>window01</object-name>
+	<object-name>window02</object-name>
+      </animation>      
+      
+      <effect>
+	<inherits-from>Effects/model-transparent</inherits-from>
+	<condition>
+	  <property>sim/rendering/rembrandt/enabled</property>
+	</condition>
+	<object-name>PilotDoorL.001</object-name>
+	<object-name>PilotDoorR.001</object-name>
+	<object-name>N-Door-glass</object-name>
+	<object-name>E-Door.001</object-name>
+	<object-name>FrontGlass</object-name>
+	<object-name>window01</object-name>
+	<object-name>window02</object-name>
+      </effect>
+      
+      <animation>
+	<object-name>PilotDoorL.001</object-name>
+	<object-name>PilotDoorR.001</object-name>
+	<object-name>N-Door-glass</object-name>
+	<object-name>E-Door.001</object-name>
+	<object-name>FrontGlass</object-name>
+	<object-name>window01</object-name>
+	<object-name>window02</object-name>
+      </animation>
+
+      
+      
+            <!-- Elevator-->         
+      
+      <animation>
+	<type>rotate</type>
+	<object-name>Elevator</object-name>
+	<property>sim/multiplay/generic/float[13]</property>
+	<factor>15</factor>
+	<center>
+	  <x-m>19.148</x-m>
+	  <y-m>0.0</y-m>
+	  <z-m>3.788</z-m>
+	</center>
+	<axis>
+	  <x>0</x>
+	  <y>1</y>
+	  <z>0</z>
+	</axis>
+      </animation>
+      
+      <!--Front Gear-->
+      
+      <animation>
+	<type>rotate</type>
+	<object-name>FGear.001</object-name>
+	<object-name>FGear.002</object-name>
+	<object-name>FGear.003</object-name>
+	<object-name>FGear.000</object-name>
+	<object-name>FGear.004</object-name>
+	<property>controls/gear/steering</property>
+	<factor>30</factor>
+	<center>
+	  <x-m>-3.855</x-m>
+	  <y-m>0.0</y-m>
+	  <z-m>1.706</z-m>
+	</center>
+	<axis>
+	  <x>0.0</x>
+	  <y>0</y>
+	  <z>-1.0</z>
+	</axis>
+      </animation>
+      
+      <animation>
+	<type>translate</type>
+	<object-name>FGear.001</object-name>
+	<object-name>FGear.002</object-name>
+	<object-name>FGear.003</object-name>
+	<object-name>FGear.000</object-name>
+	<object-name>FGear.004</object-name>
+	<property>gear/gear[0]/compression-norm</property>
+	<center>
+	  <x-m>-3.855</x-m>
+	  <y-m>0.0</y-m>
+	  <z-m>1.706</z-m>
+	</center>
+	<axis>
+	  <x>0.0</x>
+	  <y>-0</y>
+	  <z>1.0</z>
+	</axis>
+      </animation>
+      
+      <animation>
+	<type>spin</type>
+	<object-name>FGear.002</object-name>
+	<object-name>FGear.003</object-name>
+	<object-name>FGear.000</object-name>
+	<object-name>FGear.004</object-name>
+	<property>/gear/gear[0]/rollspeed-ms</property>
+	<factor> 30 </factor>
+	<center>
+	  <x-m> -3.677 </x-m>
+	  <y-m>  0.000 </y-m>
+	  <z-m>  0.432 </z-m>
+	</center>
+	<axis>
+	  <x>  0 </x>
+	  <y> -1 </y>
+	  <z>  0 </z>
+	</axis>
+      </animation>
+      
+      <!--Left Gear-->
+      
+      
+      <animation>
+	<type>translate</type>
+	<object-name>LGear.001</object-name>
+	<object-name>LGear.002</object-name>
+	<object-name>LGear.000</object-name>
+	<property>gear/gear[1]/compression-norm</property>
+	<center>
+	  <x-m> 5.430 </x-m>
+	  <y-m> -3.740 </y-m>
+	  <z-m>  0.581 </z-m>
+	</center>
+	<axis>
+	  <x>0.0</x>
+	  <y>-0</y>
+	  <z>1.0</z>
+	</axis>
+      </animation>
+      
+      <animation>
+	<type>spin</type>
+	<object-name>LGear.002</object-name>
+	<object-name>LGear.002</object-name>
+	<property>/gear/gear[1]/rollspeed-ms</property>
+	<factor> 30 </factor>
+	<center>
+	  <x-m> 5.430 </x-m>
+	  <y-m> -3.740 </y-m>
+	  <z-m>  0.581 </z-m>
+	</center>
+	<axis>
+	  <x>  0 </x>
+	  <y> -1 </y>
+	  <z>  0 </z>
+	</axis>
+      </animation>
+      
+      <!--Right Gear-->
+      
+      
+      <animation>
+	<type>translate</type>
+	<object-name>RGear</object-name>
+	<object-name>RGear.001</object-name>
+	<object-name>RGear.002</object-name>
+	<property>gear/gear[1]/compression-norm</property>
+	<center>
+	  <x-m> 5.430 </x-m>
+	  <y-m> 3.740 </y-m>
+	  <z-m>  0.581 </z-m>
+	</center>
+	<axis>
+	  <x>0.0</x>
+	  <y>-0</y>
+	  <z>1.0</z>
+	</axis>
+      </animation>
+      
+      <animation>
+	<type>spin</type>
+	<object-name>RGear.001</object-name>
+	<object-name>RGear.002</object-name>
+	<property>/gear/gear[1]/rollspeed-ms</property>
+	<factor> 30 </factor>
+	<center>
+	  <x-m> 5.430 </x-m>
+	  <y-m> 3.740 </y-m>
+	  <z-m>  0.581 </z-m>
+	</center>
+	<axis>
+	  <x>  0 </x>
+	  <y> -1 </y>
+	  <z>  0 </z>
+	</axis>
+      </animation>
+      
+      <!-- Turbine blades -->
+      
+      <animation>
+	<type>spin</type>
+	<object-name>TurbineR</object-name>
+	<property>rotors/main/rpm</property>
+	<center>
+	  <x-m>-3.335</x-m>
+	  <y-m>0.554</y-m>
+	  <z-m>4.489</z-m>
+	</center>
+	<axis>
+	  <x>1.0</x>
+	  <y>0.0</y>
+	  <z>0.0</z>
+	</axis>
+      </animation>
+      
+      <animation>
+	<type>spin</type>
+	<object-name>TurbineL</object-name>
+	<property>rotors/main/rpm</property>
+	<center>
+	  <x-m>-3.335</x-m>
+	  <y-m>-0.534</y-m>
+	  <z-m>4.489</z-m>
+	</center>
+	<axis>
+	  <x>1.0</x>
+	  <y>0.0</y>
+	  <z>0.0</z>
+	</axis>
+      </animation>
+      
+      <!--exhaust-->
+      
+      <model>
+	<path>Aircraft/MI-6PS/Models/effects/exhaust_eng1.xml</path>
+	<offsets>
+	  <x-m>1.896</x-m>
+	  <y-m>1.287</y-m>
+	  <z-m>5.012</z-m> 
+	  <roll-deg>    0 </roll-deg>
+	  <pitch-deg>   95 </pitch-deg>
+	  <heading-deg> 50 </heading-deg>
+	</offsets>
+      </model>
+      
+      <model>
+	<path>Aircraft/MI-6PS/Models/effects/exhaust_eng2.xml</path>
+	<offsets>
+	  <x-m>1.896</x-m>
+	  <y-m>-1.287</y-m>
+	  <z-m>5.012</z-m> 
+	  <roll-deg>    0 </roll-deg>
+	  <pitch-deg>   95 </pitch-deg>
+	  <heading-deg> -50 </heading-deg>
+	</offsets>
+      </model>
+      
+      <!-- Doors Navigator-->
+      
+      <animation>
+	<type>pick</type>
+	<object-name>N-Door</object-name>
+	<object-name>N-Door.001</object-name>
+	<object-name>N-Door-glass</object-name>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+	    <command>nasal</command>
+	    <script>doors.n.toggle();</script>
+	  </binding>
+	</action>
+      </animation>
+      
+      <animation>
+	<type>rotate</type>
+	<object-name>N-Door</object-name>
+	<object-name>N-Door.001</object-name>
+	<object-name>N-Door-glass</object-name>
+	<object-name>icing.001</object-name>
+	<property>sim/multiplay/generic/float[0]</property>
+	<factor>-120</factor>
+	<center>
+	  <x-m>-6.283</x-m>
+	  <y-m>1.010</y-m>
+	  <z-m>2.301</z-m>
+	</center>
+	<axis>
+	  <x>0</x>
+	  <y>0</y>
+	  <z>1</z>
+	</axis>
+      </animation>
+      
+      <!-- Doors Pilot right-->
+      
+      <animation>
+	<type>pick</type>
+	<object-name>PilotDoorR</object-name>
+	<object-name>PilotDoorR.001</object-name>
+	<object-name>PilotDoorR.002</object-name>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+	    <command>nasal</command>
+	    <script>doors.pr.toggle();</script>
+	  </binding>
+	</action>
+      </animation>
+      
+      <animation>
+	<type>rotate</type>
+	<object-name>PilotDoorR</object-name>
+	<object-name>PilotDoorR.001</object-name>
+	<object-name>PilotDoorR.002</object-name>
+	<object-name>icing.004</object-name>
+	<property>sim/multiplay/generic/float[1]</property>
+	<factor>-97</factor>
+	<axis>
+	  <x1-m> -5.487 </x1-m>
+	  <y1-m>  0.984 </y1-m>
+	  <z1-m>  3.372 </z1-m>
+	  <x2-m> -5.661 </x2-m>
+	  <y2-m>  1.039 </y2-m>
+	  <z2-m>  2.984 </z2-m>
+	</axis>
+      </animation>
+      
+      <!-- Doors Pilot left-->
+      
+      <animation>
+	<type>pick</type>
+	<object-name>PilotDoorL</object-name>
+	<object-name>PilotDoorL.001</object-name>
+	<object-name>PilotDoorL.002</object-name>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+	    <command>nasal</command>
+	    <script>doors.pl.toggle();</script>
+	  </binding>
+	</action>
+      </animation>
+      
+      <animation>
+	<type>rotate</type>
+	<object-name>PilotDoorL</object-name>
+	<object-name>PilotDoorL.001</object-name>
+	<object-name>PilotDoorL.002</object-name>
+	<object-name>icing.002</object-name>
+	<property>sim/multiplay/generic/float[2]</property>
+	<factor>97</factor>
+	<axis>
+	  <x1-m> -5.487 </x1-m>
+	  <y1-m>  -0.983 </y1-m>
+	  <z1-m>  3.372 </z1-m>
+	  <x2-m> -5.661 </x2-m>
+	  <y2-m>  -1.038 </y2-m>
+	  <z2-m>  2.984 </z2-m>
+	</axis>
+      </animation>
+      
+      <!-- Emergency Doors left-->
+      
+      <animation>
+	<type>pick</type>
+	<object-name>E-Door</object-name>
+	<object-name>E-Door.001</object-name>
+	<object-name>E-Door.002</object-name>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+	    <command>nasal</command>
+	    <script>doors.e.toggle();</script>
+	  </binding>
+	</action>
+      </animation>
+      
+      <animation>
+	<type>rotate</type>
+	<object-name>E-Door</object-name>
+	<object-name>E-Door.001</object-name>
+	<object-name>E-Door.002</object-name>
+	<object-name>icing.003</object-name>
+	<property>sim/multiplay/generic/float[3]</property>
+	<factor>105</factor>
+	<axis>
+	  <x1-m> -4.626 </x1-m>
+	  <y1-m>  -1.148 </y1-m>
+	  <z1-m>  3.292 </z1-m>
+	  <x2-m> -4.628 </x2-m>
+	  <y2-m>  -1.207 </y2-m>
+	  <z2-m>  3.043 </z2-m>
+	</axis>
+      </animation>
+      
+      <!-- Cargo Doors left-->
+      
+      <animation>
+	<type>pick</type>
+	<object-name>BackDoorL</object-name>
+	<object-name>BackDoorL.001</object-name>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+	    <command>nasal</command>
+	    <script>doors.c.toggle();</script>
+	  </binding>
+	</action>
+      </animation>
+      
+      <animation>
+	<type>rotate</type>
+	<object-name>BackDoorL</object-name>
+	<object-name>BackDoorL.001</object-name>
+	<property>sim/multiplay/generic/float[4]</property>
+	<factor>-90</factor>
+	<axis>
+	  <x1-m> 8.598 </x1-m>
+	  <y1-m>  -1.583 </y1-m>
+	  <z1-m>  1.524 </z1-m>
+	  <x2-m> 10.039 </x2-m>
+	  <y2-m>  -1.427 </y2-m>
+	  <z2-m>  2.757 </z2-m>
+	</axis>
+      </animation>
+      
+      <!-- Cargo Doors right -->
+      
+      <animation>
+	<type>pick</type>
+	<object-name>BackDoorR</object-name>
+	<object-name>BackDoorR.001</object-name>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+	    <command>nasal</command>
+	    <script>doors.c.toggle();</script>
+	  </binding>
+	</action>
+      </animation>
+      
+      <animation>
+	<type>rotate</type>
+	<object-name>BackDoorR</object-name>
+	<object-name>BackDoorR.001</object-name>
+	<property>sim/multiplay/generic/float[4]</property>
+	<factor>90</factor>
+	<axis>
+	  <x1-m> 8.598 </x1-m>
+	  <y1-m>  1.583 </y1-m>
+	  <z1-m>  1.524 </z1-m>
+	  <x2-m> 10.039 </x2-m>
+	  <y2-m>  1.427 </y2-m>
+	  <z2-m>  2.757 </z2-m>
+	</axis>
+      </animation>
+      
+      <!-- Cargo Doors center -->
+      
+      <animation>
+	<type>pick</type>
+	<object-name>BackDoorM</object-name>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+	    <command>nasal</command>
+	    <script>doors.c.toggle();</script>
+	  </binding>
+	</action>
+      </animation>
+      
+      <animation>
+	<type>rotate</type>
+	<object-name>BackDoorM</object-name>
+	<property>sim/multiplay/generic/float[4]</property>
+	<factor>-30</factor>
+	<axis>
+	  <x1-m> 8.243 </x1-m>
+	  <y1-m>  0.565 </y1-m>
+	  <z1-m>  0.846 </z1-m>
+	  <x2-m> 8.243 </x2-m>
+	  <y2-m>  -0.561 </y2-m>
+	  <z2-m>  0.846 </z2-m>
+	</axis>
+      </animation>
+      
+      <!-- Bottom Tow Doors -->
+      
+      <animation>
+	<type>pick</type>
+	<object-name>BodenKlappeAL</object-name>
+	<object-name>BodenKlappeAR</object-name>
+	<object-name>BodenKlappeL</object-name>
+	<object-name>BodenKlappeR</object-name>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+	    <command>nasal</command>
+	    <script>doors.BK.toggle();</script>
+	  </binding>
+	</action>
+      </animation>
+      
+      <animation>
+	<type>rotate</type>
+	<object-name>BodenKlappeAL</object-name>
+	<property>sim/multiplay/generic/float[11]</property>
+	<factor>-89.5</factor>
+	<axis>
+	  <x1-m> 4.247 </x1-m>
+	  <y1-m> -0.592 </y1-m>
+	  <z1-m>  0.906 </z1-m>
+	  <x2-m> 2.132 </x2-m>
+	  <y2-m>-0.592 </y2-m>
+	  <z2-m> 0.989 </z2-m>
+	</axis>
+      </animation>
+      
+      <animation>
+	<type>rotate</type>
+	<object-name>BodenKlappeAR</object-name>
+	<property>sim/multiplay/generic/float[11]</property>
+	<factor>89.5</factor>
+	<axis>
+	  <x1-m> 4.247 </x1-m>
+	  <y1-m> 0.597 </y1-m>
+	  <z1-m>  0.906 </z1-m>
+	  <x2-m> 2.132 </x2-m>
+	  <y2-m>0.597 </y2-m>
+	  <z2-m> 0.989 </z2-m>
+	</axis>
+      </animation>
+      
+      <animation>
+	<type>rotate</type>
+	<object-name>BodenKlappeIL</object-name>
+	<property>sim/multiplay/generic/float[11]</property>
+	<factor>-179.5</factor>
+	<axis>
+	  <x1-m> 4.224 </x1-m>
+	  <y1-m> -0.595 </y1-m>
+	  <z1-m>  1.525 </z1-m>
+	  <x2-m> 2.158 </x2-m>
+	  <y2-m>-0.594 </y2-m>
+	  <z2-m> 1.577 </z2-m>
+	</axis>
+      </animation>
+      
+      <animation>
+	<type>rotate</type>
+	<object-name>BodenKlappeIR</object-name>
+	<property>sim/multiplay/generic/float[11]</property>
+	<factor>179.5</factor>
+	<axis>
+	  <x1-m> 4.225 </x1-m>
+	  <y1-m>  0.596 </y1-m>
+	  <z1-m>  1.525 </z1-m>
+	  <x2-m> 2.159 </x2-m>
+	  <y2-m> 0.595 </y2-m>
+	  <z2-m> 1.577 </z2-m>
+	</axis>	
+      </animation>
+      
+      <!-- TopWindow -->
+      
+      <animation>
+	<type>pick</type>
+	<object-name>Fuselage.091</object-name>
+	<action>
+	  <button>0</button>
+	  <repeatable>false</repeatable>
+	  <binding>
+	    <command>nasal</command>
+	    <script>doors.BK.toggle();</script>
+	  </binding>
+	</action>
+      </animation>
+      
+      <animation>
+	<type>rotate</type>
+	<object-name>Fuselage.091</object-name>
+	<property>sim/multiplay/generic/float[11]</property>
+	<factor>-110</factor>
+	<axis>
+	  <x1-m> -4.378 </x1-m>
+	  <y1-m>  0.07602 </y1-m>
+	  <z1-m>  3.890 </z1-m>
+	  <x2-m> -4.378 </x2-m>
+	  <y2-m>  -0.150 </y2-m>
+	  <z2-m>  3.885 </z2-m>
+	</axis>
+      </animation>
+      
+      <model>
+	<path>Aircraft/MI-6PS/Models/effects/smoke/paratroopers-smoke.xml</path>
+	<offsets>
+	  <x-m> 12 </x-m>
+	  <y-m> 0 </y-m>
+	  <z-m> -3 </z-m>
+	</offsets>
+      </model>
+
+      <model>
+	<path>Aircraft/MI-6PS/Models/effects/Countermeasures/flare-trail1.xml</path>
+	<offsets>
+	  <x-m> 2 </x-m>
+	  <y-m> -1.5 </y-m>
+	  <z-m> 2 </z-m>	  
+	</offsets>
+      </model>
+      <model>
+	<path>Aircraft/MI-6PS/Models/effects/Countermeasures/flare-trail2.xml</path>
+	<offsets>
+	  <x-m> 2 </x-m>
+	  <y-m> 1.5 </y-m>
+	  <z-m> 2 </z-m>	  
+	</offsets>
+      </model>
+      
+      <!-- Rotor dirt -->
+	<model>
+		<path>Aircraft/MI-6PS/Models/effects/rotor/rotor_dirt.xml</path>
+		<offsets>
+			<x-m>  3.52 </x-m>
+			<y-m>  0.0 </y-m>
+			<z-m>  0.0 </z-m>
+		</offsets>
+	</model>
+	
+    <!-- NEW   Taxi and Landing lights-->
+ 
+ <model>
+    <path>Aircraft/MI-6PS/Models/light/mi6ps-lights.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- NEW   Beacon-Lights-->
+ 
+ <model>
+    <path>Aircraft/MI-6PS/Models/light/beacon-lights.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Ambient special effect lamps-->
+  <model>
+    <path>Aircraft/MI-6PS/Models/light/BlueAmbientLight.xml</path>
+    <offsets>
+      <x-m> -4.397 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 1.161 </z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/MI-6PS/Models/light/BlueAmbientLight.xml</path>
+    <offsets>
+      <x-m> 5.061 </x-m>
+      <y-m> 1.175 </y-m>
+      <z-m> 1.074 </z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/MI-6PS/Models/light/BlueAmbientLight.xml</path>
+    <offsets>
+      <x-m> 5.061 </x-m>
+      <y-m> -1.173 </y-m>
+      <z-m> 1.074 </z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/MI-6PS/Models/light/BlueAmbientLight.xml</path>
+    <condition>
+	    <greater-than>
+	      <property>sim/multiplay/generic/float[4]</property>
+	      <value>0.15</value>
+	    </greater-than>
+	  </condition>
+    <offsets>
+      <x-m> 14.079 </x-m>
+      <y-m> 0.003 </y-m>
+      <z-m> 2.971 </z-m>
+    </offsets>
+  </model>
+      
+      
+      </PropertyList>

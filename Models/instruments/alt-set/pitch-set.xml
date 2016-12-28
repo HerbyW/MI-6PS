@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+    #############################################################################
+    #    (C) 2007 by Yurik V. Nikiforoff - port for FGFS,  FDM, 	  	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
+<!--
+    #######################################################################################################
+    Arcraft development for Flightgear by Herbert Wagner 2014-2015                            Model: MI-6PS
+    Antonov AN-12BK, AN-22A, AN-225-Mrija,
+    Tuplev Tu-95MR,
+    Mil Mi-6PS
+    Yak 58, Yak-53,
+    Berijev Be-200Altair
+    SpaceShuttle
+    Development is ongoing, see latest versions: www.github.com/HerbyW
+    
+    This file is licenced under the terms mentioned in the LICENCE.txt file.
+    Mi6dev was initially started by Moritz Röhrich (Blender3D) 2010-2012 as CC 3.0 BY NC SA.
+    The 3D-model still holds the CC 3.0 BY NC SA license, everything else is GNU GPL v3 License.
+    
+    This version is now going forward and will give you a full automatic flight control-system,
+    lots of animations, instrumentation and full Multiplayer support for Parachuters and Elephant transport.
+    Liveries, Fire fighting and SAR rescue is in preparation.
+    Removing this header is probited.    
+    ########################################################################################################
+-->
+    
+    
+<PropertyList>
+ <path>pitch-set.ac</path>
+
+ <!--External panel lighting-->
+<animation>
+  <type>material</type>   
+  <object-name>pitch_wheel</object-name>
+  <object-name>pitch_nandle_base</object-name>  
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+</animation>
+
+<!--Autopilot wheels-->
+<animation>
+  <type>rotate</type>
+  <object-name>pitch_wheel</object-name>
+  <property>autopilot/settings/vertical-speed-fpm</property>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.14988</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!--Wheels-->
+
+<animation>
+  <type>pick</type>
+  <object-name>pitch_wheel</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <binding>
+      <command>property-assign</command>
+      <property>/autopilot/settings/vertical-speed-fpm</property>
+      <value>0.0</value>
+    </binding> 
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>pitch_wheel</object-name>
+  <visible>true</visible>
+  <action>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+       <command>nasal</command>
+       <script>mi6.adjustPitch(-100,100);</script>
+     </binding>  
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>pitch_wheel</object-name>
+  <visible>true</visible>
+  <action>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+       <command>nasal</command>
+       <script>mi6.adjustPitch(100,100);</script>
+     </binding>    
+  </action>
+</animation>
+
+</PropertyList>

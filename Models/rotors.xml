@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+
+<!--
+    #######################################################################################################
+    Arcraft development for Flightgear by Herbert Wagner 2014-2015                            Model: MI-6PS
+    Antonov AN-12BK, AN-22A, AN-225-Mrija,
+    Tuplev Tu-95MR,
+    Mil Mi-6PS
+    Yak 58, Yak-53,
+    Berijev Be-200Altair
+    SpaceShuttle
+    Development is ongoing, see latest versions: www.github.com/HerbyW
+    
+    This file is licenced under the terms mentioned in the LICENCE.txt file.
+    Mi6dev was initially started by Moritz Röhrich (Blender3D) 2010-2012 as CC 3.0 BY NC SA.
+    The 3D-model still holds the CC 3.0 BY NC SA license, everything else is GNU GPL v3 License.
+    
+    This version is now going forward and will give you a full automatic flight control-system,
+    lots of animations, instrumentation and full Multiplayer support for Parachuters and Elephant transport.
+    Liveries, Fire fighting and SAR rescue is in preparation.
+    Removing this header is probited.    
+    ########################################################################################################
+-->
+
+<PropertyList>
+	
+	<path>Mi-6B-rotors3.ac</path>
+	
+	<animation>
+	  	<type>range</type>
+	  	<min-m>0</min-m>
+	  	<max-m>1250</max-m>
+    	</animation>
+	
+	<!--Main Rotor-->
+	<animation>
+		<name>RotorTotal</name>
+		<object-name>Axis</object-name>
+		<object-name>HeadC</object-name>
+		<object-name>Swashplate</object-name>
+		<object-name>Blade1</object-name>
+		<object-name>Blade2</object-name>
+		<object-name>Blade3</object-name>
+		<object-name>Blade4</object-name>
+		<object-name>Blade5</object-name>
+		<object-name>Anker1</object-name>
+		<object-name>Anker2</object-name>
+		<object-name>Anker3</object-name>
+		<object-name>Anker4</object-name>
+		<object-name>Anker5</object-name>
+		<object-name>SteerAnker1</object-name>
+		<object-name>SteerAnker2</object-name>
+		<object-name>SteerAnker3</object-name>
+		<object-name>SteerAnker4</object-name>
+		<object-name>SteerAnker5</object-name>
+		<object-name>Steer1</object-name>
+		<object-name>Steer2</object-name>
+		<object-name>Steer3</object-name>
+		<object-name>Steer4</object-name>
+		<object-name>Steer5</object-name>
+		<object-name>BladeC1</object-name>
+		<object-name>BladeC2</object-name>
+		<object-name>BladeC3</object-name>
+		<object-name>BladeC4</object-name>
+		<object-name>BladeC5</object-name>
+		<object-name>Bolds1</object-name>
+		<object-name>Bolds2</object-name>
+		<object-name>Bolds3</object-name>
+		<object-name>Bolds4</object-name>
+		<object-name>Bolds5</object-name>
+		<object-name>ConI1</object-name>
+		<object-name>ConI2</object-name>
+		<object-name>ConI3</object-name>
+		<object-name>ConI4</object-name>
+		<object-name>ConI5</object-name>
+		<object-name>ConO1</object-name>
+		<object-name>ConO2</object-name>
+		<object-name>ConO3</object-name>
+		<object-name>ConO4</object-name>
+		<object-name>ConO5</object-name>
+		<object-name>ConM1</object-name>
+		<object-name>ConM2</object-name>
+		<object-name>ConM3</object-name>
+		<object-name>ConM4</object-name>
+		<object-name>ConM5</object-name>
+		<object-name>SteerCylBold1</object-name>
+		<object-name>SteerCylBold12</object-name>
+		<object-name>SteerCylBold2</object-name>
+		<object-name>SteerCylBold22</object-name>
+		<object-name>SteerCylBold3</object-name>
+		<object-name>SteerCylBold32</object-name>
+		<object-name>SteerCylBold4</object-name>
+		<object-name>SteerCylBold42</object-name>
+		<object-name>SteerCylBold5</object-name>
+		<object-name>SteerCylBold52</object-name>
+		<object-name>SteerCyl1</object-name>
+		<object-name>SteerCyl2</object-name>
+		<object-name>SteerCyl3</object-name>
+		<object-name>SteerCyl4</object-name>
+		<object-name>SteerCyl5</object-name>
+		<object-name>SteerPin1</object-name>
+		<object-name>SteerPin2</object-name>
+		<object-name>SteerPin3</object-name>
+		<object-name>SteerPin4</object-name>
+		<object-name>SteerPin5</object-name>
+		<object-name>Splints1</object-name>
+		<object-name>Splints2</object-name>
+		<object-name>Splints3</object-name>
+		<object-name>Splints4</object-name>
+		<object-name>Splints5</object-name>
+		<object-name>Sens1</object-name>
+		<object-name>Sens2</object-name>
+		<object-name>Sens3</object-name>
+		<object-name>Sens4</object-name>
+		<object-name>Sens5</object-name>
+		<object-name>Curve.010</object-name>
+		<object-name>Curve.006</object-name>
+		<object-name>Curve.007</object-name>
+		<object-name>Curve.008</object-name>
+		<object-name>Curve.009</object-name>
+		<object-name>Curve.029</object-name>
+		<object-name>Curve.033</object-name>
+		<object-name>Curve.036</object-name>
+		<object-name>Curve.039</object-name>
+		<object-name>Curve.042</object-name>
+	</animation>
+	
+	<!--Main Rotor Tilt Pitch-->
+	<animation>
+	  <type>rotate</type>
+	  <object-name>RotorTotal</object-name>
+	  <property>sim/multiplay/generic/float[5]</property>
+	  
+	  <center>
+			<x-m>3.661</x-m><!-- 3.552 3.581-->
+			<y-m>0.0</y-m><!-- 0 -->
+			<z-m>6.367</z-m><!-- 6.698 -->
+		</center>
+		<axis>
+		  <x> 0.0</x><!-- 0.08 -->
+		  <y> 1.0</y><!-- 0 -->
+		  <z> 0.0</z><!-- -0.99 -->
+		</axis>
+	</animation>
+	
+	<!--Main Rotor Tilt Roll-->
+	<animation>
+	  <type>rotate</type>
+	  <object-name>RotorTotal</object-name>
+	  <property>sim/multiplay/generic/float[15]</property>
+	  
+	  <center>
+			<x-m>3.661</x-m><!-- 3.552 3.581-->
+			<y-m>0.0</y-m><!-- 0 -->
+			<z-m>6.367</z-m><!-- 6.698 -->
+		</center>
+		<axis>
+		  <x> 1.0</x><!-- 0.08 -->
+		  <y> 0.0</y><!-- 0 -->
+		  <z> 0.0</z><!-- -0.99 -->
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>RotorTotal</object-name>
+		<property>rotors/main/rpm</property>
+		<center>
+			<x-m>3.581</x-m><!-- 3.552 -->
+			<y-m>0</y-m><!-- 0 -->
+			<z-m>6.367</z-m><!-- 6.698 -->
+		</center>
+		<axis>
+		  <x> 0.08</x><!-- 0.08 -->
+		  <y> 0.0</y><!-- 0 -->
+		  <z>-0.907</z><!-- -0.99 -->
+		</axis>
+	</animation>
+	
+	<!--Incedence Degree!!-->
+	
+	<animation>
+		<name>Blade1Total</name>
+		<object-name>Blade1</object-name>
+		<object-name>Steer1</object-name>
+		<object-name>BladeC1</object-name>
+		<object-name>Bolds1</object-name>
+		<object-name>Splints1</object-name>
+		<object-name>Curve.010</object-name>
+	</animation>
+	
+	<animation>
+		<name>Blade2Total</name>
+		<object-name>Blade2</object-name>
+		<object-name>Steer2</object-name>
+		<object-name>BladeC2</object-name>
+		<object-name>Bolds2</object-name>
+		<object-name>Splints2</object-name>
+		<object-name>Curve.006</object-name>
+	</animation>
+	
+	<animation>
+		<name>Blade3Total</name>
+		<object-name>Blade3</object-name>
+		<object-name>Steer3</object-name>
+		<object-name>BladeC3</object-name>
+		<object-name>Bolds3</object-name>
+		<object-name>Splints3</object-name>
+		<object-name>Curve.007</object-name>
+	</animation>
+	
+	<animation>
+		<name>Blade4Total</name>
+		<object-name>Blade4</object-name>
+		<object-name>Steer4</object-name>
+		<object-name>BladeC4</object-name>
+		<object-name>Bolds4</object-name>
+		<object-name>Splints4</object-name>
+		<object-name>Curve.008</object-name>
+	</animation>
+	
+	<animation>
+		<name>Blade5Total</name>
+		<object-name>Blade5</object-name>
+		<object-name>Steer5</object-name>
+		<object-name>BladeC5</object-name>
+		<object-name>Bolds5</object-name>
+		<object-name>Splints5</object-name>
+		<object-name>Curve.009</object-name>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Blade1Total</object-name>
+		<property>sim/multiplay/generic/float[6]</property>
+		<center>
+			<x-m>2.589</x-m>
+			<y-m>-2.027</y-m>
+			<z-m>6.615</z-m>
+		</center>
+		<axis>
+			<x>6.216</x>
+			<y>14.220</y>
+			<z>0.607</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Blade2Total</object-name>
+		<property>sim/multiplay/generic/float[7]</property>
+		<center>
+			<x-m>1.332</x-m>
+			<y-m>0.292</y-m>
+			<z-m>6.506</z-m>
+		</center>
+		<axis>
+			<x>15.392</x>
+			<y>-1.502</y>
+			<z>1.356</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Blade3Total</object-name>
+		<property>sim/multiplay/generic/float[8]</property>
+		<center>
+			<x-m>3.141</x-m>
+			<y-m>2.207</y-m>
+			<z-m>6.664</z-m>
+		</center>
+		<axis>
+			<x>3.316</x>
+			<y>-15.165</y>
+			<z>0.289</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Blade4Total</object-name>
+		<property>sim/multiplay/generic/float[9]</property>
+		<center>
+			<x-m>5.515</x-m>
+			<y-m>1.073</y-m>
+			<z-m>6.871</z-m>
+		</center>
+		<axis>
+			<x>-13.343</x>
+			<y>-7.852</y>
+			<z>-1.169</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Blade5Total</object-name>
+		<property>sim/multiplay/generic/float[10]</property>
+		<center>
+			<x-m>5.174</x-m>
+			<y-m>-1.545</y-m>
+			<z-m>6.842</z-m>
+		</center>
+		<axis>
+			<x>-11.562</x>
+			<y>10.311</y>
+			<z>-1.013</z>
+		</axis>
+	</animation>
+	
+	
+	<!--TAILROTOR-->
+	
+	<animation>
+		<name>Tailrotor</name>
+		<object-name>TailrotorSwashplate</object-name>
+		<object-name>TailrotorBlade1</object-name>
+		<object-name>TailAxis</object-name>
+		<object-name>Mesh.001</object-name>
+		<object-name>Cylinder.004</object-name>
+		<object-name>Cylinder.005</object-name>
+		<object-name>Circle.120</object-name>
+	</animation>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>Tailrotor</object-name>
+		<property>rotors/main/rpm</property>
+		<center>
+			<x-m>25.068</x-m>
+			<y-m>1.421</y-m>
+			<z-m>7.142</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	
+</PropertyList> 

@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+
+<!-- Custom Mil 27V/360V systems -->
+
+<PropertyList>
+	
+	<!-- Supplier list -->
+	
+	<supplier>
+		<name>Battery</name>
+		<prop>/systems/electrical/suppliers/battery</prop>
+		<kind>battery</kind>
+		<volts>27</volts>  
+		<amps>60</amps>    
+	</supplier>
+	
+	<supplier>
+		<name>Generator 1</name>
+		<prop>/systems/electrical/suppliers/generator[0]</prop>
+		<kind>alternator</kind>
+		<rpm-source>/engines/engine[0]/n2</rpm-source>
+		<volts>27</volts> 
+		<amps>444</amps> 
+	</supplier>
+	
+	<supplier>
+		<name>Generator 2</name>
+		<prop>/systems/electrical/suppliers/generator[1]</prop>
+		<kind>alternator</kind>
+		<rpm-source>/engines/engine[1]/n2</rpm-source>
+		<volts>27</volts>  
+		<amps>444</amps> 
+	</supplier>
+	
+	<supplier>
+		<name>Alternator 1</name>
+		<prop>/systems/electrical/suppliers/alternator[0]</prop>
+		<kind>alternator</kind>
+		<rpm-source>/engines/engine[0]/n2</rpm-source>
+		<volts>360</volts> 
+		<amps>250</amps> 
+	</supplier>
+	
+	<supplier>
+		<name>Alternator 2</name>
+		<prop>/systems/electrical/suppliers/alternator[1]</prop>
+		<kind>alternator</kind>
+		<rpm-source>/engines/engine[1]/n2</rpm-source>
+		<volts>360</volts>  
+		<amps>250</amps> 
+	</supplier>
+	
+	<supplier>
+		<name>APU</name>
+		<prop>/systems/electrical/suppliers/APU</prop>
+		<kind>alternator</kind>
+		<rpm-source>/engines/engine[2]/n2</rpm-source>
+		<volts>360</volts> 
+		<amps>66</amps>
+	</supplier>
+	
+	<!-- Bus list -->
+	
+	<bus>
+		<name>Bus27V</name>
+		<number>0</number>
+		<prop>/systems/electrical/outputs/Bus27V</prop>
+		<!-- Avionics outputs tied directly to bus, note that this is a -->
+		<!-- simple way to provide electrical outputs if you don't need -->
+		<!-- to put a circuit breaker or switch in front of the output. -->
+		<!-- *AND* if you don't care about back propogating the output -->
+		<!-- current. -->
+	</bus>
+	
+	<bus>
+		<name>Bus360V</name>
+		<number>0</number>
+		<prop>/systems/electrical/outputs/Bus360V</prop>
+	</bus>
+
+       <!-- Output List -->
+	<output>
+		<name>Main Attitude Indicator</name>
+		<prop>instrumentation/attitude-indicator[0]/spin</prop>
+	</output>
+	
+	<output>
+		<name>Reserve Attitude Indicator</name>
+		<prop>instrumentation/attitude-indicator[1]/spin</prop>
+	</output>
+	
+	<!-- connect in power sources -->
+	
+	<connector>
+		<input>Alternator 1</input>
+		<output>Bus360V</output>
+		<switch>
+			<prop>/controls/engines/engine[0]/alternator</prop>
+		</switch>
+	</connector>
+	
+	<connector>
+		<input>Alternator 2</input>
+		<output>Bus360V</output>
+		<switch>
+			<prop>/controls/engines/engine[1]/alternator</prop>
+		</switch>
+	</connector>
+	
+	<connector>
+		<input>Generator 1</input>
+		<output>Bus27V</output>
+		<switch>
+			<prop>/controls/engines/engine[0]/generator</prop>
+		</switch>
+	</connector>
+	
+	<connector>
+		<input>Generator 2</input>
+		<output>Bus27V</output>
+		<switch>
+			<prop>/controls/engines/engine[1]/generator</prop>
+		</switch>
+	</connector>
+	
+	<connector>
+		<input>APU</input>
+		<output>Bus360V</output>
+	</connector>
+	
+	
+	<!-- connect master bus outputs with switches-->
+	
+	<connector>
+		<input>Bus27V</input>
+		<output>Main Attitude Indicator</output>
+		<switch>
+			<prop>instrumentation/attitude-indicator[0]/power</prop>
+		</switch>
+	</connector>
+	
+	<connector>
+		<input>Bus27V</input>
+		<output>Reserve Attitude Indicator</output>
+		<switch>
+			<prop>instrumentation/attitude-indicator[1]/power</prop>
+		</switch>
+	</connector>
+	
+</PropertyList> 

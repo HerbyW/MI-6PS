@@ -1,0 +1,49 @@
+CC 3.0 BY NC SA
+
+This work is licensed under the Creative Commons
+Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+To view a copy of this license, visit
+
+http://creativecommons.org/licenses/by-nc-sa/3.0/
+http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode
+
+or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+<!--
+    #######################################################################################################
+    Arcraft development for Flightgear by Herbert Wagner 2014-2015                            Model: MI-6PS
+    Antonov AN-12BK, AN-22A, AN-225-Mrija,
+    Tuplev Tu-95MR,
+    Mil Mi-6PS
+    Yak 58, Yak-53,
+    Berijev Be-200Altair
+    SpaceShuttle
+    Development is ongoing, see latest versions: www.github.com/HerbyW
+    
+    This file is licenced under the terms mentioned in the LICENCE.txt file.
+    Mi6dev was initially started by Moritz Röhrich (Blender3D) 2010-2012 as CC 3.0 BY NC SA.
+    The 3D-model still holds the CC 3.0 BY NC SA license, everything else is GNU GPL v3 License.
+    
+    This version is now going forward and will give you a full automatic flight control-system, Fire fighting,
+    lots of animations, instrumentation and full Multiplayer support for Parachuters and Elephant transport.
+    Liveries and SAR rescue is in preparation.
+    Removing this header is probited.    
+    ########################################################################################################
+-->
+
+Used 3rd party things:
+
+material_alte-farbe-mit-rost.jpg mit freundlicher Genehmigung von:
+http://www.c4d-jack.de/php/textures/index.php?spgmGal=SRT_Packages/Part_IV
+
+http://www.airwar.ru/enc/ch/mi6.html
+Handbücher und Risszeichnungen
+
+http://soundbible.com/1140-Elephant.html
+Title: Elephant
+About: Elephant trumpeting sound effect. great for a zoo, circus, or african savannah scene. this is tarzans friend.
+Uploaded: 10.30.09 | License: Attribution 3.0 | Recorded by Mike Koenig | File Size: 882 KB | Downloads: 67087
+
+Splash sreen: ShinePhantom, der Nutzungsrechtsinhaber dieses Werkes, veröffentlicht es hiermit unter der folgenden Lizenz:
+Creative Commons Namensnennung Weitergabe unter gleichen Bedingungen
+Diese Datei ist unter der Creative-Commons-Lizenz „Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 nicht portiert“ lizenziert.

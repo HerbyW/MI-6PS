@@ -1,0 +1,69 @@
+<PropertyList>
+	<path>altimeter.ac</path>AltimeterGlass
+	
+	<animation>   
+	  <object-name>AltimeterGlass</object-name>  
+	</animation>	
+	
+	<animation>
+	  <type>noshadow</type>
+	  <object-name>AltimeterGlass</object-name>
+	</animation>
+	
+	<animation>
+	  <type>shader</type>
+	  <shader>chrome</shader>
+	  <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+	  <object-name>AltimeterGlass</object-name>
+	</animation>
+	
+	
+	<animation>
+		<name>altimeter</name>
+		<object-name>Altimeter1000</object-name>
+		<object-name>Altimeter100</object-name>
+		<object-name>Altimeter</object-name>
+		<object-name>AltimeterGlass</object-name>
+	</animation>
+	
+	<animation>
+		<type>range</type>
+		<object-name>altimeter</object-name>
+		<min-m>0</min-m>
+		<max-m>7</max-m>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Altimeter1000</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<factor>-0.0109</factor>
+		<center>
+			<x-m>-6.057</x-m>
+			<y-m>-0.700</y-m>
+			<z-m>3.036</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Altimeter100</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<factor>-0.109</factor>
+		<center>
+			<x-m>-6.057</x-m>
+			<y-m>-0.700</y-m>
+			<z-m>3.036</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+</PropertyList>

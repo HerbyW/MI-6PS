@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Sikorsky S76C custom flight recorder configuration
+     Marc Kraus, Jan. 2014 
+     Based on Thorsten Brehms work
+-->
+
+<PropertyList>
+
+	<!-- selected active flight recorder configuration for replay system -->
+	<replay-config type="int">0</replay-config>
+
+<!-- 
+	<config n="0" include="/Aircraft/Generic/flightrecorder/generic-jet.xml"/>
+ -->
+
+<config n="0">
+	<name type="string">S76C Flight Recorder</name>
+	<!-- include generic stuff -->
+	<signals include="/Aircraft/Generic/flightrecorder/components/position.xml"/>
+	<signals include="/Aircraft/Generic/flightrecorder/components/controls.xml"/>
+	<signals include="/Aircraft/Generic/flightrecorder/components/environment.xml"/>
+	<signals include="/Aircraft/Generic/flightrecorder/components/tanks.xml">
+		<count type="int">2</count> 
+	</signals>
+	
+	<!--  custom properties -->
+	<signals>
+	
+	<!-- position properties -->
+		<signal>
+			<type>float</type>
+			<property type="string">/position/gear-agl-m</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">instrumentation/altimeter/DH</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">position/gear-agl-ft</property>
+		</signal>
+
+	<!-- the doors -->
+		<signal>
+			<type>float</type>
+			<property type="string">sim/multiplay/generic/float[0]</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">sim/multiplay/generic/float[1]</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">sim/multiplay/generic/float[2]</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">sim/multiplay/generic/float[3]</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">sim/multiplay/generic/float[4]</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">sim/multiplay/generic/float[5]</property>
+		</signal>
+
+	
+	<!-- MAIN rotor and blade properties -->
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/main/roll-deg</property>
+			<interpolation type="string">angular-deg</interpolation>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/main/rpm</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/main/stall</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/main/torque</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/main/yaw-deg</property>
+			<interpolation type="string">angular-deg</interpolation>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/main/cone-deg</property>
+			<interpolation type="string">angular-deg</interpolation>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/main/blade/flap-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/main/blade/incidence-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<interpolation>angular-deg</interpolation>
+			<property type="string">/rotors/main/blade/position-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/main/blade[1]/flap-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/main/blade[1]/incidence-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<interpolation>angular-deg</interpolation>
+			<property type="string">/rotors/main/blade[1]/position-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/main/blade[2]/flap-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/main/blade[2]/incidence-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<interpolation>angular-deg</interpolation>
+			<property type="string">/rotors/main/blade[2]/position-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/main/blade[3]/flap-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/main/blade[3]/incidence-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<interpolation>angular-deg</interpolation>
+			<property type="string">/rotors/main/blade[3]/position-deg</property>
+		</signal>
+		
+		<!--  TAIL rotor and blade properties -->
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/tail/roll-deg</property>
+			<interpolation type="string">angular-deg</interpolation>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/tail/rpm</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/tail/stall</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/tail/torque</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/tail/yaw-deg</property>
+			<interpolation type="string">angular-deg</interpolation>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/tail/cone-deg</property>
+			<interpolation type="string">angular-deg</interpolation>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/tail/blade/flap-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/tail/blade/incidence-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<interpolation>angular-deg</interpolation>
+			<property type="string">/rotors/tail/blade/position-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/tail/blade[1]/flap-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/tail/blade[1]/incidence-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<interpolation>angular-deg</interpolation>
+			<property type="string">/rotors/tail/blade[1]/position-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/tail/blade[2]/flap-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/tail/blade[2]/incidence-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<interpolation>angular-deg</interpolation>
+			<property type="string">/rotors/tail/blade[2]/position-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/tail/blade[3]/flap-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/rotors/tail/blade[3]/incidence-deg</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<interpolation>angular-deg</interpolation>
+			<property type="string">/rotors/tail/blade[3]/position-deg</property>
+		</signal>
+		
+		
+	<!-- switch properties -->
+		<signal>
+			<type>float</type>
+			<property type="string">/gear/gear[0]/rollspeed-ms</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/gear/gear[1]/rollspeed-ms</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/gear/gear[2]/rollspeed-ms</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/gear/gear[0]/position-norm</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/gear/gear[1]/position-norm</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">/gear/gear[2]/position-norm</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">sim/multiplay/generic/float[6]</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">sim/multiplay/generic/float[7]</property>
+		</signal>
+		<signal>
+			<type>float</type>
+			<property type="string">sim/multiplay/generic/float[8]</property>
+		</signal>
+		
+	</signals>
+	
+</config>
+
+</PropertyList>

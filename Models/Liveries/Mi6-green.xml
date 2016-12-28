@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<!--
+Copyright (C) Herbert Wagner Dec2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
+-->
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">green</name>
+            <texture>Liveries/green.png</texture>
+        </livery>
+    </model>    
+</sim>
+</PropertyList>

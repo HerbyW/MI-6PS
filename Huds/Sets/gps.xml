@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) Herbert Wagner Nov2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
+-->
+
+<PropertyList>
+  
+	<!-- GPS waypoint -->
+	
+	<label>
+	  <width>2</width>
+	  <height>2</height>
+	  <format>GPS OBS:%5s</format>
+	  <halign>left</halign>
+	  <input>
+	    <property>/instrumentation/gps/wp/wp[1]/ID</property>
+	  </input>
+	  
+	  <condition>
+	    <equals>
+	      <property>/instrumentation/gps/mode</property>
+	      <value>obs</value>
+	    </equals>
+	  </condition>
+	</label>
+	
+	<label>
+	  <width>2</width>
+	  <height>2</height>
+	  <x>80</x>
+	  <format>(TO)</format>
+	  <halign>left</halign>
+	  
+	  <condition>
+	    <and>
+	      <equals>
+		<property>/instrumentation/gps/mode</property>
+		<value>obs</value>
+	      </equals>
+	      <not><property>/instrumentation/gps/from-flag</property></not>
+	    </and>
+	  </condition>
+	</label>
+	
+	<label>
+	  <width>2</width>
+	  <height>2</height>
+	  <x>80</x>
+	  <format>(FROM)</format>
+	  <halign>left</halign>
+	  
+	  <condition>
+	    <and>
+	      <equals>
+		<property>/instrumentation/gps/mode</property>
+		<value>obs</value>
+	      </equals>
+	      <property>/instrumentation/gps/from-flag</property>
+	    </and>
+	  </condition>
+	</label>
+	
+	<label>
+	  <width>2</width>
+	  <height>2</height>
+	  <format>GPS DTO:%5s</format>
+	  <halign>left</halign>
+	  <input>
+	    <property>/instrumentation/gps/wp/wp[1]/ID</property>
+	  </input>
+	  
+	  <condition>
+	    <property>/instrumentation/gps/wp/wp[1]/valid</property>
+	    <equals>
+	      <property>/instrumentation/gps/mode</property>
+	      <value>dto</value>
+	    </equals>
+	  </condition>
+	</label>
+	
+	<label>
+	  <width>2</width>
+	  <height>2</height>
+	  <format>GPS LEG:%5s</format>
+	  <halign>left</halign>
+	  <input>
+	    <property>/instrumentation/gps/wp/wp[0]/ID</property>
+	  </input>
+	  
+	  <condition>
+	    <property>/instrumentation/gps/wp/wp[1]/valid</property>
+	    <equals>
+	      <property>/instrumentation/gps/mode</property>
+	      <value>leg</value>
+	    </equals>
+	   </condition>	  
+	  </label>
+	  
+	  <label>
+	    <width>2</width>
+	    <height>2</height>
+	    <x>80</x>
+	    <format>-&gt;%5s</format>
+	    <halign>left</halign>
+	    <input>
+	      <property>/instrumentation/gps/wp/wp[1]/ID</property>
+	    </input>
+	    
+	    <condition>
+	      <property>/instrumentation/gps/wp/wp[1]/valid</property>
+	      <equals>
+		<property>/instrumentation/gps/mode</property>
+		<value>leg</value>
+	      </equals>
+	    </condition>	    
+	    </label>
+	    
+	    
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <y>-10</y>
+	      <format>D: %4.1fnm</format>
+	      <halign>left</halign>
+	      <input>
+		<property>/instrumentation/gps/wp/wp[1]/distance-nm</property>
+	      </input>
+	      <condition>
+		<property>/instrumentation/gps/wp/wp[1]/valid</property>
+	      </condition>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>60</x>
+	      <y>-10</y>
+	      <format>TTW:%s</format>
+	      <halign>left</halign>
+	      <input>
+		<property>/instrumentation/gps/wp/wp[1]/TTW</property>
+	      </input>
+	      <condition>
+		<property>/instrumentation/gps/wp/wp[1]/valid</property>
+	      </condition>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <y>-20</y>
+	      <format>BRG:%03d</format>
+	      <halign>left</halign>
+	      <input>
+		<property>/instrumentation/gps/wp/wp[1]/bearing-mag-deg</property>
+	      </input>
+	      <condition>
+		<property>/instrumentation/gps/wp/wp[1]/valid</property>
+	      </condition>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <y>-20</y>
+	      <x>60</x>
+	      <format>XTK: %2.1fnm</format>
+	      <halign>left</halign>
+	      <input>
+		<property>/instrumentation/gps/wp/wp[1]/course-error-nm</property>
+	      </input>
+	      
+	      <condition>
+		<property>/instrumentation/gps/wp/wp[1]/valid</property>
+		<greater-than>
+		  <expression>
+		    <abs><property>/instrumentation/gps/wp/wp[1]/course-error-nm</property></abs>
+		  </expression>
+		  <value>0.1</value>
+		</greater-than>
+	      </condition>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <y>-30</y>
+	      <format>GS:%3dkts</format>
+	      <halign>left</halign>
+	      <input>
+		<property>/instrumentation/gps/indicated-ground-speed-kt</property>
+	      </input>
+	    </label>
+	    
+	    <!--Extra Information for Mil-Mi-6 by HerbyW 10-2015 -->
+	        
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>580</x>
+	      <y>-160</y>
+	      <format>%12.0f ft</format>
+	      <halign>left</halign>
+	      <input>
+		<property>/position/altitude-ft</property>
+	      </input>
+	    </label>     
+	    
+	     <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>460</x>
+	      <y>35</y>
+	      <format>METAR: Station ID........................</format>
+	      <halign>left</halign>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>622</x>
+	      <y>35</y>		
+	      <halign>left</halign>
+	      <input>
+		<property>environment/metar/station-id</property>
+	      </input>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>460</x>
+	      <y>45</y>
+	      <format>METAR:%4.1f........................wind direction</format>
+	      <halign>left</halign>
+	      <input>
+		<property>environment/metar/base-wind-dir-deg</property>
+	      </input>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>460</x>
+	      <y>55</y>
+	      <format>METAR:%4.1f........................wind speed kt</format>
+	      <halign>left</halign>
+	      <input>
+		<property>environment/metar/base-wind-speed-kt</property>
+	      </input>
+	    </label>
+	        
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>460</x>
+	      <y>25</y>
+	      <format>Cargo Door:%01d.................closed(0) open(1)</format>
+	      <halign>left</halign>
+	      <input>
+		<property>sim/model/door-positions/c/position-norm</property>
+	      </input>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>460</x>
+	      <y>15</y>
+	      <format>Tow Door:%01d....................closed(0) open(1)</format>
+	      <halign>left</halign>
+	      <input>
+		<property>sim/model/door-positions/BK/position-norm</property>
+	      </input>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>460</x>
+	      <y>5</y>
+	      <format>Cargo:%6.1f..................................LBS</format>
+	      <halign>left</halign>
+	      <input>
+		<property>/sim/weight[0]/weight-lb</property>
+	      </input>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>460</x>
+	      <y>-5</y>
+	      <format>Water:%6.0f...................................Liter</format>
+	      <halign>left</halign>
+	      <input>
+		<property>/sim/weight[2]/weight-lb</property>
+	      </input>
+	    </label>
+	       
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>460</x>
+	      <y>-25</y>
+	      <format>VerticalSpeed:%6.2f..................meter/sec</format>
+	      <halign>left</halign>
+	      <input>
+		<property>velocities/vertical-speed-fps</property>
+		<factor>0.3048</factor>
+	      </input>
+	    </label>
+	        
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>460</x>
+	      <y>-35</y>
+	      <format>Collective:....%6.4f......................percent</format>
+	      <halign>left</halign>
+	      <input>
+		<property>controls/engines/engine/throttle</property>
+	      </input>
+	    </label>
+	        
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>460</x>
+	      <y>-45</y>
+	      <format>Pitch-Trim:....%6.4f......................Number</format>
+	      <halign>left</halign>
+	      <input>
+		<property>controls/flight/elevator-trim</property>
+	      </input>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>460</x>
+	      <y>-55</y>
+	      <format>Aileron-Trim:.%6.4f......................Number</format>
+	      <halign>left</halign>
+	      <input>
+		<property>controls/flight/aileron-trim</property>
+	      </input>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>460</x>
+	      <y>-65</y>
+	      <format>Rudder-Trim:.%6.4f......................Number</format>
+	      <halign>left</halign>
+	      <input>
+		<property>controls/flight/rudder-trim</property>
+	      </input>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>460</x>
+	      <y>-75</y>
+	      <format>Stab-Trim:.....%6.4f......................Number</format>
+	      <halign>left</halign>
+	      <input>
+		<property>controls/flight/stab</property>
+	      </input>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <y>-280</y>
+	      <halign>left</halign>
+	      <format>Home-Airport......................</format>		
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <y>-280</y>
+	      <x>146</x>
+	      <input>
+		<property>autopilot/route-manager/destination/airport</property>
+	      </input>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <y>-295</y>
+	      <halign>left</halign>
+	      <format>True-Heading:%5.2f.............Degree</format>
+	      <input>
+		<property>autopilot/route-manager/wp/true-bearing-deg</property>
+	      </input>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <y>-310</y>
+	      <halign>left</halign>
+	      <format>Distance:.......%6.2f.................miles</format>
+	      <input>
+		<property>autopilot/route-manager/wp/dist</property>
+	      </input>
+	    </label>
+	    
+	    </PropertyList>

@@ -1,0 +1,71 @@
+<PropertyList>
+	<path>variometer.ac</path>
+	
+	<animation>
+	  <name>VSI</name>
+	  <object-name>VSI_Glass</object-name>
+	  <object-name>Variometer-case</object-name>
+	  <object-name>Variometer-scale</object-name>
+	  <object-name>variometer-needle</object-name>
+	</animation>
+	
+	
+	<animation>
+	  <type>noshadow</type>
+	  <object-name>VSI_Glass</object-name>
+	</animation>
+	
+	<animation>
+	  <type>shader</type>
+	  <shader>chrome</shader>
+	  <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+	  <object-name>VSI_Glass</object-name>
+	</animation>
+	
+	<animation>
+	  <type>material</type>
+	  
+	  <object-name>Variometer-scale</object-name>
+	  <object-name>variometer-needle</object-name>
+	  <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+	</animation>
+	
+	<animation>
+	  <type>range</type>
+	  <object-name>VSI</object-name>
+	  <min-m>0</min-m>
+	  <max-m>7</max-m>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>variometer-needle</object-name>
+		<property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+		<interpolation>
+			<entry><ind>	5708.66</ind>	<dep>	177.0</dep></entry>
+	<entry><ind>	3937.0</ind>	<dep>	142.0</dep></entry>
+	<entry><ind>	1968.5</ind>	<dep>	83.0</dep></entry>
+	<entry><ind>	984.25</ind>	<dep>	44.0</dep></entry>
+	<entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
+        <entry><ind>	-984.25</ind>	<dep>	-44.0</dep></entry>
+        <entry><ind>	-1968.5</ind>	<dep>	-83.0</dep></entry>
+        <entry><ind>	-3937.0</ind>	<dep>	-142.0</dep></entry>
+        <entry><ind>	-5708.66</ind>	<dep>	-177.0</dep></entry>
+		</interpolation>
+		<center>
+			<x-m>-6.056</x-m>
+			<y-m>-0.407</y-m>
+			<z-m>3.019</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+</PropertyList>

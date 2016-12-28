@@ -1,0 +1,95 @@
+<PropertyList>
+	<name>Attitude indicators</name>
+	<description>
+		After you completed the (not yet implemented) startup procedure for the engines and switched on the power on the 27V~ bus you may want to switch on you attitude indicators, also called artificial horizons. this tutorial shows you how to do that.
+	</description>
+	
+	<audio-dir>Aircraft/c172p/tutorial/radio</audio-dir>
+	
+	<timeofday>morning</timeofday>
+	
+	<presets>
+		<airport-id>KLVK</airport-id>
+		<on-ground>1</on-ground>
+		<runway>12</runway>
+		<altitude-ft>-9999</altitude-ft>
+		<latitude-deg>37.6952</latitude-deg>
+		<longitude-deg>-121.8167</longitude-deg>
+		<heading-deg>175.0</heading-deg>
+		<airspeed-kt>0</airspeed-kt>
+		<glideslope-deg>0</glideslope-deg>
+		<offset-azimuth-deg>0</offset-azimuth-deg>
+		<offset-distance-nm>0</offset-distance-nm>
+	</presets>
+	
+	<init>
+	</init>
+	
+	<step>
+		<message>Attitude indicator tutorial...</message>
+	</step>
+	
+	<step>
+		<message>To switch on the main attitude indicators just operate this switch.</message>
+	
+		<view>
+			<heading-offset-deg>307</heading-offset-deg>
+			<pitch-offset-deg>27</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m type="double">-0.50</x-offset-m> <!--Zur Seite-->
+			<y-offset-m type="double">3.30</y-offset-m> <!--Nach oben-->
+			<z-offset-m type="double">-5.20</z-offset-m> <!--Nach vorne-->
+			<field-of-view>27</field-of-view>
+		</view>
+	
+		<marker>
+			<x-m>-5.587</x-m>
+			<y-m>0.032</y-m>
+			<z-m>3.655</z-m>
+			<scale>2</scale>
+		</marker>
+	</step>
+	
+	<step>
+		<message>To switch on the reserve attitude indicators just operate this switch.</message>
+		
+		<view>
+			<heading-offset-deg>307</heading-offset-deg>
+			<pitch-offset-deg>27</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m type="double">-0.50</x-offset-m> <!--Zur Seite-->
+			<y-offset-m type="double">3.30</y-offset-m> <!--Nach oben-->
+			<z-offset-m type="double">-5.20</z-offset-m> <!--Nach vorne-->
+			<field-of-view>27</field-of-view>
+		</view>
+		
+		<marker>
+			<x-m>-5.587</x-m>
+			<y-m>0.058</y-m>
+			<z-m>3.655</z-m>
+			<scale>2</scale>
+		</marker>
+		
+		
+		<exit>
+			<condition>
+				<and>
+					<greater-than>
+						<property>/instrumentation/attitude-indicator[0]/spin</property>
+						<value>0</value>
+					</greater-than>
+					<greater-than>
+						<property>/instrumentation/attitude-indicator[1]/spin</property>
+						<value>0</value>
+					</greater-than>
+				</and>
+			</condition>
+			
+		</exit>
+	</step>
+	
+	<end>
+		<message>Done... your attitude indicators should work now. If they haven't changed just wait 5 sec until they are spun up.</message>
+	</end>
+  
+</PropertyList>

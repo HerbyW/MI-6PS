@@ -1,0 +1,128 @@
+<PropertyList>
+	<path>clock.ac</path>
+	
+	<animation>
+		<name>clock</name>
+		<object-name>clock</object-name>
+		<object-name>clock.001</object-name>
+		<object-name>clock_glass</object-name>
+		<object-name>clock_hour</object-name>
+		<object-name>clock_hour.001</object-name>
+		<object-name>clock_minute</object-name>
+		<object-name>clock_minute.001</object-name>
+		<object-name>clock_second</object-name>
+		<object-name>clock_secon.001</object-name>
+		<object-name>clock_secon.002</object-name>
+		<object-name>Circle.114</object-name>
+		<object-name>Circle.115</object-name>
+	</animation>
+	
+	<animation>
+	  <type>noshadow</type>
+	  <object-name>clock_glass</object-name>
+	</animation>
+	
+	<animation>
+	  <type>shader</type>
+	  <shader>chrome</shader>
+	  <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+	  <object-name>clock_glass</object-name>
+	</animation>
+	
+<animation>
+          <type>material</type>
+                
+		<object-name>clock.001</object-name>
+		
+		<object-name>clock_hour</object-name>
+		<object-name>clock_hour.001</object-name>
+		<object-name>clock_minute</object-name>
+		<object-name>clock_minute.001</object-name>
+		<object-name>clock_second</object-name>
+		<object-name>clock_secon.001</object-name>
+		<object-name>clock_secon.002</object-name>
+		
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+    </animation>
+	
+	
+	<animation>
+		<type>range</type>
+		<object-name>clock</object-name>
+		<min-m>0</min-m>
+		<max-m>7</max-m>
+	</animation>
+	
+	<animation>
+	  <type>rotate</type>
+	  <object-name>clock_hour</object-name>
+	  <property>/instrumentation/clock/indicated-min</property>
+	  <factor>-0.5</factor>
+	  <center>
+	    <x-m>-6.057</x-m>
+	    <y-m>-0.129</y-m>
+	    <z-m>3.105</z-m>
+	  </center>
+	  <axis>
+	    <x>1</x>
+	    <y>0</y>
+	    <z>0</z>
+	  </axis>
+	</animation>
+	
+	<animation>
+	  <type>rotate</type>
+	  <object-name>clock_hour</object-name>
+	  <property>/instrumentation/clock/local-hour</property>
+	  <factor>-30.0</factor>
+	  <center>
+	    <x-m>-6.057</x-m>
+	    <y-m>-0.129</y-m>
+	    <z-m>3.105</z-m>
+	  </center>
+	  <axis>
+	    <x>1</x>
+	    <y>0</y>
+	    <z>0</z>
+	  </axis>
+	</animation>
+	
+	<animation>
+	  <type>rotate</type>
+	  <object-name>clock_minute</object-name>
+	  <property>/instrumentation/clock/indicated-sec</property>
+	  <factor>-0.1</factor>
+	  <center>
+	    <x-m>-6.057</x-m>
+	    <y-m>-0.129</y-m>
+	    <z-m>3.105</z-m>
+	  </center>
+	  <axis>
+	    <x>1</x>
+	    <y>0</y>
+	    <z>0</z>
+	  </axis>
+	</animation>
+	
+	<animation>
+	  <type>rotate</type>
+	  <object-name>clock_second</object-name>
+	  <property>/instrumentation/clock/indicated-sec</property>
+	  <factor>-6.0</factor>
+	  <center>
+	    <x-m>-6.057</x-m>
+	    <y-m>-0.129</y-m>
+	    <z-m>3.105</z-m>
+	  </center>
+	  <axis>
+	    <x>1</x>
+	    <y>0</y>
+	    <z>0</z>
+	  </axis>
+	</animation>
+</PropertyList>

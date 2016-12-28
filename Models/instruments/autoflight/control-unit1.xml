@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!--
+    ################################################################################################
+    copyright by Herbert Wagner 03/2016 for Mi-6PS (Flightgear)
+    ################################################################################################
+-->
+
+<PropertyList>
+
+  <path>control-unit1x.ac</path>
+
+  <!--indicators, Floating Startup 1 -->
+
+  <animation>
+    <type>material</type>
+    <object-name>S1out</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S1out</object-name>
+    <condition>
+    <equals>
+     <property>/controls/flight/autoFS1</property>
+     <value>0</value>
+    </equals>
+   </condition> 
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>S1on</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S1on</object-name>
+    <condition>
+    <not-equals>
+     <property>/controls/flight/autoFS1</property>
+     <value>0</value>
+    </not-equals>
+   </condition> 
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>S1out</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+      <command>nasal</command>
+      <script>mi6.autotakeoff()</script>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoRS2</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoSF3</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoFM4</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoLC5</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoRH7</property>
+      <value>0</value>
+    </binding>
+    </action>
+  </animation>
+  
+  <!--indicators, Runway Startup 2 -->
+
+  <animation>
+    <type>material</type>
+    <object-name>S2out</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S2out</object-name>
+    <condition>
+    <equals>
+     <property>/controls/flight/autoRS2</property>
+     <value>0</value>
+    </equals>
+   </condition> 
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>S2on</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S2on</object-name>
+    <condition>
+    <not-equals>
+     <property>/controls/flight/autoRS2</property>
+     <value>0</value>
+    </not-equals>
+   </condition> 
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>S2out</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+      <command>nasal</command>
+      <script>mi6.autotakeoffrunway()</script>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoFS1</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoSF3</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoFM4</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoLC5</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoRH7</property>
+      <value>0</value>
+    </binding>
+    </action>
+  </animation>
+  
+  <!--Speed Flight 3 -->
+  
+  <animation>
+    <type>material</type>
+    <object-name>S3out</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S3out</object-name>
+    <condition>
+    <equals>
+     <property>/controls/flight/autoSF3</property>
+     <value>0</value>
+    </equals>
+   </condition> 
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>S3on</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S3on</object-name>
+    <condition>
+    <not-equals>
+     <property>/controls/flight/autoSF3</property>
+     <value>0</value>
+    </not-equals>
+   </condition> 
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>S3out</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+      <command>nasal</command>
+      <script>mi6.speedflight()</script>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoRS2</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoFS1</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoFM4</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoLC5</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoRH7</property>
+      <value>0</value>
+    </binding>
+    </action>
+  </animation>
+  
+  <!--Floating Mode 4 -->
+  
+  <animation>
+    <type>material</type>
+    <object-name>S4out</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S4out</object-name>
+    <condition>
+    <equals>
+     <property>/controls/flight/autoFM4</property>
+     <value>0</value>
+    </equals>
+   </condition> 
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>S4on</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S4on</object-name>
+    <condition>
+    <not-equals>
+     <property>/controls/flight/autoFM4</property>
+     <value>0</value>
+    </not-equals>
+   </condition> 
+ </animation>
+ 
+ <animation>
+    <type>pick</type>
+    <object-name>S4out</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+      <command>nasal</command>
+      <script>mi6.floatingmode()</script>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoRS2</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoSF3</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoFS1</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoLC5</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoRH7</property>
+      <value>0</value>
+    </binding>
+    </action>
+  </animation>
+ 
+ <!--Landing Configuration 5 -->
+  
+  <animation>
+    <type>material</type>
+    <object-name>S5out</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S5out</object-name>
+    <condition>
+    <equals>
+     <property>/controls/flight/autoLC5</property>
+     <value>0</value>
+    </equals>
+   </condition> 
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>S5on</object-name>
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S5on</object-name>
+    <condition>
+    <not-equals>
+     <property>/controls/flight/autoLC5</property>
+     <value>0</value>
+    </not-equals>
+   </condition> 
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>S5out</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+      <command>nasal</command>
+      <script>mi6.landing()</script>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoRS2</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoSF3</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoFM4</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoFS1</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoRH7</property>
+      <value>0</value>
+    </binding>
+    </action>
+  </animation>
+  
+  <!--Reset Mode 6 -->
+  
+  <animation>
+    <type>material</type>
+    <object-name>S6out</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S6out</object-name>
+    <condition>
+    <equals>
+     <property>/controls/flight/autoRS</property>
+     <value>0</value>
+    </equals>
+   </condition> 
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>S6on</object-name>
+    <emission>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S6on</object-name>
+    <condition>
+    <not-equals>
+     <property>/controls/flight/autoRS</property>
+     <value>0</value>
+    </not-equals>
+   </condition> 
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>S6out</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+      <command>nasal</command>
+      <script>mi6.reset()</script>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoLC5</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoRS2</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoSF3</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoFM4</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoFS1</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoRH7</property>
+      <value>0</value>
+    </binding>
+    </action>
+  </animation>
+  
+  <!--Rescue Holding 7 -->
+  
+  <animation>
+    <type>material</type>
+    <object-name>S7out</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S7out</object-name>
+    <condition>
+    <equals>
+     <property>/controls/flight/autoRH7</property>
+     <value>0</value>
+    </equals>
+   </condition> 
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>S7on</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S7on</object-name>
+    <condition>
+    <not-equals>
+     <property>/controls/flight/autoRH7</property>
+     <value>0</value>
+    </not-equals>
+   </condition> 
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>S7out</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+      <command>nasal</command>
+      <script>mi6.holding()</script>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoRS2</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoSF3</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoFM4</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoLC5</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoFS1</property>
+      <value>0</value>
+    </binding>
+    </action>
+  </animation>
+  
+  <!--Reset 8 -->
+  
+  <animation>
+    <type>material</type>
+    <object-name>S8out</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S8out</object-name>
+    <condition>
+    <or>
+    <not-equals>
+     <property>/controls/flight/autoFS1</property>
+     <value>0</value>
+    </not-equals>
+    <not-equals>
+     <property>/controls/flight/autoRS2</property>
+     <value>0</value>
+    </not-equals>
+    <not-equals>
+     <property>/controls/flight/autoSF3</property>
+     <value>0</value>
+    </not-equals>
+    <not-equals>
+     <property>/controls/flight/autoFM4</property>
+     <value>0</value>
+    </not-equals>
+    <not-equals>
+     <property>/controls/flight/autoLC5</property>
+     <value>0</value>
+    </not-equals>
+    <not-equals>
+     <property>/controls/flight/autoRH7</property>
+     <value>0</value>
+    </not-equals>
+    </or>
+   </condition> 
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>S8on</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>S8on</object-name>
+    <condition>
+    <and>
+    <equals>
+     <property>/controls/flight/autoFS1</property>
+     <value>0</value>
+    </equals>
+    <equals>
+     <property>/controls/flight/autoRS2</property>
+     <value>0</value>
+    </equals>
+    <equals>
+     <property>/controls/flight/autoSF3</property>
+     <value>0</value>
+    </equals>
+    <equals>
+     <property>/controls/flight/autoFM4</property>
+     <value>0</value>
+    </equals>
+    <equals>
+     <property>/controls/flight/autoLC5</property>
+     <value>0</value>
+    </equals>
+    <equals>
+     <property>/controls/flight/autoRH7</property>
+     <value>0</value>
+    </equals>
+    </and>
+   </condition> 
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>S8out</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoFS1</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoRS2</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoSF3</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoFM4</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoLC5</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>/controls/flight/autoRH7</property>
+      <value>0</value>
+    </binding>
+    </action>
+  </animation>
+
+  <animation>
+  <type>scale</type>  
+  <property>sim/signals/fdm-initialized</property>
+  <offset>1</offset>
+  <x-max>2</x-max>
+  <y-max>2</y-max>
+  <z-max>2</z-max>
+  <x-factor>2</x-factor>
+  <y-factor>2</y-factor>
+  <z-factor>2</z-factor>
+ </animation>
+
+</PropertyList>

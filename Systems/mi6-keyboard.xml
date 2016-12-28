@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<!--
+Copyright (C) Herbert Wagner 2015-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
+-->
+<PropertyList>
+  <key n="82">
+    <name>R</name>
+    <desc>Toggle rotor brake</desc>
+    <binding>
+      <command>nasal</command>
+      <script>
+	var p = "/controls/rotor/brake";
+	setprop(p, !getprop(p));
+      </script>
+    </binding>
+  </key>
+  
+  <key n="114">
+    <name>r</name>
+    <desc>Apply rotor brake</desc>
+    <binding>
+      <command>nasal</command>
+      <script>interpolate("/controls/rotor/brake", 1.0, 2)</script>
+    </binding>
+    <mod-up>
+      <binding>
+	<command>nasal</command>
+	<script>interpolate("/controls/rotor/brake", 0.0, 2)</script>
+      </binding>
+    </mod-up>
+  </key>
+  
+  <key n="125">
+    <name>}</name>
+    <desc>Start Engines</desc>
+    <binding>
+      <command>nasal</command>
+      <script>mi6.engines(1)</script>
+    </binding>
+  </key>
+  
+  <key n="123">
+    <name>{</name>
+    <desc>Shutdown Engines</desc>
+    <binding>
+      <command>nasal</command>
+      <script>mi6.engines(0)</script>
+    </binding>
+  </key>
+  
+  <key n="68">
+    <name>D</name>
+    <desc>Door</desc>
+    <binding>
+      <command>nasal</command>
+      <script>doors.c.toggle();</script>
+    </binding>
+  </key>
+  
+  <key n="100">
+    <name>d</name>
+    <desc>Cargo bay</desc>
+    <binding>
+      <command>nasal</command>
+      <script>doors.BK.toggle();</script>
+    </binding>
+  </key>
+  
+  <key n="102">
+    <name>f</name>
+    <desc>Flares On-Off</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>sim/multiplay/generic/int[8]</property>
+    </binding>    
+  </key>
+  
+  <key n="61"> 
+    <name>=</name>
+    <desc>Jump signal</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>controls/paratroopers/jump-signal</property>
+      <value>true</value>
+    </binding>
+  </key>
+  
+  <key n="60">
+    <name> > </name>
+    <desc>Change Pilot Engineer View</desc>
+    <binding>
+      <command>property-cycle</command>
+      <property>sim/current-view/view-number</property>  
+      <value>0</value>
+      <value>9</value>
+    </binding>
+  </key>
+  
+  <key n="121">
+    <name>y</name>
+    <desc>Change Pilot-Navigator-Towing View</desc>
+    <binding>
+      <command>property-cycle</command>
+      <property>sim/current-view/view-number</property>  
+      <value>0</value>
+      <value>11</value>
+      <value>12</value>
+    </binding>
+  </key>
+  
+  <key n="108">
+    <name>l</name>
+    <desc>Landing Lights</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/switches/landinglight</property>
+    </binding>
+  </key>
+  
+  <key n="76">
+    <name>L</name>
+    <desc>Search Light</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/switches/search</property>
+    </binding>
+  </key>
+  
+  <key n="102">
+    <name>f</name>
+    <desc>Taxi Lights</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/switches/taxilight</property>
+    </binding>
+  </key>
+  
+  <key n="70">
+    <name>F</name>
+    <desc>Change to floating mode</desc>
+    <binding>
+      <command>nasal</command>
+      <script>mi6.floatingmode()</script>
+    </binding>
+  </key>
+  
+  <key n="101">
+    <name>e</name>
+    <desc>Change to Landing Configuration</desc>
+    <binding>
+      <command>nasal</command>
+      <script>mi6.landing()</script>
+    </binding>  
+  </key>
+  
+  <key n="69">
+    <name>E</name>
+    <desc>Rescue Holding</desc>
+    <binding>
+      <command>nasal</command>
+      <script>mi6.holding()</script>
+    </binding>  
+  </key>
+  
+  </PropertyList>
+  
+  

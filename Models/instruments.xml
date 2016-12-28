@@ -1,0 +1,350 @@
+<?xml version="1.0"?>
+
+<!--
+    #######################################################################################################
+    Arcraft development for Flightgear by Herbert Wagner 2014-2015                            Model: MI-6PS
+    Antonov AN-12BK, AN-22A, AN-225-Mrija,
+    Tuplev Tu-95MR,
+    Mil Mi-6PS
+    Yak 58, Yak-53,
+    Berijev Be-200Altair
+    SpaceShuttle
+    Development is ongoing, see latest versions: www.github.com/HerbyW
+    
+    This file is licenced under the terms mentioned in the LICENCE.txt file.
+    Mi6dev was initially started by Moritz Röhrich (Blender3D) 2010-2012 as CC 3.0 BY NC SA.
+    The 3D-model still holds the CC 3.0 BY NC SA license, everything else is GNU GPL v3 License.
+    
+    This version is now going forward and will give you a full automatic flight control-system,
+    lots of animations, instrumentation and full Multiplayer support for Parachuters and Elephant transport.
+    Liveries, Fire fighting and SAR rescue is in preparation.
+    Removing this header is probited.    
+    ########################################################################################################
+-->
+
+<!--
+    Animation index
+    1) Pitch
+	    1.1) Co-pilot
+    5) retractable table 2 mal
+    6) tankvalves
+	    6.1) 1
+	    6.2) 2
+	    6.3) 3
+	    6.4) 4
+	    6.5) 6
+    7) heating
+	    7.1) windows
+	    7.2) rotors
+	    7.3) instruments
+    11) cigarett smoke effect
+-->
+<PropertyList>
+
+	<path>Mi-6D-instruments.ac</path>
+	
+	<animation>
+	  	<type>range</type>
+	  	<min-m>0</min-m>
+	  	<max-m>20</max-m>
+    	</animation>
+	
+	<animation>
+		<name>instruments</name>
+		<object-name>Pitch</object-name>
+		<object-name>PitchStick1</object-name>
+		<object-name>PitchStick2</object-name>
+		<object-name>PitchStickS</object-name>
+		<object-name>Throttle</object-name>
+		<object-name>Pitchknob</object-name>
+		<object-name>PitchTri</object-name>
+		<object-name>retractable_table</object-name>
+		<object-name>Nav</object-name>
+	</animation>
+	
+	<animation>
+		<type>range</type>
+		<object-name>instruments</object-name>
+		<min-m>0</min-m>
+		<max-m>3</max-m>
+	</animation>
+	
+	<animation>
+    <type>material</type>
+        <object-name>instruments</object-name>
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.05 </red>
+      <green> 0.05 </green>
+      <blue>  0.05 </blue>
+    </emission>
+  </animation>
+	
+	
+	<!--1 Pitch-->
+	<!--1.1 Co-pilot pitch-->
+	<animation>
+		<type>rotate</type>
+		<object-name>Pitch</object-name>
+		<object-name>PitchStick1</object-name>
+		<object-name>PitchStickS</object-name>
+		<object-name>Throttle</object-name>
+		<object-name>Pitchknob</object-name>
+		<property>/controls/engines/engine[0]/throttle</property>
+		<factor>-35</factor>
+		<center>
+			<x-m>-5.053</x-m>
+			<y-m>-0.229</y-m>
+			<z-m>2.542</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Pitch</object-name>
+		<object-name>PitchStick1</object-name>
+		<object-name>PitchStickS</object-name>
+		<object-name>Throttle</object-name>
+		<object-name>Pitchknob</object-name>
+		<property>/controls/pitch-offset</property>
+		<factor>-45</factor>
+		<center>
+			<x-m>-5.053</x-m>
+			<y-m>-0.229</y-m>
+			<z-m>2.542</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>PitchStick1</object-name>
+		<property>/controls/engines/engine[0]/throttle</property>
+		<factor>45</factor>
+		<center>
+			<x-m>-5.241</x-m>
+			<y-m>-0.242</y-m>
+			<z-m>2.458</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>PitchStick1</object-name>
+		<property>/controls/pitch-offset</property>
+		<factor>45</factor>
+		<center>
+			<x-m>-5.241</x-m>
+			<y-m>-0.242</y-m>
+			<z-m>2.458</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>PitchTri</object-name>
+		<object-name>PitchStick2</object-name>
+		<property>/controls/engines/engine[0]/throttle</property>
+		<factor>-74.3</factor>
+		<center>
+			<x-m>-5.137</x-m>
+			<y-m>0.231</y-m>
+			<z-m>2.462</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>PitchTri</object-name>
+		<object-name>PitchStick2</object-name>
+		<property>/controls/pitch-offset</property>
+		<factor>-74.3</factor>
+		<center>
+			<x-m>-5.137</x-m>
+			<y-m>0.231</y-m>
+			<z-m>2.462</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>PitchStick2</object-name>
+		<property>/controls/engines/engine[0]/throttle</property>
+		<factor>74.3</factor>
+		<center>
+			<x-m>-5.201</x-m>
+			<y-m>0.192</y-m>
+			<z-m>2.420</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>PitchStick2</object-name>
+		<property>/controls/pitch-offset</property>
+		<factor>74.3</factor>
+		<center>
+			<x-m>-5.201</x-m>
+			<y-m>0.192</y-m>
+			<z-m>2.420</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!--5 retractable table -->
+	
+	<animation>
+		<type>pick</type>
+		<object-name>retractable_table</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>systems/rtable/retracted</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>retractable_table</object-name>
+		<property>systems/rtable/retracted</property>
+		<factor>0.2</factor>
+		<center>
+			<x-m>-4.752</x-m>
+			<y-m>0.668</y-m>
+			<z-m>2.760</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>retractable_table.001</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>systems/rtable/retracted</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>retractable_table.001</object-name>
+		<property>systems/rtable/retracted</property>
+		<factor>0.2</factor>
+		<axis>
+      <x1-m> -6.217 </x1-m>
+      <y1-m>  -0.703 </y1-m>
+      <z1-m>  2.259 </z1-m>
+      <x2-m> -6.217 </x2-m>
+      <y2-m>  -0.475 </y2-m>
+      <z2-m>  2.259 </z2-m>
+    </axis>
+	</animation>
+
+
+<!--11 cigarett smoke effect-->
+	<model>
+		<path>Aircraft/MI-6PS/Models/effects/cigarett-smoke.xml</path>
+		<offsets>
+			<x-m>-6.086</x-m>
+			<y-m>-0.142</y-m>
+			<z-m>3.285</z-m> 
+			<roll-deg>    0 </roll-deg>
+			<pitch-deg>   0 </pitch-deg>
+			<heading-deg> 0 </heading-deg>
+		</offsets>
+	</model>
+	
+<!-- Emergency Doors left-->
+		
+		
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>E-Table</object-name>
+		<object-name>Cylinder.001</object-name>
+		<object-name>FGMug</object-name>
+		<property>sim/multiplay/generic/float[3]</property>
+		<factor>105</factor>
+		<axis>
+      <x1-m> -4.626 </x1-m>
+      <y1-m>  -1.148 </y1-m>
+      <z1-m>  3.292 </z1-m>
+      <x2-m> -4.628 </x2-m>
+      <y2-m>  -1.207 </y2-m>
+      <z2-m>  3.043 </z2-m>
+    </axis>
+	</animation>
+
+<!-- frontverticalleveler-->
+
+<animation>
+  <type>rotate</type>
+  <object-name>Plane.211</object-name>
+  <property>orientation/roll-deg</property>
+  <factor>-1</factor>
+  <center>
+    <x-m>-7.556</x-m>
+    <y-m>0.000613</y-m>
+    <z-m>2.537</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+</PropertyList> 
