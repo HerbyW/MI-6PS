@@ -88,12 +88,13 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
   
   <key n="60">
     <name> > </name>
-    <desc>Change Pilot Engineer View</desc>
+    <desc>Change Pilot-Engineer-Model View</desc>
     <binding>
       <command>property-cycle</command>
       <property>sim/current-view/view-number</property>  
       <value>0</value>
       <value>9</value>
+      <value>7</value>
     </binding>
   </key>
   

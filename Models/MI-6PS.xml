@@ -299,10 +299,7 @@
       
       <animation>
 	<type>material</type>
-	<object-name>PilotDoorL.001</object-name>
-	<object-name>PilotDoorR.001</object-name>
 	<object-name>N-Door-glass</object-name>
-	<object-name>E-Door.001</object-name>
 	<object-name>FrontGlass</object-name>
 	<object-name>window01</object-name>
 	<object-name>window02</object-name>
@@ -311,6 +308,19 @@
 	  <red>   0.15 </red>
           <green> 0.15 </green>
           <blue>  0.60 </blue>
+	</emission>
+      </animation>
+      
+      <animation>
+	<type>material</type>
+	<object-name>PilotDoorL.001</object-name>
+	<object-name>PilotDoorR.001</object-name>
+	<object-name>E-Door.001</object-name>
+	<emission>
+	  <factor-prop>sim/multiplay/generic/int[5]</factor-prop>
+	  <red>   0.05 </red>
+          <green> 0.05 </green>
+          <blue>  0.05 </blue>
 	</emission>
       </animation>
       

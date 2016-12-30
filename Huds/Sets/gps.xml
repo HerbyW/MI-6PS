@@ -29,7 +29,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	<label>
 	  <width>2</width>
 	  <height>2</height>
-	  <x>80</x>
+	  <x>110</x>
 	  <format>(TO)</format>
 	  <halign>left</halign>
 	  
@@ -47,7 +47,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	<label>
 	  <width>2</width>
 	  <height>2</height>
-	  <x>80</x>
+	  <x>110</x>
 	  <format>(FROM)</format>
 	  <halign>left</halign>
 	  
@@ -101,7 +101,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	  <label>
 	    <width>2</width>
 	    <height>2</height>
-	    <x>80</x>
+	    <x>110</x>
 	    <format>-&gt;%5s</format>
 	    <halign>left</halign>
 	    <input>
@@ -136,7 +136,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	    <label>
 	      <width>2</width>
 	      <height>2</height>
-	      <x>60</x>
+	      <x>80</x>
 	      <y>-10</y>
 	      <format>TTW:%s</format>
 	      <halign>left</halign>
@@ -377,40 +377,94 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	    <label>
 	      <width>2</width>
 	      <height>2</height>
-	      <y>-280</y>
+	      <x>-90</x>
+	      <y>-340</y>
 	      <halign>left</halign>
-	      <format>Home-Airport......................</format>		
+	      <format>Departure-Airport</format>		
 	    </label>
 	    
 	    <label>
 	      <width>2</width>
 	      <height>2</height>
-	      <y>-280</y>
-	      <x>146</x>
+	      <y>-340</y>
+	      <x>20</x>
 	      <input>
-		<property>autopilot/route-manager/destination/airport</property>
+		<property>/autopilot/route-manager/departure/airport</property>
 	      </input>
 	    </label>
 	    
 	    <label>
 	      <width>2</width>
 	      <height>2</height>
-	      <y>-295</y>
-	      <halign>left</halign>
-	      <format>True-Heading:%5.2f.............Degree</format>
+	      <y>-340</y>
+	      <x>110</x>
 	      <input>
-		<property>autopilot/route-manager/wp/true-bearing-deg</property>
+		<property>/autopilot/route-manager/departure/name</property>
 	      </input>
 	    </label>
 	    
 	    <label>
 	      <width>2</width>
 	      <height>2</height>
-	      <y>-310</y>
+	      <x>-90</x>
+	      <y>-350</y>
 	      <halign>left</halign>
-	      <format>Distance:.......%6.2f.................miles</format>
+	      <format>Destination-Airport</format>		
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <y>-350</y>
+	      <x>20</x>
 	      <input>
-		<property>autopilot/route-manager/wp/dist</property>
+		<property>/autopilot/route-manager/destination/airport</property>
+	      </input>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <y>-350</y>
+	      <x>110</x>
+	      <input>
+		<property>/autopilot/route-manager/destination/name</property>
+	      </input>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>-90</x>
+	      <y>-360</y>
+	      <halign>left</halign>
+	      <format>Total-Distance:..................%6.2f nm</format>
+	      <input>
+		<property>/autopilot/route-manager/total-distance</property>
+	      </input>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>-90</x>
+	      <y>-370</y>
+	      <halign>left</halign>
+	      <format>True-Heading:......................%5.2f deg</format>
+	      <input>
+		<property>/autopilot/route-manager/wp/true-bearing-deg</property>
+	      </input>
+	    </label>
+	    
+	    <label>
+	      <width>2</width>
+	      <height>2</height>
+	      <x>-90</x>
+	      <y>-380</y>
+	      <halign>left</halign>
+	      <format>Remaining-Distance:..........%6.2f nm</format>
+	      <input>
+		<property>/autopilot/route-manager/distance-remaining-nm</property>
 	      </input>
 	    </label>
 	    
