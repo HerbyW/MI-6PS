@@ -75,7 +75,7 @@ Made by Moritz Roehrich (Blender3D) 2010-2012
 
 Updated 3D-model, FDM, Animations, Instruments by Herbert Wagner 10-2015 - 12-2016
 
-Version: 4.0.2
+Version: 4.0.3
 
                                   ABOUT
 
@@ -156,6 +156,8 @@ There is also a switch for a water-pipe, to load water from a lake or the see. G
 
 In fire fighting situations you will get all information in the cockpit from your friendly copilot. To install the addon for this, read the txt-file in the read-me-for-wildfire folder and install the files.
 
+Autorotation: In case of engine off, Autopilot and all other settings will be made with automatic. Look to the rotor speed and controll the collective. Before landing reduce speed to 60-80 kts.
+
 All animations are working in MP-mode.
 
 Latest Update: Now with 6 different modes for starting, landing, changing the flight modus and more. After one modus is fully activated you may click on the clear button. then you may click an other mode.
@@ -163,6 +165,7 @@ Latest Update: Now with 6 different modes for starting, landing, changing the fl
 	       Now with landing and taxi lights and a search light, manageable via switches or shortcuts, special ambient lights, new view definitions with shortcuts
 	       Now with wind-compass and working speed indicator for ground- and airspeed
 	       Now with beacon and strobe lights and switches
+	       Now with Autorotation Automatic Settings
 
 Values for setting the rotor-tilt and the rotor-roll-tilt:
    In floating mode:     4.50/-0.62 (speed 3)

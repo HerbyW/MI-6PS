@@ -913,6 +913,27 @@ var reset = func()
 
 };
 
+#
+#Autorotate automatic settings
+#
+
+setlistener("/sim/model/mi6/state", func(v) {
+  if (getprop("/sim/model/mi6/state") == 0 and getprop("/position/altitude-agl-ft")>50)
+  {
+  interpolate("/controls/flight/tilt", 0.2, 1 );
+  interpolate("/controls/flight/tilt-roll", -0.08, 1 );
+  interpolate("/controls/flight/stab", 0.3, 1);
+  setprop("/controls/flight/floating-pitch", 0.0 );
+  setprop("/autopilot/locks/heading", "");
+  setprop("/autopilot/locks/altitude", "");
+  setprop("/autopilot/locks/speed", "");
+  setprop("/autopilot/locks/collective", 0 );
+  setprop("/autopilot/locks/couple", 0 );
+  setprop("/sim/messages/copilot", "Autorotation !!");
+  }
+});
+
+
 ############################# FUEL CONTROL #####################################################
 
 var Fuel1_Level= props.globals.getNode("/consumables/fuel/tank/level-gal_us",1);
