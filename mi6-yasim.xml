@@ -213,20 +213,20 @@
         
 	<!--internal Tanks-->
 	<tank x="3" y="-1" z="1.5" capacity="800" jet="true"/> <!--0-->
-	<tank x="3" y="1" z="1.5" capacity="800" jet="true"/> <!--1-->
+	<tank x="3" y="1" z="1.5" capacity="800" jet="true"/> <!--1 = 0+1=valve1-->
 	<tank x="3" y="-2" z="1.5" capacity="800" jet="true"/> <!--2-->
-	<tank x="3" y="2" z="1.5" capacity="800" jet="true"/> <!--3-->
+	<tank x="3" y="2" z="1.5" capacity="800" jet="true"/> <!--3 = 2+3=valve2-->
 	<tank x="2" y="-1" z="1.5" capacity="800" jet="true"/> <!--4-->
-	<tank x="2" y="1" z="1.5" capacity="800" jet="true"/> <!--5-->
-	<tank x="1" y="-0" z="1.5" capacity="1000" jet="true"/> <!--6-->
-	<tank x="0" y="-0" z="1.5" capacity="1000" jet="true"/> <!--7-->
-	<tank x="-2" y="-1" z="2.5" capacity="1085" jet="true"/> <!--8-->
-	<tank x="-2" y="1" z="2.5" capacity="1085" jet="true"/> <!--9-->
-	<tank x="-3" y="-0" z="2.5" capacity="2169" jet="true"/> <!--10-->
+	<tank x="2" y="1" z="1.5" capacity="800" jet="true"/> <!--5 = 4+5=valve3-->
+	<tank x="1" y="-0" z="1.5" capacity="1000" jet="true"/> <!--6=valve4-->
+	<tank x="0" y="-0" z="1.5" capacity="1000" jet="true"/> <!--7=valve5-->
+	<tank x="-2" y="-1" z="2.5" capacity="1085" jet="true"/> <!--8=valve6-->
+	<tank x="-2" y="1" z="2.5" capacity="1085" jet="true"/> <!--9=valve7-->
+	<tank x="-3" y="-0" z="2.5" capacity="2169" jet="true"/> <!--10=valve8-->
 	
 	<!--external Tanks-->
-	<tank x="-3.5" y="3" z="-2" capacity="3077" jet="true"/> <!--11l-->
-	<tank x="-3.5" y="-3" z="-2" capacity="3077" jet="true"/> <!--12r-->
+	<tank x="-3.5" y="3" z="-2" capacity="3077" jet="true"/> <!--11l=valve9-->
+	<tank x="-3.5" y="-3" z="-2" capacity="3077" jet="true"/> <!--12r=valve10-->
 	
 	
   <ballast x=" 9.9" y=" 0.0" z="  7.4" mass=" 5250"/>  

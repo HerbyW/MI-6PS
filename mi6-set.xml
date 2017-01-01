@@ -67,7 +67,30 @@ Removing this header is probited.
       <fan type="bool">0</fan>
       <external-suspension type="bool">0</external-suspension>
       <jettison-cargo type="bool">0</jettison-cargo>
-      
+      <Hydrant-rechts type="bool">0</Hydrant-rechts>
+      <Hydrant-rechts-Kappe type="bool">0</Hydrant-rechts-Kappe>
+      <Hydrant-links type="bool">0</Hydrant-links>
+      <Hydrant-links-Kappe type="bool">0</Hydrant-links-Kappe>
+      <Durchflussmessgeraet type="bool">0</Durchflussmessgeraet>  
+      <Lampentest type="bool">0</Lampentest>
+      <Pumpensteuerung type="bool">0</Pumpensteuerung>
+      <Kanalschalter type="int">0</Kanalschalter>
+      <KS-Kappe type="bool">0</KS-Kappe>
+      <Fuellventile type="bool">0</Fuellventile>
+      <Auftanksignal type="bool">0</Auftanksignal>
+      <Boardbetankungsschalter type="bool">0</Boardbetankungsschalter>
+      <Tankuhr type="bool">0</Tankuhr>
+      <KraftstoffflussSteuerschalter type="bool">0</KraftstoffflussSteuerschalter>
+      <Sensorenkontrollschalter type="bool">0</Sensorenkontrollschalter>
+      <SKS-Kappe type="bool">0</SKS-Kappe>
+      <Flugplatznetzschalter type="bool">0</Flugplatznetzschalter>
+      <Neutralgasschalter type="bool">0</Neutralgasschalter>
+      <Heizungsschalter type="bool">0</Heizungsschalter>
+      <BatterieHeizungMaschinenschutz type="bool">0</BatterieHeizungMaschinenschutz>
+      <Frachttuere type="bool">0</Frachttuere>
+      <Frachttuere-Kappe type="bool">0</Frachttuere-Kappe>
+      <Frachtrampe type="bool">0</Frachtrampe>      
+      <Frachtrampe-Kappe type="bool">0</Frachtrampe-Kappe>      
     </switches>
     <flight>
       <floating-pitch type="double">0.0</floating-pitch>

@@ -971,7 +971,10 @@ var update_fuel = maketimer(1, func{
     var lvl12 = Fuel12_Level.getValue();
     var lvl13 = Fuel13_Level.getValue();
     
-    lvl = lvl-amnt;
+    if(lvl > 0 and getprop("/consumables/fuel/tank[0]/selected")==1)
+    { lvl = lvl-amnt; }
+#    else
+#    { mi6.engines(0);   }    
     if(lvl2 > 0 and getprop("/consumables/fuel/tank[1]/selected")==1)
     { lvl2 = lvl2-amnt; }
     else
