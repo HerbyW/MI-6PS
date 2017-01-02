@@ -929,6 +929,9 @@ setlistener("/sim/model/mi6/state", func(v) {
   setprop("/autopilot/locks/speed", "");
   setprop("/autopilot/locks/collective", 0 );
   setprop("/autopilot/locks/couple", 0 );
+  interpolate("/controls/flight/elevator-trim", 0.0, 1 );
+  interpolate("/controls/flight/aileron-trim", 0.0, 1 );
+  interpolate("/controls/flight/rudder-trim", 0.0, 1 );
   setprop("/sim/messages/copilot", "Autorotation !!");
   }
 });

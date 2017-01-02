@@ -45,8 +45,8 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <config>
       <Kp>1.0</Kp>
       <Ki>0.0</Ki>
-      <u_min>-25</u_min>
-      <u_max>25</u_max>
+      <u_min>-20</u_min>
+      <u_max>20</u_max>
     </config>
   </pi-simple-controller>
   
@@ -218,10 +218,10 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <max-rate-of-change>1.5</max-rate-of-change>
   </filter>
   
-  
+  <!--pid controller for roll-deg  -->
   
   <pid-controller>
-    <name>Aileron Trim-80 more than 130 kts</name>
+    <name>Aileron Trim-130 more than 130 kts</name>
     <debug>false</debug>
     <enable>
       <condition>
@@ -231,11 +231,11 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	    <value>0</value>
 	  </greater-than>
 	  <greater-than>
-	    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property> 
+	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
 	    <value>130</value>
 	  </greater-than>
 	  <less-than>
-	    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property> 
+	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
 	    <value>300</value>
 	  </less-than>
 	  <or>
@@ -291,11 +291,11 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	    <value>0</value>
 	  </greater-than>
 	  <greater-than>
-	    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property> 
+	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
 	    <value>110</value>
 	  </greater-than>
 	  <less-than>
-	    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property> 
+	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
 	    <value>130</value>
 	  </less-than>
 	  <or>
@@ -351,11 +351,11 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	    <value>0</value>
 	  </greater-than>
 	  <greater-than>
-	    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property> 
+	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
 	    <value>100</value>
 	  </greater-than>
 	  <less-than>
-	    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property> 
+	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
 	    <value>110</value>
 	  </less-than>
 	  <or>
@@ -411,11 +411,11 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	    <value>0</value>
 	  </greater-than>
 	  <greater-than>
-	    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property> 
+	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
 	    <value>90</value>
 	  </greater-than>
 	  <less-than>
-	    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property> 
+	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
 	    <value>100</value>
 	  </less-than>
 	  <or>
@@ -559,7 +559,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	    <value>0</value>
 	  </greater-than>
 	  <greater-than>
-	    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property> 
+	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
 	    <value>100</value>
 	  </greater-than>
 	  <or>
@@ -604,11 +604,11 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	    <value>0</value>
 	  </greater-than>
 	  <greater-than>
-	    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property> 
+	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
 	    <value>90</value>
 	  </greater-than>
 	  <less-than>
-	    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property> 
+	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
 	    <value>100</value>
 	  </less-than>
 	  <or>
@@ -1232,7 +1232,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       </condition>
     </enable>
     <input>
-      <prop>/instrumentation/airspeed-indicator/indicated-speed-kt</prop>
+      <prop>/instrumentation/airspeed-indicator/true-speed-kt</prop>
     </input>
     <reference>
       <prop>/autopilot/settings/target-speed-kt</prop>
