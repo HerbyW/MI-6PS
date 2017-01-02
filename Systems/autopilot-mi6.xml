@@ -226,18 +226,10 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <enable>
       <condition>
 	<and>
-	  <greater-than>
+	  <equals>
 	    <property>/controls/flight/slowspeed</property> 
-	    <value>0</value>
-	  </greater-than>
-	  <greater-than>
-	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
-	    <value>130</value>
-	  </greater-than>
-	  <less-than>
-	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
-	    <value>300</value>
-	  </less-than>
+	    <value>2</value>
+	  </equals>
 	  <or>
 	    <equals>
 	      <property>/autopilot/locks/heading</property>
@@ -281,18 +273,18 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
   </pid-controller>
   
   <pid-controller>
-    <name>Aileron Trim-65 110-130kts</name>
+    <name>Aileron Trim-110 110-130kts</name>
     <debug>false</debug>
     <enable>
       <condition>
 	<and>
-	  <greater-than>
+	  <equals>
 	    <property>/controls/flight/slowspeed</property> 
-	    <value>0</value>
-	  </greater-than>
+	    <value>1</value>
+	  </equals>
 	  <greater-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
-	    <value>110</value>
+	    <value>110.001</value>
 	  </greater-than>
 	  <less-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
@@ -341,18 +333,18 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
   </pid-controller>
   
   <pid-controller>
-    <name>Aileron Trim-55 100-110 kts</name>
+    <name>Aileron Trim-100 100-110 kts</name>
     <debug>false</debug>
     <enable>
       <condition>
 	<and>
-	  <greater-than>
+	  <equals>
 	    <property>/controls/flight/slowspeed</property> 
-	    <value>0</value>
-	  </greater-than>
+	    <value>1</value>
+	  </equals>
 	  <greater-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
-	    <value>100</value>
+	    <value>100.001</value>
 	  </greater-than>
 	  <less-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
@@ -401,18 +393,18 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
   </pid-controller>
   
   <pid-controller>
-    <name>Aileron Trim-45 90-100 kts</name>
+    <name>Aileron Trim-90 90-100 kts</name>
     <debug>false</debug>
     <enable>
       <condition>
 	<and>
-	  <greater-than>
+	  <equals>
 	    <property>/controls/flight/slowspeed</property> 
-	    <value>0</value>
-	  </greater-than>
+	    <value>1</value>
+	  </equals>
 	  <greater-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
-	    <value>90</value>
+	    <value>90.001</value>
 	  </greater-than>
 	  <less-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
@@ -560,7 +552,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	  </greater-than>
 	  <greater-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
-	    <value>100</value>
+	    <value>100.001</value>
 	  </greater-than>
 	  <or>
 	    <equals>
@@ -605,7 +597,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	  </greater-than>
 	  <greater-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
-	    <value>90</value>
+	    <value>90.001</value>
 	  </greater-than>
 	  <less-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 

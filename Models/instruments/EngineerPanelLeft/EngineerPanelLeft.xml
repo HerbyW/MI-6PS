@@ -378,7 +378,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Durchflussmessgeraet</property>
+				<property>controls/switches/Durchflussmessgeraet</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -388,7 +388,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Durchflussmessgeraet</object-name>
-		<property>contols/switches/Durchflussmessgeraet</property>
+		<property>controls/switches/Durchflussmessgeraet</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -411,7 +411,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Hydrant-rechts</property>
+				<property>controls/switches/Hydrant-rechts</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -421,7 +421,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Hydrant-rechts</object-name>
-		<property>contols/switches/Hydrant-rechts</property>
+		<property>controls/switches/Hydrant-rechts</property>
 		<factor>-45</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -443,7 +443,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Hydrant-rechts-Kappe</property>
+				<property>controls/switches/Hydrant-rechts-Kappe</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -453,7 +453,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Schalterkappe.007</object-name>
-		<property>contols/switches/Hydrant-rechts-Kappe</property>
+		<property>controls/switches/Hydrant-rechts-Kappe</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.723</x-m>
@@ -476,7 +476,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Hydrant-links</property>
+				<property>controls/switches/Hydrant-links</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -486,7 +486,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Hydrant-links</object-name>
-		<property>contols/switches/Hydrant-links</property>
+		<property>controls/switches/Hydrant-links</property>
 		<factor>-45</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -508,7 +508,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Hydrant-links-Kappe</property>
+				<property>controls/switches/Hydrant-links-Kappe</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -518,7 +518,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Schalterkappe.013</object-name>
-		<property>contols/switches/Hydrant-links-Kappe</property>
+		<property>controls/switches/Hydrant-links-Kappe</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.723</x-m>
@@ -541,7 +541,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Lampentest</property>
+				<property>controls/switches/Lampentest</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -551,7 +551,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Lampentest</object-name>
-		<property>contols/switches/Lampentest</property>
+		<property>controls/switches/Lampentest</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -574,7 +574,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Pumpensteuerung</property>
+				<property>controls/switches/Pumpensteuerung</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -584,7 +584,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Pumpensteuerung</object-name>
-		<property>contols/switches/Pumpensteuerung</property>
+		<property>controls/switches/Pumpensteuerung</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -607,7 +607,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-cycle</command>
-				<property>contols/switches/Kanalschalter</property>
+				<property>controls/switches/Kanalschalter</property>
 				<value>0</value>
 				<value>1</value>
 				<value>2</value>
@@ -619,7 +619,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Kanalschalter</object-name>
-		<property>contols/switches/Kanalschalter</property>
+		<property>controls/switches/Kanalschalter</property>
 		<factor>-30</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -641,7 +641,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/KS-Kappe</property>
+				<property>controls/switches/KS-Kappe</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -651,7 +651,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Schalterkappe.009</object-name>
-		<property>contols/switches/KS-Kappe</property>
+		<property>controls/switches/KS-Kappe</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.723</x-m>
@@ -674,7 +674,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Fuellventile</property>
+				<property>controls/switches/Fuellventile</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -684,7 +684,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Fuellventile</object-name>
-		<property>contols/switches/Fuellventile</property>
+		<property>controls/switches/Fuellventile</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -707,7 +707,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Auftanksignal</property>
+				<property>controls/switches/Auftanksignal</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -717,7 +717,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Auftanksignal</object-name>
-		<property>contols/switches/Auftanksignal</property>
+		<property>controls/switches/Auftanksignal</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -740,7 +740,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Boardbetankungsschalter</property>
+				<property>controls/switches/Boardbetankungsschalter</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -750,7 +750,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Boardbetankungsschalter</object-name>
-		<property>contols/switches/Boardbetankungsschalter</property>
+		<property>controls/switches/Boardbetankungsschalter</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -773,7 +773,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Tankuhr</property>
+				<property>controls/switches/Tankuhr</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -783,7 +783,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Tankuhr</object-name>
-		<property>contols/switches/Tankuhr</property>
+		<property>controls/switches/Tankuhr</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -806,7 +806,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/KraftstoffflussSteuerschalter</property>
+				<property>controls/switches/KraftstoffflussSteuerschalter</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -816,7 +816,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>KraftstoffflussSteuerschalter</object-name>
-		<property>contols/switches/KraftstoffflussSteuerschalter</property>
+		<property>controls/switches/KraftstoffflussSteuerschalter</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -839,7 +839,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Sensorenkontrollschalter</property>
+				<property>controls/switches/Sensorenkontrollschalter</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -849,7 +849,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Sensorenkontrollschalter</object-name>
-		<property>contols/switches/Sensorenkontrollschalter</property>
+		<property>controls/switches/Sensorenkontrollschalter</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -871,7 +871,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/SKS-Kappe</property>
+				<property>controls/switches/SKS-Kappe</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -881,7 +881,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Schalterkappe.008</object-name>
-		<property>contols/switches/SKS-Kappe</property>
+		<property>controls/switches/SKS-Kappe</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.723</x-m>
@@ -904,7 +904,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Flugplatznetzschalter</property>
+				<property>controls/switches/Flugplatznetzschalter</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -914,7 +914,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Flugplatznetzschalter</object-name>
-		<property>contols/switches/Flugplatznetzschalter</property>
+		<property>controls/switches/Flugplatznetzschalter</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -937,7 +937,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Neutralgasschalter</property>
+				<property>controls/switches/Neutralgasschalter</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -947,7 +947,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Neutralgasschalter</object-name>
-		<property>contols/switches/Neutralgasschalter</property>
+		<property>controls/switches/Neutralgasschalter</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -970,7 +970,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Heizungsschalter</property>
+				<property>controls/switches/Heizungsschalter</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -980,7 +980,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Heizungsschalter</object-name>
-		<property>contols/switches/Heizungsschalter</property>
+		<property>controls/switches/Heizungsschalter</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -1003,7 +1003,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/BatterieHeizungMaschinenschutz</property>
+				<property>controls/switches/BatterieHeizungMaschinenschutz</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -1013,7 +1013,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>BatterieHeizungMaschinenschutz</object-name>
-		<property>contols/switches/BatterieHeizungMaschinenschutz</property>
+		<property>controls/switches/BatterieHeizungMaschinenschutz</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -1036,7 +1036,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Frachttuere</property>
+				<property>controls/switches/Frachttuere</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -1046,7 +1046,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Frachttuere</object-name>
-		<property>contols/switches/Frachttuere</property>
+		<property>controls/switches/Frachttuere</property>
 		<factor>-45</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -1068,7 +1068,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Frachttuere-Kappe</property>
+				<property>controls/switches/Frachttuere-Kappe</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -1078,7 +1078,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Schalterkappe.012</object-name>
-		<property>contols/switches/Frachttuere-Kappe</property>
+		<property>controls/switches/Frachttuere-Kappe</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.723</x-m>
@@ -1101,7 +1101,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Frachtrampe</property>
+				<property>controls/switches/Frachtrampe</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -1111,7 +1111,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Frachtrampe</object-name>
-		<property>contols/switches/Frachtrampe</property>
+		<property>controls/switches/Frachtrampe</property>
 		<factor>-45</factor>
 		<center>
 			<x-m>-4.733</x-m>
@@ -1133,7 +1133,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>contols/switches/Frachtrampe-Kappe</property>
+				<property>controls/switches/Frachtrampe-Kappe</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -1143,7 +1143,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Schalterkappe.011</object-name>
-		<property>contols/switches/Frachtrampe-Kappe</property>
+		<property>controls/switches/Frachtrampe-Kappe</property>
 		<factor>-90</factor>
 		<center>
 			<x-m>-4.723</x-m>
