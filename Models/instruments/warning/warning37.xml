@@ -53,9 +53,9 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
      </and>
     </condition>  
   <emission>
-    <red>1.0</red>
-    <green>1.0</green>
-    <blue>1.0</blue>    
+    <red>2.0</red>
+    <green>2.0</green>
+    <blue>2.0</blue>    
   </emission>
 </animation>
 

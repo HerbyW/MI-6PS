@@ -938,6 +938,10 @@ setlistener("/sim/model/mi6/state", func(v) {
 
 
 ############################# FUEL CONTROL #####################################################
+# Verbrauch: rotors/main/torque 60000 -980000
+
+
+
 
 var Fuel1_Level= props.globals.getNode("/consumables/fuel/tank/level-gal_us",1);
 var Fuel2_Level= props.globals.getNode("/consumables/fuel/tank[1]/level-gal_us",1);
@@ -954,13 +958,15 @@ var Fuel12_Level= props.globals.getNode("/consumables/fuel/tank[11]/level-gal_us
 var Fuel13_Level= props.globals.getNode("/consumables/fuel/tank[12]/level-gal_us",1);
 var TotalFuelG=props.globals.getNode("/consumables/fuel/total-fuel-gals",1);
 var NoFuel=props.globals.getNode("/engines/engine/out-of-fuel",1);
+var torqueM=props.globals.getNode("/rotors/main/torque",1);
 
 var update_fuel = maketimer(1, func{
   
   if(getprop("sim/model/mi6/state")>1)
   {  
-    var amnt = 0.012;
-    var lvl = Fuel1_Level.getValue();
+    var amnt = torqueM.getValue() * 0.0000001;
+    setprop("/engines/fuel-flow-kgph", amnt*2*60*60);
+    var lvl1 = Fuel1_Level.getValue();
     var lvl2 = Fuel2_Level.getValue();
     var lvl3 = Fuel3_Level.getValue();
     var lvl4 = Fuel4_Level.getValue();
@@ -974,60 +980,63 @@ var update_fuel = maketimer(1, func{
     var lvl12 = Fuel12_Level.getValue();
     var lvl13 = Fuel13_Level.getValue();
     
-    if(lvl > 0 and getprop("/consumables/fuel/tank[0]/selected")==1)
-    { lvl = lvl-amnt; }
-#    else
-#    { mi6.engines(0);   }    
+    if(lvl1 > 0 and getprop("/consumables/fuel/tank[0]/selected")==1)
+    { lvl1 = lvl1-amnt; }
+    else
+    { mi6.engines(0);   }    
     if(lvl2 > 0 and getprop("/consumables/fuel/tank[1]/selected")==1)
     { lvl2 = lvl2-amnt; }
     else
-    { lvl = lvl-amnt;   }    
-    if(lvl3 > 0 and getprop("/consumables/fuel/tank[2]/selected")==1)
-    { lvl3 = lvl3-amnt; }
-    else
-    { lvl = lvl-amnt;   }
-    if(lvl4 > 0 and getprop("/consumables/fuel/tank[3]/selected")==1)
-    { lvl4 = lvl4-amnt; }
-    else
-    { lvl = lvl-amnt;   }
-    if(lvl5 > 0 and getprop("/consumables/fuel/tank[4]/selected")==1)
-    { lvl5 = lvl5-amnt; }
-    else
-    { lvl = lvl-amnt;   }
-    if(lvl6 > 0 and getprop("/consumables/fuel/tank[5]/selected")==1)
-    { lvl6 = lvl6-amnt; }
-    else
-    { lvl = lvl-amnt;   }
-    if(lvl7 > 0 and getprop("/consumables/fuel/tank[6]/selected")==1)
-    { lvl7 = lvl7-amnt; }
-    else
-    { lvl = lvl-amnt;   }
-    if(lvl8 > 0 and getprop("/consumables/fuel/tank[7]/selected")==1)
-    { lvl8 = lvl8-amnt; }
-    else
-    { lvl = lvl-amnt;   }
-    if(lvl9 > 0 and getprop("/consumables/fuel/tank[8]/selected")==1)
-    { lvl9 = lvl9-amnt; }
-    else
-    { lvl = lvl-amnt;   }
-    if(lvl10 > 0 and getprop("/consumables/fuel/tank[9]/selected")==1)
-    { lvl10 = lvl10-amnt; }
-    else
-    { lvl = lvl-amnt;   }
-    if(lvl11 > 0 and getprop("/consumables/fuel/tank[10]/selected")==1)
-    { lvl11 = lvl11-amnt; }
-    else
-    { lvl = lvl-amnt;   }
-    if(lvl12 > 0 and getprop("/consumables/fuel/tank[11]/selected")==1)
-    { lvl12 = lvl12-amnt; }
-    else
-    { lvl = lvl-amnt;   }
-    if(lvl13 > 0 and getprop("/consumables/fuel/tank[12]/selected")==1)
-    { lvl13 = lvl13-amnt; }
-    else
-    { lvl = lvl-amnt;   }    
+    { mi6.engines(0);   }
     
-    if(lvl < 0.0)lvl = 0.0;
+    if(lvl3 > 0 and getprop("/consumables/fuel/tank[2]/selected")==1)
+    { lvl3 = lvl3-amnt;
+      lvl1 = lvl1+amnt; }
+    
+    if(lvl4 > 0 and getprop("/consumables/fuel/tank[3]/selected")==1)
+    { lvl4 = lvl4-amnt;
+      lvl2 = lvl2+amnt; }
+
+    if(lvl5 > 0 and getprop("/consumables/fuel/tank[4]/selected")==1)
+    { lvl5 = lvl5-amnt; 
+      lvl3 = lvl3+amnt; }
+
+    if(lvl6 > 0 and getprop("/consumables/fuel/tank[5]/selected")==1)
+    { lvl6 = lvl6-amnt; 
+      lvl4 = lvl4+amnt; }
+
+    if(lvl7 > 0 and getprop("/consumables/fuel/tank[6]/selected")==1)
+    { lvl7 = lvl7-2*amnt;
+      lvl5 = lvl5+amnt;
+      lvl6 = lvl6+amnt; }
+
+    if(lvl8 > 0 and getprop("/consumables/fuel/tank[7]/selected")==1)
+    { lvl8 = lvl8-2*amnt;
+      lvl7 = lvl7+2*amnt; }
+
+    if(lvl9 > 0 and getprop("/consumables/fuel/tank[8]/selected")==1)
+    { lvl9 = lvl9-amnt;
+      lvl8 = lvl8+amnt; }
+
+    if(lvl10 > 0 and getprop("/consumables/fuel/tank[9]/selected")==1)
+    { lvl10 = lvl10-amnt;
+      lvl8 = lvl8+amnt; }
+
+    if(lvl11 > 0 and getprop("/consumables/fuel/tank[10]/selected")==1)
+    { lvl11 = lvl11-2*amnt;
+      lvl9 = lvl9+amnt;
+      lvl10 = lvl10+amnt; }
+
+    if(lvl12 > 0 and getprop("/consumables/fuel/tank[11]/selected")==1)
+    { lvl12 = lvl12-amnt;
+      lvl11 = lvl11+amnt; }
+
+    if(lvl13 > 0 and getprop("/consumables/fuel/tank[12]/selected")==1)
+    { lvl13 = lvl13-amnt;
+      lvl11 = lvl11+amnt; }
+   
+    
+    if(lvl1 < 0.0)lvl1 = 0.0;
     if(lvl2 < 0.0)lvl2 = 0.0;
     if(lvl3 < 0.0)lvl3 = 0.0;
     if(lvl4 < 0.0)lvl4 = 0.0;
@@ -1040,9 +1049,9 @@ var update_fuel = maketimer(1, func{
     if(lvl11 < 0.0)lvl11 = 0.0;
     if(lvl12 < 0.0)lvl12 = 0.0;
     if(lvl13 < 0.0)lvl13 = 0.0;
-    var ttl = lvl+lvl2+lvl3+lvl4+lvl5+lvl6+lvl7+lvl8+lvl9+lvl10+lvl11+lvl12+lvl13;
+    var ttl = lvl1+lvl2+lvl3+lvl4+lvl5+lvl6+lvl7+lvl8+lvl9+lvl10+lvl11+lvl12+lvl13;
     if (!ttl) mi6.engines(0);
-    Fuel1_Level.setDoubleValue(lvl);
+    Fuel1_Level.setDoubleValue(lvl1);
     Fuel2_Level.setDoubleValue(lvl2);
     Fuel3_Level.setDoubleValue(lvl3);
     Fuel4_Level.setDoubleValue(lvl4);

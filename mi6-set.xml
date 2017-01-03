@@ -48,7 +48,8 @@ Removing this header is probited.
       <reltarget>1</reltarget>
       <maxreltorque>1</maxreltorque>
     </rotor>
-    <switches>      
+    <switches>
+      <startpanel-cover type="double">0</startpanel-cover>    
       <gauge-light type="int">1</gauge-light>
       <adf-1-selector type="double">0</adf-1-selector>
       <adf-2-selector type="double">0</adf-2-selector>

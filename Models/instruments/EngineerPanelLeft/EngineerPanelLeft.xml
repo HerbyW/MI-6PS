@@ -385,6 +385,18 @@
 		</action>
 	</animation>
 	
+	<model>
+		<path>Aircraft/MI-6PS/Models/instruments/fuel/fuel1_R1.xml</path>
+		<offsets>
+			<x-m>-4.729</x-m>
+			<y-m> -0.836</y-m>
+			<z-m>2.716</z-m> 
+			<roll-deg>    0 </roll-deg>
+			<pitch-deg>   0 </pitch-deg>
+			<heading-deg> 180 </heading-deg>
+		</offsets>
+	</model>
+	
 	<animation>
 		<type>rotate</type>
 		<object-name>Durchflussmessgeraet</object-name>
