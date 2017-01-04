@@ -294,7 +294,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	      <height>2</height>
 	      <x>460</x>
 	      <y>-5</y>
-	      <format>Water:%6.0f...................................Liter</format>
+	      <format>Water:%6.0f...................................Pounds</format>
 	      <halign>left</halign>
 	      <input>
 		<property>/sim/weight[2]/weight-lb</property>

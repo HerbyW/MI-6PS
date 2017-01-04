@@ -24,7 +24,7 @@
 
 <PropertyList>
 	
-	<path>Mi-6B-rotors3.ac</path>
+	<path>Mi-6B-rotors4.ac</path>
 	
 	<animation>
 	  	<type>range</type>
@@ -123,6 +123,11 @@
 		<object-name>Curve.036</object-name>
 		<object-name>Curve.039</object-name>
 		<object-name>Curve.042</object-name>
+		<object-name>Anlenk1</object-name>
+		<object-name>Anlenk2</object-name>
+		<object-name>Anlenk3</object-name>
+		<object-name>Anlenk4</object-name>
+		<object-name>Anlenk5</object-name>
 	</animation>
 	
 	<!--Main Rotor Tilt Pitch-->
@@ -307,6 +312,32 @@
 			<y>10.311</y>
 			<z>-1.013</z>
 		</axis>
+	</animation>
+	
+	<animation>
+	  <type>translate</type>
+	  <object-name>Swashplate</object-name>
+	  <object-name>SwashSteer</object-name>
+	  <object-name>Anlenk1</object-name>
+	  <object-name>Anlenk2</object-name>
+	  <object-name>Anlenk3</object-name>
+	  <object-name>Anlenk4</object-name>
+	  <object-name>Anlenk5</object-name>
+	  <property>sim/multiplay/generic/float[17]</property>
+	  <interpolation>
+	    <entry><ind> 0.0 </ind><dep> 0.10 </dep></entry>	    
+	    <entry><ind> 1.0 </ind><dep> 0.0 </dep></entry>
+	  </interpolation>
+	  <center>
+	    <x-m>3.661</x-m><!-- 3.552 3.581-->
+	    <y-m>0.0</y-m><!-- 0 -->
+	    <z-m>6.367</z-m><!-- 6.698 -->
+	  </center>
+	  <axis>
+	    <x>0</x>
+	    <y>0</y>
+	    <z>1</z>
+	  </axis>
 	</animation>
 	
 	

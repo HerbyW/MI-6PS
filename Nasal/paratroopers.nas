@@ -60,7 +60,7 @@ var Wload = 1;
 
 var waterloading = maketimer( 1, func
 {
-     if(getprop("sim/model/mi6/waterpipe") > 0 and Wload < 100 )
+     if(getprop("sim/model/mi6/waterpipe") > 0 and Wload < 220 )
              {  
                 if(getprop("fdm/jsbsim/environment/terrain-solid") == 0)
 		    {

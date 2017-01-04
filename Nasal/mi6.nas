@@ -315,6 +315,7 @@ var crash = func {
     torque_pct.setValue(torque_val = 0);
     stall_filtered.setValue(stall_val = 0);
     state.setValue(0);
+    mi6.engines(0);
 
   } else {
     # uncrash (for replay)
@@ -942,7 +943,7 @@ setlistener("/sim/model/mi6/state", func(v) {
 
 
 
-
+setprop("/rotors/main/torque", 0);
 var Fuel1_Level= props.globals.getNode("/consumables/fuel/tank/level-gal_us",1);
 var Fuel2_Level= props.globals.getNode("/consumables/fuel/tank[1]/level-gal_us",1);
 var Fuel3_Level= props.globals.getNode("/consumables/fuel/tank[2]/level-gal_us",1);
@@ -962,10 +963,11 @@ var torqueM=props.globals.getNode("/rotors/main/torque",1);
 
 var update_fuel = maketimer(1, func{
   
+    var amnt = torqueM.getValue() * 0.0000001457;
+    interpolate("/engines/fuel-flow-kgph", amnt*2*60*60*4.6459, 1);
+  
   if(getprop("sim/model/mi6/state")>1)
-  {  
-    var amnt = torqueM.getValue() * 0.0000001;
-    setprop("/engines/fuel-flow-kgph", amnt*2*60*60);
+  {
     var lvl1 = Fuel1_Level.getValue();
     var lvl2 = Fuel2_Level.getValue();
     var lvl3 = Fuel3_Level.getValue();
@@ -1075,4 +1077,47 @@ var update_fuel = maketimer(1, func{
 });
 
 update_fuel.start();
+
+####################################################################################################
+# overhead panel controls
+#
+
+setlistener("/sim/model/mi6/state", func(v) {
+  if (getprop("/sim/model/mi6/state") == 1)
+  {  
+  setprop("/controls/switches/engine", 1 );  
+  }
+  if (getprop("/sim/model/mi6/state") == 0)
+  {  
+  setprop("/controls/switches/engine", 0 );  
+  }
+});
+
+setlistener("/controls/switches/engine", func(v) {
+  if (getprop("/controls/switches/engine") == 1)
+  {  
+  setprop("/controls/switches/engines-main-cover", 0 );  
+  }
+  if (getprop("/controls/switches/engine") == 0)
+  {  
+  setprop("/controls/switches/engines-main-cover", 1 );  
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -44,7 +44,7 @@
   </animation>
 
  
- <!--sum of tank 1 content in kg, small needle -->
+ <!--sum of all tanks content in kg, small needle -->
  
  <animation>
   <type>rotate</type>
@@ -52,7 +52,7 @@
   <property>consumables/fuel/total-fuel-gals</property>
   <interpolation>
    <entry><ind>  0.0</ind><dep>/0</dep></entry> 
-   <entry><ind> 25500</ind><dep>  322</dep></entry>
+   <entry><ind> 7500</ind><dep>  290</dep></entry>
   </interpolation>
   <center>
    <x-m>0.0</x-m>
@@ -66,7 +66,7 @@
   </axis>
  </animation>
  
- <!--fuel flow in kilogramm per hour for engine 1, big needle -->
+ <!--fuel flow in kilogramm per hour, big needle -->
  
  <animation>
   <type>rotate</type>
@@ -74,7 +74,7 @@
   <property>engines/fuel-flow-kgph</property>
   <interpolation>
     <entry><ind>  0.0</ind><dep>  0   </dep></entry>
-    <entry><ind> 700</ind><dep> 315</dep></entry>
+    <entry><ind> 7000</ind><dep> 315</dep></entry>
   </interpolation>
   <center>
    <x-m>0.0</x-m>

@@ -91,7 +91,10 @@ Removing this header is probited.
       <Frachttuere type="bool">0</Frachttuere>
       <Frachttuere-Kappe type="bool">0</Frachttuere-Kappe>
       <Frachtrampe type="bool">0</Frachtrampe>      
-      <Frachtrampe-Kappe type="bool">0</Frachtrampe-Kappe>      
+      <Frachtrampe-Kappe type="bool">0</Frachtrampe-Kappe>
+      <engines-main-cover type="bool">0</engines-main-cover> 
+      <engine type="bool">0</engine> 
+      
     </switches>
     <flight>
       <floating-pitch type="double">0.0</floating-pitch>
@@ -201,6 +204,7 @@ Removing this header is probited.
 	<float n="14" alias="/rotors/main/torque"/>
 	<float n="15" alias="/rotors/main/tilt/roll-deg"/>
 	<float n="16" alias="/sim/model/mi6/iceing"/> <!-- the icing on the windshield -->
+	<float n="17" alias="/controls/engines/engine/throttle"/>
 	
 	<string  alias="/sim/multiplay/callsign"/>
 	<string n="1" type="string" alias="/sim/model/mi6/version"/>
@@ -224,7 +228,7 @@ Removing this header is probited.
       <weight n="2">
 	<name>Water</name>
 	<weight-lb type="double">100.0</weight-lb>
-	<max-lb type="double">12000.0</max-lb>
+	<max-lb type="double">22100.0</max-lb>
 	<min-lb type="double">0.0</min-lb>
       </weight>
       

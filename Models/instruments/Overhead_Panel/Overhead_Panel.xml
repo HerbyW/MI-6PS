@@ -192,8 +192,8 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>Switch.188</object-name>
-    <property>sim/model/mi6/engine</property>
-    <factor>-90</factor>
+    <property>/controls/switches/engine</property>
+    <factor>-85</factor>
     <center>
       <x-m>-5.801</x-m>
       <y-m>0.139</y-m>
