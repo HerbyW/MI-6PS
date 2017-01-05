@@ -1,0 +1,487 @@
+<PropertyList>
+
+<!--
+    #######################################################################################################
+    Arcraft development for Flightgear by Herbert Wagner 2014-2015                            Model: MI-6PS
+    Antonov AN-12BK, AN-22A, AN-225-Mrija,
+    Tuplev Tu-95MR,
+    Mil Mi-6PS
+    Yak 58, Yak-53,
+    Berijev Be-200Altair
+    SpaceShuttle
+    Development is ongoing, see latest versions: www.github.com/HerbyW
+    
+    This file is licenced under the terms mentioned in the LICENCE.txt file.
+    Mi6dev was initially started by Moritz Röhrich (Blender3D) 2010-2012 as CC 3.0 BY NC SA.
+    The 3D-model still holds the CC 3.0 BY NC SA license, everything else is GNU GPL v3 License.
+    
+    This version is now going forward and will give you a full automatic flight control-system,
+    lots of animations, instrumentation and full Multiplayer support for Parachuters and Elephant transport.
+    Liveries, Fire fighting and SAR rescue is in preparation.
+    Removing this header is probited.    
+    ########################################################################################################
+-->
+  
+	<path>red-lamps.ac</path>
+
+	
+<!-- Pumpensteuerung green-->
+	<animation>
+	  <type>material</type>
+	  <object-name>_c_2.001</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   0.35 </red>
+	    <green> 0.35 </green>
+	    <blue>  0.35 </blue>
+	  </emission>
+	</animation>
+	<!--Brightness-->
+	<animation>
+	  <type>material</type>
+	  <object-name>_d_2.001</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   1 </red>
+	    <green> 1 </green>
+	    <blue>  1 </blue>
+	  </emission>
+	</animation>
+	
+	<!--Set-->
+	<animation>
+	  <type>select</type>
+	  <object-name>_d_2.001</object-name>
+	  <condition>
+	    <or>
+	    <equals>
+	      <property>controls/switches/Lampentest</property>    
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>controls/switches/Pumpensteuerung</property>    
+	      <value>1</value>
+	    </equals>
+	    </or>
+	  </condition>
+	</animation>
+	
+<!-- Durchflussmessgeraet -->
+	
+		<animation>
+	  <type>material</type>
+	  <object-name>_c_2.005</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   0.35 </red>
+	    <green> 0.35 </green>
+	    <blue>  0.35 </blue>
+	  </emission>
+	</animation>
+	<!--Brightness-->
+	<animation>
+	  <type>material</type>
+	  <object-name>_d_2.005</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   1 </red>
+	    <green> 1 </green>
+	    <blue>  1 </blue>
+	  </emission>
+	</animation>
+	
+	<!--Set-->
+	<animation>
+	  <type>select</type>
+	  <object-name>_d_2.005</object-name>
+	  <condition>
+	    <or>
+	    <equals>
+	      <property>controls/switches/Lampentest</property>    
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>controls/switches/Durchflussmessgeraet</property>    
+	      <value>1</value>
+	    </equals>
+	    </or>
+	  </condition>
+	</animation>
+	
+<!-- Auftanksystem 06 07 08 09 10-->
+	
+		<animation>
+	  <type>material</type>
+	  <object-name>_c_2.006</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   0.35 </red>
+	    <green> 0.35 </green>
+	    <blue>  0.35 </blue>
+	  </emission>
+	</animation>
+	<!--Brightness-->
+	<animation>
+	  <type>material</type>
+	  <object-name>_d_2.006</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   1 </red>
+	    <green> 1 </green>
+	    <blue>  1 </blue>
+	  </emission>
+	</animation>
+	
+	<!--Set-->
+	<animation>
+	  <type>select</type>
+	  <object-name>_d_2.006</object-name>
+	  <condition>
+	    <or>
+	    <equals>
+	      <property>controls/switches/Lampentest</property>    
+	      <value>1</value>
+	    </equals>
+	    <and>
+	    <equals>
+	      <property>controls/switches/Boardbetankungsschalter</property>    
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>controls/switches/Tankuhr</property>    
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>controls/switches/KraftstoffflussSteuerschalter</property>    
+	      <value>1</value>
+	    </equals>
+	    </and>
+	    </or>
+	  </condition>
+	</animation>
+	
+	<animation>
+	  <type>material</type>
+	  <object-name>_c_2.007</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   0.35 </red>
+	    <green> 0.35 </green>
+	    <blue>  0.35 </blue>
+	  </emission>
+	</animation>
+	<!--Brightness-->
+	<animation>
+	  <type>material</type>
+	  <object-name>_d_2.007</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   1 </red>
+	    <green> 1 </green>
+	    <blue>  1 </blue>
+	  </emission>
+	</animation>
+	
+	<!--Set-->
+	<animation>
+	  <type>select</type>
+	  <object-name>_d_2.007</object-name>
+	  <condition>
+	    <or>
+	    <equals>
+	      <property>controls/switches/Lampentest</property>    
+	      <value>1</value>
+	    </equals>
+	    <and>
+	    <equals>
+	      <property>controls/switches/Kanalschalter</property>    
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>controls/switches/Fuellventile</property>   
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>controls/switches/Auftanksignal</property>    
+	      <value>1</value>
+	    </equals>
+	    </and>
+	    </or>
+	  </condition>
+	</animation>
+	
+	<animation>
+	  <type>material</type>
+	  <object-name>_c_2.010</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   0.35 </red>
+	    <green> 0.35 </green>
+	    <blue>  0.35 </blue>
+	  </emission>
+	</animation>
+	<!--Brightness-->
+	<animation>
+	  <type>material</type>
+	  <object-name>_d_2.010</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   1 </red>
+	    <green> 1 </green>
+	    <blue>  1 </blue>
+	  </emission>
+	</animation>
+	
+	<!--Set-->
+	<animation>
+	  <type>select</type>
+	  <object-name>_d_2.010</object-name>
+	  <condition>
+	    <or>
+	    <equals>
+	      <property>controls/switches/Lampentest</property>    
+	      <value>1</value>
+	    </equals>
+	    <and>
+	    <equals>
+	      <property>controls/switches/Kanalschalter</property>    
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>controls/switches/Fuellventile</property>   
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>controls/switches/Auftanksignal</property>    
+	      <value>1</value>
+	    </equals>
+	    </and>
+	    </or>
+	  </condition>
+	</animation>
+	
+	<animation>
+	  <type>material</type>
+	  <object-name>_c_2.008</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   0.35 </red>
+	    <green> 0.35 </green>
+	    <blue>  0.35 </blue>
+	  </emission>
+	</animation>
+	<!--Brightness-->
+	<animation>
+	  <type>material</type>
+	  <object-name>_d_2.008</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   1 </red>
+	    <green> 1 </green>
+	    <blue>  1 </blue>
+	  </emission>
+	</animation>
+	
+	<!--Set-->
+	<animation>
+	  <type>select</type>
+	  <object-name>_d_2.008</object-name>
+	  <condition>
+	    <or>
+	    <equals>
+	      <property>controls/switches/Lampentest</property>    
+	      <value>1</value>
+	    </equals>
+	    <and>
+	    <equals>
+	      <property>controls/switches/Kanalschalter</property>    
+	      <value>2</value>
+	    </equals>
+	    <equals>
+	      <property>controls/switches/Fuellventile</property>   
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>controls/switches/Auftanksignal</property>    
+	      <value>1</value>
+	    </equals>
+	    </and>
+	    </or>
+	  </condition>
+	</animation>
+	
+	<animation>
+	  <type>material</type>
+	  <object-name>_c_2.009</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   0.35 </red>
+	    <green> 0.35 </green>
+	    <blue>  0.35 </blue>
+	  </emission>
+	</animation>
+	<!--Brightness-->
+	<animation>
+	  <type>material</type>
+	  <object-name>_d_2.009</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   1 </red>
+	    <green> 1 </green>
+	    <blue>  1 </blue>
+	  </emission>
+	</animation>
+	
+	<!--Set-->
+	<animation>
+	  <type>select</type>
+	  <object-name>_d_2.009</object-name>
+	  <condition>
+	    <or>
+	    <equals>
+	      <property>controls/switches/Lampentest</property>    
+	      <value>1</value>
+	    </equals>
+	    <and>
+	    <equals>
+	      <property>controls/switches/Kanalschalter</property>    
+	      <value>2</value>
+	    </equals>
+	    <equals>
+	      <property>controls/switches/Fuellventile</property>   
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>controls/switches/Auftanksignal</property>    
+	      <value>1</value>
+	    </equals>
+	    </and>
+	    </or>
+	  </condition>
+	</animation>
+	
+	<!-- Lampentest 02 -->
+	
+		<animation>
+	  <type>material</type>
+	  <object-name>_c_2.002</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   0.35 </red>
+	    <green> 0.35 </green>
+	    <blue>  0.35 </blue>
+	  </emission>
+	</animation>
+	<!--Brightness-->
+	<animation>
+	  <type>material</type>
+	  <object-name>_d_2.002</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   1 </red>
+	    <green> 1 </green>
+	    <blue>  1 </blue>
+	  </emission>
+	</animation>
+	
+	<!--Set-->
+	<animation>
+	  <type>select</type>
+	  <object-name>_d_2.002</object-name>
+	  <condition>
+	    <equals>
+	      <property>controls/switches/Lampentest</property>    
+	      <value>1</value>
+	    </equals>
+	  </condition>
+	</animation>
+	
+	<!-- Sensorenkontrolle 15 -->
+	
+		<animation>
+	  <type>material</type>
+	  <object-name>_c_2.015</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   0.35 </red>
+	    <green> 0.35 </green>
+	    <blue>  0.35 </blue>
+	  </emission>
+	</animation>
+	<!--Brightness-->
+	<animation>
+	  <type>material</type>
+	  <object-name>_d_2.015</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   1 </red>
+	    <green> 1 </green>
+	    <blue>  1 </blue>
+	  </emission>
+	</animation>
+	
+	<!--Set-->
+	<animation>
+	  <type>select</type>
+	  <object-name>_d_2.015</object-name>
+	  <condition>
+	    <or>
+	    <equals>
+	      <property>controls/switches/Lampentest</property>    
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>controls/switches/Sensorenkontrollschalter</property>    
+	      <value>1</value>
+	    </equals>
+	  </or>
+	  </condition>
+	</animation>
+	
+		<!-- Hydranten 04 -->
+	
+		<animation>
+	  <type>material</type>
+	  <object-name>_c_2.004</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   0.35 </red>
+	    <green> 0.35 </green>
+	    <blue>  0.35 </blue>
+	  </emission>
+	</animation>
+	<!--Brightness-->
+	<animation>
+	  <type>material</type>
+	  <object-name>_d_2.004</object-name>
+	  <emission>
+	    <factor-prop>controls/switches/gauge-light</factor-prop>
+	    <red>   1 </red>
+	    <green> 1 </green>
+	    <blue>  1 </blue>
+	  </emission>
+	</animation>
+	
+	<!--Set-->
+	<animation>
+	  <type>select</type>
+	  <object-name>_d_2.004</object-name>
+	  <condition>
+	    <or>
+	    <equals>
+	      <property>controls/switches/Lampentest</property>    
+	      <value>1</value>
+	    </equals>
+	    <equals>
+	      <property>controls/switches/Hydrant-rechts</property>    
+	      <value>0</value>
+	    </equals>
+	    <equals>
+	      <property>controls/switches/Hydrant-links</property>    
+	      <value>0</value>
+	    </equals>
+	  </or>
+	  </condition>
+	</animation>
+
+</PropertyList>

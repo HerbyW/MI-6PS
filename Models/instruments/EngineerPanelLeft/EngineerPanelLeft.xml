@@ -1,1174 +1,1262 @@
 <PropertyList>
-
-<!--
-    #######################################################################################################
-    Arcraft development for Flightgear by Herbert Wagner 2014-2015                            Model: MI-6PS
-    Antonov AN-12BK, AN-22A, AN-225-Mrija,
-    Tuplev Tu-95MR,
-    Mil Mi-6PS
-    Yak 58, Yak-53,
-    Berijev Be-200Altair
-    SpaceShuttle
-    Development is ongoing, see latest versions: www.github.com/HerbyW
-    
-    This file is licenced under the terms mentioned in the LICENCE.txt file.
-    Mi6dev was initially started by Moritz Röhrich (Blender3D) 2010-2012 as CC 3.0 BY NC SA.
-    The 3D-model still holds the CC 3.0 BY NC SA license, everything else is GNU GPL v3 License.
-    
-    This version is now going forward and will give you a full automatic flight control-system,
-    lots of animations, instrumentation and full Multiplayer support for Parachuters and Elephant transport.
-    Liveries, Fire fighting and SAR rescue is in preparation.
-    Removing this header is probited.    
-    ########################################################################################################
--->
   
-	<path>EngineerPanelLeft.ac</path>
-	
-		<!--Tank valves-->
-	<!--valve1-->
-          <animation>
-		<type>pick</type>
-		<object-name>fuel_tank_valve_1</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>consumables/fuel/tank[0]/selected</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-			<binding>
-				<command>property-toggle</command>
-				<property>consumables/fuel/tank[1]/selected</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>fuel_tank_valve_1</object-name>
-		<property>consumables/fuel/tank[0]/selected</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-1.068</y-m>
-			<z-m>2.847</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-		</animation>
-	<!--valve2-->
-	<animation>
-		<type>pick</type>
-		<object-name>fuel_tank_valve_2</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>consumables/fuel/tank[2]/selected</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-			<binding>
-				<command>property-toggle</command>
-				<property>consumables/fuel/tank[3]/selected</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>fuel_tank_valve_2</object-name>
-		<property>consumables/fuel/tank[2]/selected</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-1.043</y-m>
-			<z-m>2.847</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	<!--valve3-->
-	<animation>
-		<type>pick</type>
-		<object-name>fuel_tank_valve_3</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>consumables/fuel/tank[4]/selected</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-			<binding>
-				<command>property-toggle</command>
-				<property>consumables/fuel/tank[5]/selected</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>fuel_tank_valve_3</object-name>
-		<property>consumables/fuel/tank[4]/selected</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-1.021</y-m>
-			<z-m>2.847</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	<!--valve4-->
-	<animation>
-		<type>pick</type>
-		<object-name>fuel_tank_valve_4</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>consumables/fuel/tank[6]/selected</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>fuel_tank_valve_4</object-name>
-		<property>consumables/fuel/tank[6]/selected</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.997</y-m>
-			<z-m>2.847</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	 <!--valve5 -->
-	<animation>
-		<type>pick</type>
-		<object-name>fuel_tank_valve_5</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>consumables/fuel/tank[7]/selected</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>fuel_tank_valve_5</object-name>
-		<property>consumables/fuel/tank[7]/selected</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.974</y-m>
-			<z-m>2.847</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--valve6 -->
-	<animation>
-		<type>pick</type>
-		<object-name>fuel_tank_valve_6</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>consumables/fuel/tank[8]/selected</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>fuel_tank_valve_6</object-name>
-		<property>consumables/fuel/tank[8]/selected</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.947</y-m>
-			<z-m>2.847</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--valve7 -->
-	<animation>
-		<type>pick</type>
-		<object-name>fuel_tank_valve_7</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>consumables/fuel/tank[9]/selected</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>fuel_tank_valve_7</object-name>
-		<property>consumables/fuel/tank[9]/selected</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.924</y-m>
-			<z-m>2.847</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--valve8 -->
-	<animation>
-		<type>pick</type>
-		<object-name>fuel_tank_valve_8</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>consumables/fuel/tank[10]/selected</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>fuel_tank_valve_8</object-name>
-		<property>consumables/fuel/tank[10]/selected</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.900</y-m>
-			<z-m>2.847</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--valve9 -->
-	<animation>
-		<type>pick</type>
-		<object-name>fuel_tank_valve_9</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>consumables/fuel/tank[11]/selected</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>fuel_tank_valve_9</object-name>
-		<property>consumables/fuel/tank[11]/selected</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.876</y-m>
-			<z-m>2.847</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--valve10 -->
-	<animation>
-		<type>pick</type>
-		<object-name>fuel_tank_valve_10</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>consumables/fuel/tank[12]/selected</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>fuel_tank_valve_10</object-name>
-		<property>consumables/fuel/tank[12]/selected</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.853</y-m>
-			<z-m>2.847</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--Durchflussmessgeraet -->
-	<animation>
-		<type>pick</type>
-		<object-name>Durchflussmessgeraet</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Durchflussmessgeraet</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<model>
-		<path>Aircraft/MI-6PS/Models/instruments/fuel/fuel1_R1.xml</path>
-		<offsets>
-			<x-m>-4.725</x-m>
-			<y-m> -0.836</y-m>
-			<z-m>2.726</z-m> 
-			<roll-deg>    0 </roll-deg>
-			<pitch-deg>   0 </pitch-deg>
-			<heading-deg> 180 </heading-deg>
-		</offsets>
-	</model>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Durchflussmessgeraet</object-name>
-		<property>controls/switches/Durchflussmessgeraet</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.817</y-m>
-			<z-m>2.847</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--Hydrant-rechts mit Kappe -->
-	<animation>
-		<type>pick</type>
-		<object-name>Hydrant-rechts</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Hydrant-rechts</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Hydrant-rechts</object-name>
-		<property>controls/switches/Hydrant-rechts</property>
-		<factor>-45</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-1.110</y-m>
-			<z-m>2.847</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>pick</type>
-		<object-name>Schalterkappe.007</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Hydrant-rechts-Kappe</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Schalterkappe.007</object-name>
-		<property>controls/switches/Hydrant-rechts-Kappe</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.723</x-m>
-			<y-m>-1.110</y-m>
-			<z-m>2.873</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--Hydrant-links mit Kappe-->
-	<animation>
-		<type>pick</type>
-		<object-name>Hydrant-links</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Hydrant-links</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Hydrant-links</object-name>
-		<property>controls/switches/Hydrant-links</property>
-		<factor>-45</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-1.135</y-m>
-			<z-m>2.847</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>pick</type>
-		<object-name>Schalterkappe.013</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Hydrant-links-Kappe</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Schalterkappe.013</object-name>
-		<property>controls/switches/Hydrant-links-Kappe</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.723</x-m>
-			<y-m>-1.135</y-m>
-			<z-m>2.873</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--Lampentest -->
-	<animation>
-		<type>pick</type>
-		<object-name>Lampentest</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Lampentest</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Lampentest</object-name>
-		<property>controls/switches/Lampentest</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-1.013</y-m>
-			<z-m>2.716</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-      
-      <!--Pumpensteuerung -->
-	<animation>
-		<type>pick</type>
-		<object-name>Pumpensteuerung</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Pumpensteuerung</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Pumpensteuerung</object-name>
-		<property>controls/switches/Pumpensteuerung</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.966</y-m>
-			<z-m>2.716</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--Kanalschalter mit Kappe-->
-	<animation>
-		<type>pick</type>
-		<object-name>Kanalschalter</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-cycle</command>
-				<property>controls/switches/Kanalschalter</property>
-				<value>0</value>
-				<value>1</value>
-				<value>2</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Kanalschalter</object-name>
-		<property>controls/switches/Kanalschalter</property>
-		<factor>-30</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-1.061</y-m>
-			<z-m>2.946</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>pick</type>
-		<object-name>Schalterkappe.009</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/KS-Kappe</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Schalterkappe.009</object-name>
-		<property>controls/switches/KS-Kappe</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.723</x-m>
-			<y-m>-1.053</y-m>
-			<z-m>2.972</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--Fuellventile -->
-	<animation>
-		<type>pick</type>
-		<object-name>Fuellventile</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Fuellventile</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Fuellventile</object-name>
-		<property>controls/switches/Fuellventile</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.986</y-m>
-			<z-m>2.933</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--Auftanksignal -->
-	<animation>
-		<type>pick</type>
-		<object-name>Auftanksignal</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Auftanksignal</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Auftanksignal</object-name>
-		<property>controls/switches/Auftanksignal</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.966</y-m>
-			<z-m>2.933</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--Boardbetankungsschalter -->
-	<animation>
-		<type>pick</type>
-		<object-name>Boardbetankungsschalter</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Boardbetankungsschalter</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Boardbetankungsschalter</object-name>
-		<property>controls/switches/Boardbetankungsschalter</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.892</y-m>
-			<z-m>2.933</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--Tankuhr -->
-	<animation>
-		<type>pick</type>
-		<object-name>Tankuhr</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Tankuhr</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Tankuhr</object-name>
-		<property>controls/switches/Tankuhr</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.874</y-m>
-			<z-m>2.933</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--KraftstoffflussSteuerschalter -->
-	<animation>
-		<type>pick</type>
-		<object-name>KraftstoffflussSteuerschalter</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/KraftstoffflussSteuerschalter</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>KraftstoffflussSteuerschalter</object-name>
-		<property>controls/switches/KraftstoffflussSteuerschalter</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.854</y-m>
-			<z-m>2.933</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--Sensorenkontrollschalter mit Kappe-->
-	<animation>
-		<type>pick</type>
-		<object-name>Sensorenkontrollschalter</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Sensorenkontrollschalter</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Sensorenkontrollschalter</object-name>
-		<property>controls/switches/Sensorenkontrollschalter</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-1.108</y-m>
-			<z-m>3.046</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>pick</type>
-		<object-name>Schalterkappe.008</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/SKS-Kappe</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Schalterkappe.008</object-name>
-		<property>controls/switches/SKS-Kappe</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.723</x-m>
-			<y-m>-1.108</y-m>
-			<z-m>3.072</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--Flugplatznetzschalter-->
-	<animation>
-		<type>pick</type>
-		<object-name>Flugplatznetzschalter</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Flugplatznetzschalter</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Flugplatznetzschalter</object-name>
-		<property>controls/switches/Flugplatznetzschalter</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.989</y-m>
-			<z-m>3.323</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--Neutralgasschalter-->
-	<animation>
-		<type>pick</type>
-		<object-name>Neutralgasschalter</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Neutralgasschalter</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Neutralgasschalter</object-name>
-		<property>controls/switches/Neutralgasschalter</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.962</y-m>
-			<z-m>3.323</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--Heizungsschalter-->
-	<animation>
-		<type>pick</type>
-		<object-name>Heizungsschalter</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Heizungsschalter</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Heizungsschalter</object-name>
-		<property>controls/switches/Heizungsschalter</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.924</y-m>
-			<z-m>3.323</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--BatterieHeizungMaschinenschutz-->
-	<animation>
-		<type>pick</type>
-		<object-name>BatterieHeizungMaschinenschutz</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/BatterieHeizungMaschinenschutz</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>BatterieHeizungMaschinenschutz</object-name>
-		<property>controls/switches/BatterieHeizungMaschinenschutz</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.891</y-m>
-			<z-m>3.323</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--Frachttuere mit Kappe-->
-	<animation>
-		<type>pick</type>
-		<object-name>Frachttuere</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Frachttuere</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Frachttuere</object-name>
-		<property>controls/switches/Frachttuere</property>
-		<factor>-45</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.891</y-m>
-			<z-m>3.323</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>pick</type>
-		<object-name>Schalterkappe.012</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Frachttuere-Kappe</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Schalterkappe.012</object-name>
-		<property>controls/switches/Frachttuere-Kappe</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.723</x-m>
-			<y-m>-0.853</y-m>
-			<z-m>3.348</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<!--Frachtrampe mit Kappe-->
-	<animation>
-		<type>pick</type>
-		<object-name>Frachtrampe</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Frachtrampe</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Frachtrampe</object-name>
-		<property>controls/switches/Frachtrampe</property>
-		<factor>-45</factor>
-		<center>
-			<x-m>-4.733</x-m>
-			<y-m>-0.837</y-m>
-			<z-m>3.323</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>pick</type>
-		<object-name>Schalterkappe.011</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-toggle</command>
-				<property>controls/switches/Frachtrampe-Kappe</property>
-				<value>0</value>
-				<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Schalterkappe.011</object-name>
-		<property>controls/switches/Frachtrampe-Kappe</property>
-		<factor>-90</factor>
-		<center>
-			<x-m>-4.723</x-m>
-			<y-m>-0.828</y-m>
-			<z-m>3.348</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-</PropertyList>
-
-      
+  <!--
+  #######################################################################################################
+  Arcraft development for Flightgear by Herbert Wagner 2014-2015                            Model: MI-6PS
+  Antonov AN-12BK, AN-22A, AN-225-Mrija,
+  Tuplev Tu-95MR,
+  Mil Mi-6PS
+  Yak 58, Yak-53,
+  Berijev Be-200Altair
+  SpaceShuttle
+  Development is ongoing, see latest versions: www.github.com/HerbyW
+  
+  This file is licenced under the terms mentioned in the LICENCE.txt file.
+  Mi6dev was initially started by Moritz Röhrich (Blender3D) 2010-2012 as CC 3.0 BY NC SA.
+  The 3D-model still holds the CC 3.0 BY NC SA license, everything else is GNU GPL v3 License.
+  
+  This version is now going forward and will give you a full automatic flight control-system,
+  lots of animations, instrumentation and full Multiplayer support for Parachuters and Elephant transport.
+  Liveries, Fire fighting and SAR rescue is in preparation.
+  Removing this header is probited.    
+  ########################################################################################################
+  -->
+  
+  <path>EngineerPanelLeft.ac</path>
+  
+  <!--Brightness-->
+  <animation>
+    <type>material</type>
+    <object-name>EngineerPanelLeft</object-name>  
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.1 </red>
+      <green> 0.1 </green>
+      <blue>  0.1 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>material</type>    
+    <object-name>fuel_tank_valve_1</object-name>
+    <object-name>fuel_tank_valve_2</object-name>
+    <object-name>fuel_tank_valve_3</object-name>
+    <object-name>fuel_tank_valve_4</object-name>
+    <object-name>fuel_tank_valve_5</object-name>
+    <object-name>fuel_tank_valve_6</object-name>
+    <object-name>fuel_tank_valve_7</object-name>
+    <object-name>fuel_tank_valve_8</object-name>
+    <object-name>fuel_tank_valve_9</object-name>
+    <object-name>fuel_tank_valve_10</object-name>
+    <object-name>Durchflussmessgeraet</object-name>
+    <object-name>Hydrant-rechts</object-name>
+    <object-name>Hydrant-links</object-name>    
+    <object-name>Lampentest</object-name>
+    <object-name>Pumpensteuerung</object-name>
+    <object-name>Kanalschalter</object-name>    
+    <object-name>Fuellventile</object-name>
+    <object-name>Auftanksignal</object-name>
+    <object-name>Boardbetankungsschalter</object-name>
+    <object-name>Tankuhr</object-name>
+    <object-name>KraftstoffflussSteuerschalter</object-name>
+    <object-name>Sensorenkontrollschalter</object-name>    
+    <object-name>Flugplatznetzschalter</object-name>
+    <object-name>Neutralgasschalter</object-name>
+    <object-name>Heizungsschalter</object-name>
+    <object-name>BatterieHeizungMaschinenschutz</object-name>
+    <object-name>Frachttuere</object-name>    
+    <object-name>Frachtrampe</object-name>       
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.35 </red>
+      <green> 0.35 </green>
+      <blue>  0.35 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>material</type>    
+    <object-name>Schalterkappe.007</object-name>
+    <object-name>Schalterkappe.013</object-name>  
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.15 </red>
+      <green> 0.0 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>Schalterkappe.009</object-name>    
+    <object-name>Schalterkappe.008</object-name>    
+    <object-name>Schalterkappe.012</object-name>    
+    <object-name>Schalterkappe.011</object-name>    
+    <emission>
+      <factor-prop>controls/switches/gauge-light</factor-prop>
+      <red>   0.05 </red>
+      <green> 0.05 </green>
+      <blue>  0.05 </blue>
+    </emission>
+  </animation>
+  
+  <!--Tank valves-->
+  <!--valve1-->
+  <animation>
+    <type>pick</type>
+    <object-name>fuel_tank_valve_1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>consumables/fuel/tank[0]/selected</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+      <binding>
+	<command>property-toggle</command>
+	<property>consumables/fuel/tank[1]/selected</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>fuel_tank_valve_1</object-name>
+    <property>consumables/fuel/tank[0]/selected</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-1.068</y-m>
+      <z-m>2.847</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <!--valve2-->
+  <animation>
+    <type>pick</type>
+    <object-name>fuel_tank_valve_2</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>consumables/fuel/tank[2]/selected</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+      <binding>
+	<command>property-toggle</command>
+	<property>consumables/fuel/tank[3]/selected</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>fuel_tank_valve_2</object-name>
+    <property>consumables/fuel/tank[2]/selected</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-1.043</y-m>
+      <z-m>2.847</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <!--valve3-->
+  <animation>
+    <type>pick</type>
+    <object-name>fuel_tank_valve_3</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>consumables/fuel/tank[4]/selected</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+      <binding>
+	<command>property-toggle</command>
+	<property>consumables/fuel/tank[5]/selected</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>fuel_tank_valve_3</object-name>
+    <property>consumables/fuel/tank[4]/selected</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-1.021</y-m>
+      <z-m>2.847</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <!--valve4-->
+  <animation>
+    <type>pick</type>
+    <object-name>fuel_tank_valve_4</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>consumables/fuel/tank[6]/selected</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>fuel_tank_valve_4</object-name>
+    <property>consumables/fuel/tank[6]/selected</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.997</y-m>
+      <z-m>2.847</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <!--valve5 -->
+  <animation>
+    <type>pick</type>
+    <object-name>fuel_tank_valve_5</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>consumables/fuel/tank[7]/selected</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>fuel_tank_valve_5</object-name>
+    <property>consumables/fuel/tank[7]/selected</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.974</y-m>
+      <z-m>2.847</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--valve6 -->
+  <animation>
+    <type>pick</type>
+    <object-name>fuel_tank_valve_6</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>consumables/fuel/tank[8]/selected</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>fuel_tank_valve_6</object-name>
+    <property>consumables/fuel/tank[8]/selected</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.947</y-m>
+      <z-m>2.847</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--valve7 -->
+  <animation>
+    <type>pick</type>
+    <object-name>fuel_tank_valve_7</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>consumables/fuel/tank[9]/selected</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>fuel_tank_valve_7</object-name>
+    <property>consumables/fuel/tank[9]/selected</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.924</y-m>
+      <z-m>2.847</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--valve8 -->
+  <animation>
+    <type>pick</type>
+    <object-name>fuel_tank_valve_8</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>consumables/fuel/tank[10]/selected</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>fuel_tank_valve_8</object-name>
+    <property>consumables/fuel/tank[10]/selected</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.900</y-m>
+      <z-m>2.847</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--valve9 -->
+  <animation>
+    <type>pick</type>
+    <object-name>fuel_tank_valve_9</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>consumables/fuel/tank[11]/selected</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>fuel_tank_valve_9</object-name>
+    <property>consumables/fuel/tank[11]/selected</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.876</y-m>
+      <z-m>2.847</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--valve10 -->
+  <animation>
+    <type>pick</type>
+    <object-name>fuel_tank_valve_10</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>consumables/fuel/tank[12]/selected</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>fuel_tank_valve_10</object-name>
+    <property>consumables/fuel/tank[12]/selected</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.853</y-m>
+      <z-m>2.847</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Durchflussmessgeraet -->
+  <animation>
+    <type>pick</type>
+    <object-name>Durchflussmessgeraet</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Durchflussmessgeraet</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <model>
+    <path>Aircraft/MI-6PS/Models/instruments/fuel/fuel1_R1.xml</path>
+    <offsets>
+      <x-m>-4.725</x-m>
+      <y-m> -0.836</y-m>
+      <z-m>2.726</z-m> 
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Durchflussmessgeraet</object-name>
+    <property>controls/switches/Durchflussmessgeraet</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.817</y-m>
+      <z-m>2.847</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Hydrant-rechts mit Kappe -->
+  <animation>
+    <type>pick</type>
+    <object-name>Hydrant-rechts</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Hydrant-rechts</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Hydrant-rechts</object-name>
+    <property>controls/switches/Hydrant-rechts</property>
+    <factor>-45</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-1.110</y-m>
+      <z-m>2.847</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>Schalterkappe.007</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Hydrant-rechts-Kappe</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Schalterkappe.007</object-name>
+    <property>controls/switches/Hydrant-rechts-Kappe</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.723</x-m>
+      <y-m>-1.110</y-m>
+      <z-m>2.873</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Hydrant-links mit Kappe-->
+  <animation>
+    <type>pick</type>
+    <object-name>Hydrant-links</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Hydrant-links</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Hydrant-links</object-name>
+    <property>controls/switches/Hydrant-links</property>
+    <factor>-45</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-1.135</y-m>
+      <z-m>2.847</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>Schalterkappe.013</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Hydrant-links-Kappe</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Schalterkappe.013</object-name>
+    <property>controls/switches/Hydrant-links-Kappe</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.723</x-m>
+      <y-m>-1.135</y-m>
+      <z-m>2.873</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Lampentest -->
+  <animation>
+    <type>pick</type>
+    <object-name>Lampentest</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Lampentest</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Lampentest</object-name>
+    <property>controls/switches/Lampentest</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-1.013</y-m>
+      <z-m>2.716</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Pumpensteuerung -->
+  <animation>
+    <type>pick</type>
+    <object-name>Pumpensteuerung</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Pumpensteuerung</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Pumpensteuerung</object-name>
+    <property>controls/switches/Pumpensteuerung</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.966</y-m>
+      <z-m>2.716</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Kanalschalter mit Kappe-->
+  <animation>
+    <type>pick</type>
+    <object-name>Kanalschalter</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-cycle</command>
+	<property>controls/switches/Kanalschalter</property>
+	<value>1</value>
+	<value>2</value>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>Kanalschalter</object-name>
+    <action>
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-assign</command>
+	<property>controls/switches/Kanalschalter</property>
+	<value>0</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Kanalschalter</object-name>
+    <property>controls/switches/Kanalschalter</property>
+    <factor>-30</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-1.061</y-m>
+      <z-m>2.946</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>Schalterkappe.009</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/KS-Kappe</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Schalterkappe.009</object-name>
+    <property>controls/switches/KS-Kappe</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.723</x-m>
+      <y-m>-1.053</y-m>
+      <z-m>2.972</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Fuellventile -->
+  <animation>
+    <type>pick</type>
+    <object-name>Fuellventile</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Fuellventile</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Fuellventile</object-name>
+    <property>controls/switches/Fuellventile</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.986</y-m>
+      <z-m>2.933</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Auftanksignal -->
+  <animation>
+    <type>pick</type>
+    <object-name>Auftanksignal</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Auftanksignal</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Auftanksignal</object-name>
+    <property>controls/switches/Auftanksignal</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.966</y-m>
+      <z-m>2.933</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Boardbetankungsschalter -->
+  <animation>
+    <type>pick</type>
+    <object-name>Boardbetankungsschalter</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Boardbetankungsschalter</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Boardbetankungsschalter</object-name>
+    <property>controls/switches/Boardbetankungsschalter</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.892</y-m>
+      <z-m>2.933</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Tankuhr -->
+  <animation>
+    <type>pick</type>
+    <object-name>Tankuhr</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Tankuhr</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Tankuhr</object-name>
+    <property>controls/switches/Tankuhr</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.874</y-m>
+      <z-m>2.933</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--KraftstoffflussSteuerschalter -->
+  <animation>
+    <type>pick</type>
+    <object-name>KraftstoffflussSteuerschalter</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/KraftstoffflussSteuerschalter</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>KraftstoffflussSteuerschalter</object-name>
+    <property>controls/switches/KraftstoffflussSteuerschalter</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.854</y-m>
+      <z-m>2.933</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Sensorenkontrollschalter mit Kappe-->
+  <animation>
+    <type>pick</type>
+    <object-name>Sensorenkontrollschalter</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Sensorenkontrollschalter</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Sensorenkontrollschalter</object-name>
+    <property>controls/switches/Sensorenkontrollschalter</property>
+    <factor>-85</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-1.108</y-m>
+      <z-m>3.046</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>Schalterkappe.008</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/SKS-Kappe</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Schalterkappe.008</object-name>
+    <property>controls/switches/SKS-Kappe</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.723</x-m>
+      <y-m>-1.108</y-m>
+      <z-m>3.072</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Flugplatznetzschalter-->
+  <animation>
+    <type>pick</type>
+    <object-name>Flugplatznetzschalter</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Flugplatznetzschalter</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Flugplatznetzschalter</object-name>
+    <property>controls/switches/Flugplatznetzschalter</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.989</y-m>
+      <z-m>3.323</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Neutralgasschalter-->
+  <animation>
+    <type>pick</type>
+    <object-name>Neutralgasschalter</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Neutralgasschalter</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Neutralgasschalter</object-name>
+    <property>controls/switches/Neutralgasschalter</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.962</y-m>
+      <z-m>3.323</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Heizungsschalter-->
+  <animation>
+    <type>pick</type>
+    <object-name>Heizungsschalter</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Heizungsschalter</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Heizungsschalter</object-name>
+    <property>controls/switches/Heizungsschalter</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.924</y-m>
+      <z-m>3.323</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--BatterieHeizungMaschinenschutz-->
+  <animation>
+    <type>pick</type>
+    <object-name>BatterieHeizungMaschinenschutz</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/BatterieHeizungMaschinenschutz</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>BatterieHeizungMaschinenschutz</object-name>
+    <property>controls/switches/BatterieHeizungMaschinenschutz</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.891</y-m>
+      <z-m>3.323</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Frachttuere mit Kappe-->
+  <animation>
+    <type>pick</type>
+    <object-name>Frachttuere</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Frachttuere</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Frachttuere</object-name>
+    <property>controls/switches/Frachttuere</property>
+    <factor>-45</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.891</y-m>
+      <z-m>3.323</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>Schalterkappe.012</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Frachttuere-Kappe</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Schalterkappe.012</object-name>
+    <property>controls/switches/Frachttuere-Kappe</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.723</x-m>
+      <y-m>-0.853</y-m>
+      <z-m>3.348</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!--Frachtrampe mit Kappe-->
+  <animation>
+    <type>pick</type>
+    <object-name>Frachtrampe</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Frachtrampe</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Frachtrampe</object-name>
+    <property>controls/switches/Frachtrampe</property>
+    <factor>-45</factor>
+    <center>
+      <x-m>-4.733</x-m>
+      <y-m>-0.837</y-m>
+      <z-m>3.323</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>Schalterkappe.011</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/switches/Frachtrampe-Kappe</property>
+	<value>0</value>
+	<value>1</value>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Schalterkappe.011</object-name>
+    <property>controls/switches/Frachtrampe-Kappe</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>-4.723</x-m>
+      <y-m>-0.828</y-m>
+      <z-m>3.348</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  </PropertyList>
+  
+  
+  

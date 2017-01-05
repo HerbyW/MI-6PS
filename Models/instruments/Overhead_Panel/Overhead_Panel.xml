@@ -114,9 +114,9 @@ Removing this header is probited.
     <object-name>Plane.016</object-name>        
     <emission>
       <factor-prop>controls/switches/gauge-light</factor-prop>
-      <red>   0.05 </red>
-      <green> 0.05 </green>
-      <blue>  0.05 </blue>
+      <red>   0.15 </red>
+      <green> 0.0 </green>
+      <blue>  0.0 </blue>
     </emission>
   </animation>
   

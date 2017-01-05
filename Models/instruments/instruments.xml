@@ -134,6 +134,10 @@
 		<path>Aircraft/MI-6PS/Models/instruments/EngineerPanelLeft/EngineerPanelLeft.xml</path>
 	</model>
 	
+	<model>
+		<path>Aircraft/MI-6PS/Models/instruments/EngineerPanelLeft/red-lamps.xml</path>
+	</model>
+	
 	<!-- 3 Marker Indicators--> 
 	
 	<model>

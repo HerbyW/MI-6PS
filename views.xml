@@ -56,12 +56,13 @@
 			<type>lookfrom</type>
 			<internal archive="y">true</internal>
 			<config>
-				<default-field-of-view-deg type="double">85.0</default-field-of-view-deg>
+			        <pitch-offset-deg type="double"> -6 </pitch-offset-deg>
+				<default-field-of-view-deg type="double">107.0</default-field-of-view-deg>
 				<from-model type="bool">true</from-model>
 				<from-model-idx type="int">0</from-model-idx>
 				
-				<x-offset-m type="double">-0.70</x-offset-m> <!--Zur Seite-->
-				<y-offset-m type="double">3.20</y-offset-m> <!--Nach oben-->
+				<x-offset-m type="double">-0.78</x-offset-m> <!--Zur Seite-->
+				<y-offset-m type="double">3.08</y-offset-m> <!--Nach oben-->
 				<z-offset-m type="double">-4.27</z-offset-m> <!--Nach vorne-->
 			</config>
 		</view>
