@@ -157,6 +157,39 @@
 	</offsets>
 	</model>
 	
+	  <model>        
+    <path>Aircraft/MI-6PS/Models/effects/fueltruck/F_T_short_VolvoFM-set.xml</path>
+    <condition>
+      <greater-than>
+	<property>sim/multiplay/generic/float[18]</property>
+	<value>0</value>
+      </greater-than>
+    </condition>
+    
+          <offsets>
+	    <x-m> 0.6 </x-m>
+	    <y-m> 16.1 </y-m>
+	    <z-m> 0.5 </z-m>            
+	    <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model> 
+  
+  <model>        
+    <path>Aircraft/MI-6PS/Models/effects/fueltruck/tube.xml</path>
+    <condition>
+      <greater-than>
+	<property>sim/multiplay/generic/float[18]</property>
+	<value>0</value>
+      </greater-than>
+    </condition>
+          <offsets>
+	    <x-m> 0 </x-m>
+	    <y-m> 0 </y-m>
+	    <z-m> 0 </z-m>            
+	    <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+	
 	<!-- the ice effect -->
 	
 	<effect>

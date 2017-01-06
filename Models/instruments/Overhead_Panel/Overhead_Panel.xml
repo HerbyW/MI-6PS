@@ -215,7 +215,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>nasal</command>
-	<script>interpolate("/controls/rotor/brake", 1.0, 2)</script>
+	<script>interpolate("/controls/rotor/brake", 1.0, 0.5)</script>
       </binding>
     </action>
   </animation>
@@ -228,7 +228,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>nasal</command>
-	<script>interpolate("/controls/rotor/brake", 0.0, 2)</script>
+	<script>interpolate("/controls/rotor/brake", 0.0, 0.5)</script>
       </binding>
     </action>
     <hovered>

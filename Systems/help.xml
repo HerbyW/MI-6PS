@@ -75,7 +75,7 @@ Made by Moritz Roehrich (Blender3D) 2010-2012
 
 Updated 3D-model, FDM, Animations, Instruments by Herbert Wagner 10-2015 - 12-2016
 
-Version: 4.0.3
+Version: 4.0.4
 
                                   ABOUT
 
@@ -158,6 +158,29 @@ In fire fighting situations you will get all information in the cockpit from you
 
 Autorotation: In case of engine off, Autopilot and all other settings will be made with automatic. Look to the rotor speed and controll the collective. Before landing reduce speed to 60-80 kts.
 
+Engineer panel:
+
+Bottom row: from left
+-lamp test switch
+-Pump control (should be on)
+
+Fuel system: 2nd row from bottom: from left
+-Hydrant left
+-Hydrant right (put them both on)
+-10 tank valves, the first 3 switches work for 2 tanks simultan, never shut down valve 1! all fuel is transfered to tank 1+2
+-fuel consumption meter on
+
+Refilling: 3rd row from bottom: from left:
+-channel switch:0 out, 1 filling to 80 percent, 2 filling to 100 percent
+-filling valve
+-tank signal
+-board tank signal
+-tank meter
+-fuel flow meter
+-Switch all to on, the tank truck is then comming, automatic end of animation
+
+Sensor control: 4th row from bottom on the left, should be on
+
 All animations are working in MP-mode.
 
 Latest Update: Now with 6 different modes for starting, landing, changing the flight modus and more. After one modus is fully activated you may click on the clear button. then you may click an other mode.
@@ -166,6 +189,7 @@ Latest Update: Now with 6 different modes for starting, landing, changing the fl
 	       Now with wind-compass and working speed indicator for ground- and airspeed
 	       Now with beacon and strobe lights and switches
 	       Now with Autorotation Automatic Settings
+	       Now with fuel system, tank animation, fuel consumption
 
 Values for setting the rotor-tilt and the rotor-roll-tilt:
    In floating mode:     4.50/-0.62 (speed 3)

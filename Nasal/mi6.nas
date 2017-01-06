@@ -1106,18 +1106,87 @@ setlistener("/controls/switches/engine", func(v) {
 
 
 # other controls
+setlistener("/sim/model/mi6/state", func(v) 
+{
+  if (getprop("/sim/model/mi6/state") == 1)
+    {  setprop("/controls/rotor/brake", 0 );  }
+  if (getprop("/sim/model/mi6/state") == 0 and getprop("position/altitude-agl-ft") < 5)
+    {  setprop("/controls/rotor/brake", 1 );
+       setprop("/sim/messages/copilot", "Rotor brake on!");
+    }
+});
 
 
+var tankwagen = maketimer(2, func {
+  
+  if(getprop("/controls/switches/Boardbetankungsschalter") == 1 and getprop("/controls/switches/Tankuhr") == 1 and getprop("/controls/switches/KraftstoffflussSteuerschalter") == 1 
+     and getprop("/controls/switches/Kanalschalter") > 0 and getprop("/controls/switches/Fuellventile") == 1 
+     and getprop("/controls/switches/Auftanksignal") == 1 and getprop("/controls/switches/fueltruck") == 0)
+    {
+    setprop("/controls/lighting/beacon", 1 );
+    interpolate("/controls/switches/fueltruck", 1, 18);
+    }
+});
 
+tankwagen.start();
 
+setprop("/consumables/fuel/finishtanking", 0.0);
 
+setlistener("/controls/switches/fueltruck", func(v) 
+{
+  if (getprop("/controls/switches/fueltruck") == 1 and getprop("/controls/switches/Kanalschalter") == 1)
+    {
+      interpolate("/consumables/fuel/tank[0]/level-gal_us", 95, 15 );
+      interpolate("/consumables/fuel/tank[1]/level-gal_us", 95, 15 );
+      interpolate("/consumables/fuel/tank[2]/level-gal_us", 95, 15 );
+      interpolate("/consumables/fuel/tank[3]/level-gal_us", 95, 15 );
+      interpolate("/consumables/fuel/tank[4]/level-gal_us", 95, 15 );
+      interpolate("/consumables/fuel/tank[5]/level-gal_us", 95, 15 );
+      interpolate("/consumables/fuel/tank[6]/level-gal_us", 119, 15 );
+      interpolate("/consumables/fuel/tank[7]/level-gal_us", 119, 15 );
+      interpolate("/consumables/fuel/tank[8]/level-gal_us", 129, 15 );
+      interpolate("/consumables/fuel/tank[9]/level-gal_us", 129, 15 );
+      interpolate("/consumables/fuel/tank[10]/level-gal_us", 258, 15 );
+      interpolate("/consumables/fuel/tank[11]/level-gal_us", 367, 15 );
+      interpolate("/consumables/fuel/tank[12]/level-gal_us", 367, 15 );
+      setprop("/sim/messages/copilot", "Fuel loading to level 80 percent!");
+      interpolate("/consumables/fuel/finishtanking", 1, 16 );      
+    }
+  if (getprop("/controls/switches/fueltruck") == 1 and getprop("/controls/switches/Kanalschalter") == 2)
+    {
+      interpolate("/consumables/fuel/tank[0]/level-gal_us", 115, 15 );
+      interpolate("/consumables/fuel/tank[1]/level-gal_us", 115, 15 );
+      interpolate("/consumables/fuel/tank[2]/level-gal_us", 115, 15 );
+      interpolate("/consumables/fuel/tank[3]/level-gal_us", 115, 15 );
+      interpolate("/consumables/fuel/tank[4]/level-gal_us", 115, 15 );
+      interpolate("/consumables/fuel/tank[5]/level-gal_us", 115, 15 );
+      interpolate("/consumables/fuel/tank[6]/level-gal_us", 145, 15 );
+      interpolate("/consumables/fuel/tank[7]/level-gal_us", 145, 15 );
+      interpolate("/consumables/fuel/tank[8]/level-gal_us", 160, 15 );
+      interpolate("/consumables/fuel/tank[9]/level-gal_us", 160, 15 );
+      interpolate("/consumables/fuel/tank[10]/level-gal_us", 320, 15 );
+      interpolate("/consumables/fuel/tank[11]/level-gal_us", 450, 15 );
+      interpolate("/consumables/fuel/tank[12]/level-gal_us", 450, 15 );
+      setprop("/sim/messages/copilot", "Fuel loading to level 100 percent!");
+      interpolate("/consumables/fuel/finishtanking", 1.0, 16 );      
+    }    
+});
 
-
-
-
-
-
-
+setlistener("/consumables/fuel/finishtanking", func(v) 
+{
+  if (getprop("/consumables/fuel/finishtanking") == 1.0)
+    { 
+      setprop("/controls/switches/Boardbetankungsschalter", 0);
+      setprop("/controls/switches/Tankuhr", 0);
+      setprop("/controls/switches/KraftstoffflussSteuerschalter", 0); 
+      setprop("/controls/switches/Kanalschalter", 0);
+      setprop("/controls/switches/Fuellventile", 0); 
+      setprop("/controls/switches/Auftanksignal", 0);
+      interpolate("/controls/switches/fueltruck", 0, 18);
+      setprop("/sim/messages/copilot", "Fuel loading finished!");
+      setprop("/consumables/fuel/finishtanking", 0.0);
+    }
+});
 
 
 

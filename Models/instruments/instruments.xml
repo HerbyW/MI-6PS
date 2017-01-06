@@ -283,6 +283,18 @@
 	</model>
 	
 	<model>
+		<path>Aircraft/MI-6PS/Models/instruments/warning/warning38.xml</path>
+		<offsets>
+			<x-m>-6.045</x-m>
+			<y-m>-0.595</y-m>
+			<z-m>3.133</z-m> 
+			<roll-deg>    0 </roll-deg>
+			<pitch-deg>   0 </pitch-deg>
+			<heading-deg> 0 </heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
 		<path>Aircraft/MI-6PS/Models/instruments/warning/warning61.xml</path>
 		<offsets>
 			<x-m>-6.045</x-m>

@@ -328,5 +328,19 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <max-dist>100</max-dist>
     </ADF>
     
+    <tanksignal>
+      <name>tanksignal</name>
+      <mode>looped</mode>
+      <path>Aircraft/MI-6PS/Sound/cat-reversebeep.wav</path>
+       <condition>
+	 <greater-than>
+          <property>sim/multiplay/generic/float[18]</property>
+	  <value>0.01</value>
+	  </greater-than>
+       </condition>     
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </tanksignal>
+    
 </fx>
 </PropertyList>
