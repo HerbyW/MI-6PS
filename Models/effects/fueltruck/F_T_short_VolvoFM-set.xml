@@ -7,9 +7,7 @@
 	<path>Fuel_Truck_Short_VolvoFM.ac</path>
 	
 	<animation>
-	  <type>select</type>
-	  
-	  
+	  <type>select</type>  
 	    <condition>
 	      <greater-than>
 		<property>sim/multiplay/generic/float[18]</property>
@@ -17,10 +15,11 @@
 	      </greater-than>
 	    </condition>
 	  </animation>
+	  
+	  
 	
 	<animation>
-	  <type>translate</type>
-	  
+	  <type>translate</type>  
 	  <property>sim/multiplay/generic/float[18]</property>
 	  <interpolation>
 	    <entry><ind> 0.0 </ind><dep> -85 </dep></entry>
@@ -36,11 +35,12 @@
 	  </axis>
 	</animation>
 	
+	
+	
 	<animation>
 		<name>Lights_all</name>
 		<object-name>Lights_front</object-name>
 		<object-name>Lights_rear</object-name>
-		
 	</animation>
 	
 	<!-- Lights illumination -->
@@ -64,9 +64,9 @@
 	<condition>
             <property>sim/multiplay/generic/int[16]</property>
         </condition>
-	<emission>	
-			<red>1</red>	
-			<green>1</green>	
+	<emission>
+			<red>1</red>
+			<green>1</green>
 			<blue>1</blue>
 		</emission>
 	</animation>

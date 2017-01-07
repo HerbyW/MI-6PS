@@ -157,7 +157,8 @@
 	</offsets>
 	</model>
 	
-	  <model>        
+	  <model>
+	    <name>Fueltruck</name>
     <path>Aircraft/MI-6PS/Models/effects/fueltruck/F_T_short_VolvoFM-set.xml</path>
     <condition>
       <greater-than>
@@ -169,10 +170,44 @@
           <offsets>
 	    <x-m> 0.6 </x-m>
 	    <y-m> 16.1 </y-m>
-	    <z-m> 0.5 </z-m>            
+	    <z-m> 0.1 </z-m>            
 	    <pitch-deg>0</pitch-deg>
 	  </offsets>
-  </model> 
+  </model>
+  
+  <animation>
+    <object-name>Fueltruck</object-name>
+    <type>rotate</type>        
+    <property>orientation/roll-deg</property>
+    <factor>1</factor>
+    <center>
+      <x-m> 0.6 </x-m>
+	    <y-m> 16.1 </y-m>
+	    <z-m> 0.1 </z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation> 
+  
+  <animation>
+    <object-name>Fueltruck</object-name>
+    <type>rotate</type>        
+    <property>orientation/pitch-deg</property>
+    <factor>1</factor>
+    <center>
+      <x-m> 0.6 </x-m>
+	    <y-m> 16.1 </y-m>
+	    <z-m> 0.1 </z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    </animation>
   
   <model>        
     <path>Aircraft/MI-6PS/Models/effects/fueltruck/tube.xml</path>

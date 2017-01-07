@@ -768,7 +768,6 @@ var autotakeoffrunway = func()
    interpolate("/controls/flight/autoRS2", 10, 140 );  
    setprop("/controls/gear/brake-parking", 0 );
    setprop("/autopilot/locks/collective", 0 );
-   setprop("/autopilot/locks/couple", 1 );
    setprop("/controls/flight/floating-pitch", 0.0 );
    interpolate("/controls/flight/tilt", -0.08, 10 );
    interpolate("/controls/flight/tilt-roll", -0.08, 100 );
@@ -783,6 +782,7 @@ var autotakeoffrunway = func()
    setprop("instrumentation/magnetic-compass/pitch-offset-deg", getprop("/environment/magnetic-variation-deg-korr"));
    setprop("autopilot/settings/heading-bug-deg", getprop("orientation/heading-magnetic-deg"));
    setprop("/autopilot/locks/heading", "dg-heading-hold");
+   setprop("/autopilot/locks/couple", 1 );
    setprop("/sim/messages/copilot", "All Settings for Auto Take Off on runway are made.");
    setprop("/sim/messages/copilot", "Use the rudder to hold the runway heading.");
    setprop("/sim/messages/copilot", "We will climb 3000 ft, just use the elevator to hold a pitch of not more than 10 degree");
