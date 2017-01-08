@@ -61,7 +61,7 @@
 				<from-model type="bool">true</from-model>
 				<from-model-idx type="int">0</from-model-idx>
 				
-				<x-offset-m type="double">-0.78</x-offset-m> <!--Zur Seite-->
+				<x-offset-m type="double">-0.66</x-offset-m> <!--Zur Seite-->
 				<y-offset-m type="double">3.08</y-offset-m> <!--Nach oben-->
 				<z-offset-m type="double">-4.27</z-offset-m> <!--Nach vorne-->
 			</config>

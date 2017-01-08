@@ -96,6 +96,11 @@
 	
 	<model>
 		<path>Aircraft/MI-6PS/Models/instruments/exhTempIndic/exhTempIndic.xml</path>
+		<offsets>
+			<x-m>0.01</x-m>
+			<y-m>-0.0</y-m>
+			<z-m>-0.25</z-m> 
+		</offsets>
 	</model>
 	
 	<model>
@@ -112,6 +117,11 @@
 	
 	<model>
 		<path>Aircraft/MI-6PS/Models/instruments/RPMGauge/RPMGauge.xml</path>
+		<offsets>
+			<x-m>0.01</x-m>
+			<y-m>-0.0</y-m>
+			<z-m>-0.25</z-m> 
+		</offsets>
 	</model>
 	
 	<model>
@@ -128,10 +138,19 @@
 	
 	<model>
 		<path>Aircraft/MI-6PS/Models/instruments/EngineHealthIndicator/engineHealthIndicator.xml</path>
+		<offsets>
+			<x-m>0.01</x-m>
+			<y-m>-0.0</y-m>
+			<z-m>-0.25</z-m> 
+		</offsets>
 	</model>
 	
 	<model>
 		<path>Aircraft/MI-6PS/Models/instruments/EngineerPanelLeft/EngineerPanelLeft.xml</path>
+	</model>
+	
+	<model>
+		<path>Aircraft/MI-6PS/Models/instruments/EngineerPanelLeft/radiopanel.xml</path>
 	</model>
 	
 	<model>
@@ -789,9 +808,9 @@ Control</text>
 	<model>
 		<path>Aircraft/MI-6PS/Models/instruments/km-5/km-5-1.xml</path>
 		<offsets>
-			<x-m>-4.85</x-m>
-			<y-m>-0.62</y-m>
-			<z-m>3.27</z-m> 
+			<x-m>-4.729</x-m>
+			<y-m>-0.624</y-m>
+			<z-m>3.26</z-m> 
 			<roll-deg>    0 </roll-deg>
 			<pitch-deg>   0 </pitch-deg>
 			<heading-deg> 0 </heading-deg>
@@ -801,9 +820,9 @@ Control</text>
 	<model>
 		<path>Aircraft/MI-6PS/Models/instruments/kurs-mp/kurs-mp-1.xml</path>
 		<offsets>
-			<x-m>-4.85</x-m>
-			<y-m>-0.67</y-m>
-			<z-m>3.40</z-m> 
+			<x-m>-4.727</x-m>
+			<y-m>-0.624</y-m>
+			<z-m>3.12</z-m> 
 			<roll-deg>    0 </roll-deg>
 			<pitch-deg>   0 </pitch-deg>
 			<heading-deg> 0 </heading-deg>
@@ -813,9 +832,9 @@ Control</text>
 	<model>
 		<path>Aircraft/MI-6PS/Models/instruments/kurs-mp/kurs-mp-2.xml</path>
 		<offsets>
-			<x-m>-4.85</x-m>
-			<y-m>-0.47</y-m>
-			<z-m>3.40</z-m> 
+			<x-m>-4.727</x-m>
+			<y-m>-0.624</y-m>
+			<z-m>3.01</z-m> 
 			<roll-deg>    0 </roll-deg>
 			<pitch-deg>   0 </pitch-deg>
 			<heading-deg> 0 </heading-deg>

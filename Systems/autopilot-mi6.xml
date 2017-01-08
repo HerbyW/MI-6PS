@@ -174,7 +174,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output>/autopilot/internal/target-roll-deg</output>
     <type>noise-spike</type>
-    <max-rate-of-change>20.0</max-rate-of-change>
+    <max-rate-of-change>20.0</max-rate-of-change>                                <!-- 20 -->
   </filter>
   
   <filter>
@@ -284,7 +284,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	  </equals>
 	  <greater-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
-	    <value>110.001</value>
+	    <value>110.0</value>
 	  </greater-than>
 	  <less-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
@@ -344,7 +344,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	  </equals>
 	  <greater-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
-	    <value>100.001</value>
+	    <value>100.0</value>
 	  </greater-than>
 	  <less-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
@@ -404,7 +404,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	  </equals>
 	  <greater-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
-	    <value>90.001</value>
+	    <value>90.0</value>
 	  </greater-than>
 	  <less-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
@@ -552,7 +552,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	  </greater-than>
 	  <greater-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
-	    <value>100.001</value>
+	    <value>100.0</value>
 	  </greater-than>
 	  <or>
 	    <equals>
@@ -597,7 +597,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	  </greater-than>
 	  <greater-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 
-	    <value>90.001</value>
+	    <value>90.0</value>
 	  </greater-than>
 	  <less-than>
 	    <property>/instrumentation/airspeed-indicator/true-speed-kt</property> 

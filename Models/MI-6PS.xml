@@ -92,6 +92,10 @@
       </model>
       
       <model>
+	<path>Aircraft/MI-6PS/Models/effects/rampe/rampe.xml</path>
+	</model>
+      
+      <model>
 	<path>Aircraft/MI-6PS/Models/effects/elephant/elephant.xml</path>
 	<offsets>
 	  <x-m>45.50</x-m>
