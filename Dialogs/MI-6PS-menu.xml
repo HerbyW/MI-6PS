@@ -8,7 +8,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 <PropertyList>
 
   <default>
-    <menu n="10">
+    <menu n="100">
       <label>MI-6 Poschar(Fire)</label>
       <enabled type="bool">true</enabled>
       <item>
@@ -18,6 +18,14 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 		<script>aircraft.livery.dialog.open()</script>
 	</binding>
        </item>
+       
+       <item>
+        <label>Show/hide Devices</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>/sim/model/hide-devices</property>
+        </binding>
+      </item>
     </menu>
     
   </default>

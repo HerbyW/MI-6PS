@@ -130,7 +130,7 @@ Removing this header is probited.
     <author>Herbert Wagner, Moritz Roehrich</author>
     <flight-model>yasim</flight-model>
     <aero>mi6-yasim</aero>
-    <version>4.0.5</version>
+    <version>4.0.6</version>
     
     <fuel-fraction>0.8</fuel-fraction>
     
@@ -159,12 +159,13 @@ Removing this header is probited.
 	<flares type="int">0</flares>
 	<waterpipe type="int">0</waterpipe>
 	<watercanon type="int">0</watercanon>
-	<version type="string">4.0.5</version>
+	<version type="string">4.0.6</version>
 	<wings type="int">1</wings>
 	<anti-ice-alpha type="float">1</anti-ice-alpha>
 	<anti-ice-rotor type="float">1</anti-ice-rotor>
 	<iceing type="float">1</iceing>
       </mi6>
+      <hide-devices type="bool">false</hide-devices>
     </model>
     
     <multiplay>

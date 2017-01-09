@@ -75,7 +75,7 @@ Made by Moritz Roehrich (Blender3D) 2010-2012
 
 Updated 3D-model, FDM, Animations, Instruments by Herbert Wagner 10-2015 - 12-2016
 
-Version: 4.0.5
+Version: 4.0.6
 
                                   ABOUT
 
@@ -157,6 +157,8 @@ There is also a switch for a water-pipe, to load water from a lake or the see. G
 In fire fighting situations you will get all information in the cockpit from your friendly copilot. To install the addon for this, read the txt-file in the read-me-for-wildfire folder and install the files.
 
 Autorotation: In case of engine off, Autopilot and all other settings will be made with automatic. Look to the rotor speed and controll the collective. Before landing reduce speed to 60-80 kts.
+
+Hide some instruments: click them or in the menue
 
 Engineer panel:
 

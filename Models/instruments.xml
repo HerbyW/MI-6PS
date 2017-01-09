@@ -41,7 +41,49 @@
 -->
 <PropertyList>
 
-	<path>Mi-6D-instruments.ac</path>
+	<path>Mi-6E-instruments.ac</path>
+	
+	<animation>
+    <type>select</type>
+    <object-name>Plane.025</object-name>
+    <object-name>Plane.019</object-name>
+    <object-name>Plane.018</object-name>
+    <object-name>Circle.017</object-name>
+    <object-name>Nav</object-name>
+    <object-name>Cube</object-name>
+    <object-name>Circle.121</object-name>
+    <object-name>Fuselage.006</object-name>
+    <object-name>Fuselage.007</object-name>
+    <object-name>Fuselage.008</object-name>
+    <object-name>retractable_table</object-name>
+    <object-name>retractable_table.001</object-name>
+    <condition>
+      <property>sim/model/hide-devices</property>
+    </condition>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>Plane.025</object-name>
+    <object-name>Plane.019</object-name>
+    <object-name>Plane.018</object-name>
+    <object-name>Circle.017</object-name>
+    <object-name>Nav</object-name>
+    <object-name>Cube</object-name>
+    <object-name>Circle.121</object-name>
+    <object-name>Fuselage.006</object-name>
+    <object-name>Fuselage.007</object-name>
+    <object-name>Fuselage.008</object-name>
+    <object-name>retractable_table</object-name>
+    <object-name>retractable_table.001</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/hide-devices</property>
+      </binding>      
+    </action>
+  </animation>
 	
 	<animation>
 	  	<type>range</type>
@@ -86,8 +128,6 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Pitch</object-name>
-		<object-name>PitchStick1</object-name>
-		<object-name>PitchStickS</object-name>
 		<object-name>Throttle</object-name>
 		<object-name>Pitchknob</object-name>
 		<property>/controls/engines/engine[0]/throttle</property>
@@ -106,13 +146,96 @@
 	
 	<animation>
 		<type>rotate</type>
-		<object-name>Pitch</object-name>
-		<object-name>PitchStick1</object-name>
+		<object-name>PitchTri</object-name>
+		<property>/controls/engines/engine[0]/throttle</property>
+		<factor>-65</factor>
+		<center>
+			<x-m>-5.137</x-m>
+			<y-m>0.169</y-m>
+			<z-m>2.530</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	
+	
+	<animation>
+		<type>rotate</type>
 		<object-name>PitchStickS</object-name>
-		<object-name>Throttle</object-name>
-		<object-name>Pitchknob</object-name>
-		<property>/controls/pitch-offset</property>
-		<factor>-45</factor>
+		<property>/controls/engines/engine[0]/throttle</property>
+		<factor>-65</factor>
+		<center>
+			<x-m>-5.137</x-m>
+			<y-m>0.169</y-m>
+			<z-m>2.530</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>PitchStickS</object-name>
+		<property>/controls/engines/engine[0]/throttle</property>
+		<factor>15</factor>
+		<center>
+			<x-m>-5.203</x-m>
+			<y-m>0.169</y-m>
+			<z-m>2.550</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>PitchStick2</object-name>
+		<property>/controls/engines/engine[0]/throttle</property>
+		<factor>-65</factor>
+		<center>
+			<x-m>-5.137</x-m>
+			<y-m>0.231</y-m>
+			<z-m>2.462</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>PitchStick2</object-name>
+		<property>/controls/engines/engine[0]/throttle</property>
+		<factor>75</factor>
+		<center>
+			<x-m>-5.201</x-m>
+			<y-m>0.192</y-m>
+			<z-m>2.430</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>PitchStick1</object-name>
+		<property>/controls/engines/engine[0]/throttle</property>
+		<factor>-35</factor>
 		<center>
 			<x-m>-5.053</x-m>
 			<y-m>-0.229</y-m>
@@ -124,103 +247,16 @@
 			<z>0</z>
 		</axis>
 	</animation>
-
-	<animation>
-		<type>rotate</type>
-		<object-name>PitchStick1</object-name>
-		<property>/controls/engines/engine[0]/throttle</property>
-		<factor>45</factor>
-		<center>
-			<x-m>-5.241</x-m>
-			<y-m>-0.242</y-m>
-			<z-m>2.458</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
 	
 	<animation>
 		<type>rotate</type>
 		<object-name>PitchStick1</object-name>
-		<property>/controls/pitch-offset</property>
-		<factor>45</factor>
+		<property>/controls/engines/engine[0]/throttle</property>
+		<factor>35</factor>
 		<center>
-			<x-m>-5.241</x-m>
+			<x-m>-5.214</x-m>
 			<y-m>-0.242</y-m>
-			<z-m>2.458</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>PitchTri</object-name>
-		<object-name>PitchStick2</object-name>
-		<property>/controls/engines/engine[0]/throttle</property>
-		<factor>-74.3</factor>
-		<center>
-			<x-m>-5.137</x-m>
-			<y-m>0.231</y-m>
-			<z-m>2.462</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>PitchTri</object-name>
-		<object-name>PitchStick2</object-name>
-		<property>/controls/pitch-offset</property>
-		<factor>-74.3</factor>
-		<center>
-			<x-m>-5.137</x-m>
-			<y-m>0.231</y-m>
-			<z-m>2.462</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>PitchStick2</object-name>
-		<property>/controls/engines/engine[0]/throttle</property>
-		<factor>74.3</factor>
-		<center>
-			<x-m>-5.201</x-m>
-			<y-m>0.192</y-m>
-			<z-m>2.420</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>PitchStick2</object-name>
-		<property>/controls/pitch-offset</property>
-		<factor>74.3</factor>
-		<center>
-			<x-m>-5.201</x-m>
-			<y-m>0.192</y-m>
-			<z-m>2.420</z-m>
+			<z-m>2.527</z-m>
 		</center>
 		<axis>
 			<x>0</x>
