@@ -103,7 +103,7 @@ Removing this header is probited.
       <tilt type="double">0.0</tilt>
       <tilt-roll type="double">0.0</tilt-roll>
       <stab type="double">0.0</stab>
-      <slowspeed type="double">0</slowspeed>      
+      <slowspeed type="int">0</slowspeed>      
     </flight>
     <paratroopers>
       <paratroopers type="int">0</paratroopers>
