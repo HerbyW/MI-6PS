@@ -61,7 +61,7 @@
 	<animation>
 	  <type>rotate</type>
 	  <object-name>clock_hour</object-name>
-	  <property>/instrumentation/clock/indicated-min</property>
+	  <property>instrumentation/clock/indicated-min</property>
 	  <factor>-0.5</factor>
 	  <center>
 	    <x-m>-6.057</x-m>
@@ -78,7 +78,7 @@
 	<animation>
 	  <type>rotate</type>
 	  <object-name>clock_hour</object-name>
-	  <property>/instrumentation/clock/local-hour</property>
+	  <property>instrumentation/clock/local-hour</property>
 	  <factor>-30.0</factor>
 	  <center>
 	    <x-m>-6.057</x-m>
@@ -95,7 +95,7 @@
 	<animation>
 	  <type>rotate</type>
 	  <object-name>clock_minute</object-name>
-	  <property>/instrumentation/clock/indicated-sec</property>
+	  <property>instrumentation/clock/indicated-sec</property>
 	  <factor>-0.1</factor>
 	  <center>
 	    <x-m>-6.057</x-m>
@@ -112,7 +112,7 @@
 	<animation>
 	  <type>rotate</type>
 	  <object-name>clock_second</object-name>
-	  <property>/instrumentation/clock/indicated-sec</property>
+	  <property>instrumentation/clock/indicated-sec</property>
 	  <factor>-6.0</factor>
 	  <center>
 	    <x-m>-6.057</x-m>

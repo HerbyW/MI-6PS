@@ -192,7 +192,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>Switch.188</object-name>
-    <property>/controls/switches/engine</property>
+    <property>controls/switches/engine</property>
     <factor>-85</factor>
     <center>
       <x-m>-5.801</x-m>
@@ -215,7 +215,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>nasal</command>
-	<script>interpolate("/controls/rotor/brake", 1.0, 0.5)</script>
+	<script>interpolate("controls/rotor/brake", 1.0, 0.5)</script>
       </binding>
     </action>
   </animation>
@@ -228,7 +228,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>nasal</command>
-	<script>interpolate("/controls/rotor/brake", 0.0, 0.5)</script>
+	<script>interpolate("controls/rotor/brake", 0.0, 0.5)</script>
       </binding>
     </action>
     <hovered>
@@ -243,7 +243,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>Switch.187</object-name>
-    <property>/controls/rotor/brake</property>
+    <property>controls/rotor/brake</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.801</x-m>
@@ -346,7 +346,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/electric/battery-switch</property>
+	<property>controls/electric/battery-switch</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -363,7 +363,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>Switch.181</object-name>
-    <property>/controls/electric/battery-switch</property>
+    <property>controls/electric/battery-switch</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.801</x-m>
@@ -386,7 +386,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/switches/gauge-light</property>
+	<property>controls/switches/gauge-light</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -403,7 +403,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>Switch.182</object-name>
-    <property>/controls/switches/gauge-light</property>
+    <property>controls/switches/gauge-light</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.801</x-m>
@@ -426,7 +426,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/lighting/nav-lights</property>
+	<property>controls/lighting/nav-lights</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -443,7 +443,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>Switch.183</object-name>
-    <property>/controls/lighting/nav-lights</property>
+    <property>controls/lighting/nav-lights</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.801</x-m>
@@ -466,7 +466,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/lighting/beacon</property>
+	<property>controls/lighting/beacon</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -483,7 +483,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>Switch.184</object-name>
-    <property>/controls/lighting/beacon</property>
+    <property>controls/lighting/beacon</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.801</x-m>
@@ -506,7 +506,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/lighting/strobe</property>
+	<property>controls/lighting/strobe</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -523,7 +523,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>Switch.185</object-name>
-    <property>/controls/lighting/strobe</property>
+    <property>controls/lighting/strobe</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.801</x-m>
@@ -546,7 +546,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/instrumentation/adf[0]/power-btn</property>
+	<property>instrumentation/adf[0]/power-btn</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -563,7 +563,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>Switch.012</object-name>
-    <property>/instrumentation/adf[0]/power-btn</property>
+    <property>instrumentation/adf[0]/power-btn</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>
@@ -586,7 +586,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/instrumentation/adf[1]/power-btn</property>
+	<property>instrumentation/adf[1]/power-btn</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -603,7 +603,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>Switch.013</object-name>
-    <property>/instrumentation/adf[1]/power-btn</property>
+    <property>instrumentation/adf[1]/power-btn</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>
@@ -626,7 +626,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/instrumentation/heading-indicator[0]/serviceable</property>
+	<property>instrumentation/heading-indicator[0]/serviceable</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -643,7 +643,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>Switch.014</object-name>
-    <property>/instrumentation/heading-indicator[0]/serviceable</property>
+    <property>instrumentation/heading-indicator[0]/serviceable</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>
@@ -666,7 +666,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/instrumentation/nav[0]/power-btn</property>
+	<property>instrumentation/nav[0]/power-btn</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -683,7 +683,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>Switch.015</object-name>
-    <property>/instrumentation/nav[0]/power-btn</property>
+    <property>instrumentation/nav[0]/power-btn</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>
@@ -706,7 +706,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/instrumentation/nav[1]/power-btn</property>
+	<property>instrumentation/nav[1]/power-btn</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -723,7 +723,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>Switch.016</object-name>
-    <property>/instrumentation/nav[1]/power-btn</property>
+    <property>instrumentation/nav[1]/power-btn</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>
@@ -746,7 +746,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/instrumentation/transponder/serviceable</property>
+	<property>instrumentation/transponder/serviceable</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -763,7 +763,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>Switch.017</object-name>
-    <property>/instrumentation/transponder/serviceable</property>
+    <property>instrumentation/transponder/serviceable</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>
@@ -786,7 +786,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/switches/autopilot</property>
+	<property>controls/switches/autopilot</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -803,7 +803,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>autopilot</object-name>
-    <property>/controls/switches/autopilot</property>
+    <property>controls/switches/autopilot</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.493</x-m>
@@ -825,7 +825,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/switches/friction</property>
+	<property>controls/switches/friction</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -842,7 +842,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>friction</object-name>
-    <property>/controls/switches/friction</property>
+    <property>controls/switches/friction</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.493</x-m>
@@ -864,7 +864,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/switches/hydro-damping</property>
+	<property>controls/switches/hydro-damping</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -881,7 +881,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>hydro-damping</object-name>
-    <property>/controls/switches/hydro-damping</property>
+    <property>controls/switches/hydro-damping</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.493</x-m>
@@ -905,7 +905,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/switches/landinglight</property>
+	<property>controls/switches/landinglight</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -922,7 +922,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>landinglight-l-ctrl</object-name>
-    <property>/controls/switches/landinglight</property>
+    <property>controls/switches/landinglight</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>
@@ -944,7 +944,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/switches/search</property>
+	<property>controls/switches/search</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -961,7 +961,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>landinglight-l</object-name>
-    <property>/controls/switches/search</property>
+    <property>controls/switches/search</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>
@@ -983,7 +983,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/switches/taxilight</property>
+	<property>controls/switches/taxilight</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -1000,7 +1000,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>landinglight-r-ctrl</object-name>
-    <property>/controls/switches/taxilight</property>
+    <property>controls/switches/taxilight</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>
@@ -1022,7 +1022,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/switches/taxilight</property>
+	<property>controls/switches/taxilight</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -1039,7 +1039,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>landinglight-r</object-name>
-    <property>/controls/switches/taxilight</property>
+    <property>controls/switches/taxilight</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>
@@ -1073,7 +1073,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/switches/glass-heating</property>
+	<property>controls/switches/glass-heating</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -1090,7 +1090,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>glass-heating</object-name>
-    <property>/controls/switches/glass-heating</property>
+    <property>controls/switches/glass-heating</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>
@@ -1124,7 +1124,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/switches/rotor-heating</property>
+	<property>controls/switches/rotor-heating</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -1141,7 +1141,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>rotor-heating</object-name>
-    <property>/controls/switches/rotor-heating</property>
+    <property>controls/switches/rotor-heating</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>
@@ -1175,7 +1175,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/switches/instrument-heating</property>
+	<property>controls/switches/instrument-heating</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -1192,7 +1192,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>instrument-heating</object-name>
-    <property>/controls/switches/instrument-heating</property>
+    <property>controls/switches/instrument-heating</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>
@@ -1214,7 +1214,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/switches/fan</property>
+	<property>controls/switches/fan</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -1231,7 +1231,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>fan</object-name>
-    <property>/controls/switches/fan</property>
+    <property>controls/switches/fan</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>
@@ -1253,7 +1253,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/switches/external-suspension</property>
+	<property>controls/switches/external-suspension</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -1270,7 +1270,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>external-suspension</object-name>
-    <property>/controls/switches/external-suspension</property>
+    <property>controls/switches/external-suspension</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>
@@ -1292,7 +1292,7 @@ Removing this header is probited.
       <repeatable>false</repeatable>
       <binding>
 	<command>property-toggle</command>
-	<property>/controls/switches/jettison-cargo</property>
+	<property>controls/switches/jettison-cargo</property>
 	<value>0</value>
 	<value>1</value>
       </binding>
@@ -1309,7 +1309,7 @@ Removing this header is probited.
   <animation>
     <type>rotate</type>
     <object-name>jettison-cargo</object-name>
-    <property>/controls/switches/jettison-cargo</property>
+    <property>controls/switches/jettison-cargo</property>
     <factor>-90</factor>
     <center>
       <x-m>-5.590</x-m>

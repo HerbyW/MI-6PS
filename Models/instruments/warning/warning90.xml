@@ -42,7 +42,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
   <object-name>text</object-name>
   <condition>
       <equals>
-	<property>/autopilot/locks/altitude</property>
+	<property>autopilot/locks/altitude</property>
 	<value>gleiten</value>
       </equals>
    </condition>  
@@ -62,32 +62,32 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <repeatable>false</repeatable>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/floating-pitch</property>
+      <property>controls/flight/floating-pitch</property>
       <value>0.0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/autopilot/locks/speed</property>
+      <property>autopilot/locks/speed</property>
       <value></value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/autopilot/locks/collective</property>
+      <property>autopilot/locks/collective</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/autopilot/locks/heading</property>
+      <property>autopilot/locks/heading</property>
       <value type="string">wing-leveler</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/autopilot/internal/target-roll-deg-wl</property>
+      <property>autopilot/internal/target-roll-deg-wl</property>
       <value type="double"> 0 </value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/autopilot/locks/altitude</property>
+      <property>autopilot/locks/altitude</property>
       <value type="string"></value>
     </binding>
   </action>

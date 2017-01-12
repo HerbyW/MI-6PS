@@ -9,7 +9,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 <sim>
     <model>
         <livery>
-            <name type="string">3mtest</name>
+            <name type="string">Eagle Flights</name>
             <texture>Liveries/3mtest.png</texture>
         </livery>
     </model>    

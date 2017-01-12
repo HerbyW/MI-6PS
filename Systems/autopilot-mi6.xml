@@ -40,7 +40,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <property>/autopilot/internal/target-roll-deg-wl</property><!-- 0.0 -->
     </reference>
     <output>
-      <property>autopilot/internal/target-roll-filter</property>
+      <property>/autopilot/internal/target-roll-filter</property>
     </output>
     <config>
       <Kp>1.0</Kp>
@@ -68,7 +68,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <value>0.0</value>
     </reference>
     <output>
-      <property>autopilot/internal/target-roll-filter</property>
+      <property>/autopilot/internal/target-roll-filter</property>
     </output>
     <config>
       <Kp>-1.0</Kp>
@@ -96,7 +96,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <value>0.0</value>
     </reference>
     <output>
-      <property>autopilot/internal/target-roll-filter</property>
+      <property>/autopilot/internal/target-roll-filter</property>
     </output>
     <config>
       <Kp>-1.0</Kp>
@@ -124,7 +124,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <value>0.0</value>
     </reference>
     <output>
-      <property>autopilot/internal/target-roll-filter</property>
+      <property>/autopilot/internal/target-roll-filter</property>
     </output>
     <config>
       <Kp>-1.0</Kp>
@@ -140,7 +140,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <name>ROLL FILTER less than 90 kts</name>
     <debug>false</debug>
     <feedback-if-disabled>false</feedback-if-disabled>
-    <initialize-to>output</initialize-to>
+    <initialize-to>input</initialize-to>                                    <!-- output -->
     <enable>
       <condition>
 	<and>
@@ -172,7 +172,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <input>
       <property>/autopilot/internal/target-roll-filter</property>
     </input>
-    <output>/autopilot/internal/target-roll-deg</output>
+    <output><property>/autopilot/internal/target-roll-deg</property></output>
     <type>noise-spike</type>
     <max-rate-of-change>20.0</max-rate-of-change>                                <!-- 20 -->
   </filter>
@@ -213,7 +213,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <input>
       <property>/autopilot/internal/target-roll-filter</property>
     </input>
-    <output>/autopilot/internal/target-roll-deg</output>
+    <output><property>/autopilot/internal/target-roll-deg</property></output>
     <type>noise-spike</type>
     <max-rate-of-change>1.5</max-rate-of-change>
   </filter>
@@ -550,7 +550,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <input>
       <property>/controls/flight/aileron-trim-filter</property>
     </input>
-    <output>/controls/flight/aileron-trim</output>
+    <output><property>/controls/flight/aileron-trim</property></output>
     <type>noise-spike</type>
     <max-rate-of-change>0.50</max-rate-of-change>
   </filter>
@@ -591,7 +591,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <input>
       <property>/controls/flight/aileron-trim-filter</property>
     </input>
-    <output>/controls/flight/aileron-trim</output>
+    <output><property>/controls/flight/aileron-trim</property></output>
     <type>noise-spike</type>
     <max-rate-of-change>0.15</max-rate-of-change>
   </filter>
@@ -632,7 +632,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <input>
       <property>/controls/flight/aileron-trim-filter</property>
     </input>
-    <output>/controls/flight/aileron-trim</output>
+    <output><property>/controls/flight/aileron-trim</property></output>
     <type>noise-spike</type>
     <max-rate-of-change>0.050</max-rate-of-change>
   </filter>
@@ -895,7 +895,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <input>
       <property>/controls/engines/engine[0]/throttle-filter</property>
     </input>
-    <output>/controls/engines/engine[0]/throttle</output>
+    <output><property>/controls/engines/engine[0]/throttle</property></output>
     <type>noise-spike</type>
     <max-rate-of-change>0.0035</max-rate-of-change>                                                      <!-- 0.05 -->
   </filter>
@@ -944,7 +944,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <input>
       <property>/controls/engines/engine[0]/throttle-filter</property>
     </input>
-    <output>/controls/engines/engine[0]/throttle</output>
+    <output><property>/controls/engines/engine[0]/throttle</property></output>
     <type>noise-spike</type>
     <max-rate-of-change>0.005</max-rate-of-change>                                                      <!-- 0.05 -->
   </filter>   
@@ -996,7 +996,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <input>
       <property>/controls/engines/engine[0]/throttle-filter</property>
     </input>
-    <output>/controls/engines/engine[0]/throttle</output>
+    <output><property>/controls/engines/engine[0]/throttle</property></output>
     <type>noise-spike</type>
     <max-rate-of-change>0.012</max-rate-of-change>                                                    <!-- 0.075 -->
   </filter> 
@@ -1044,7 +1044,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <input>
       <property>/controls/engines/engine[0]/throttle-filter</property>
     </input>
-    <output>/controls/engines/engine[0]/throttle</output>
+    <output><property>/controls/engines/engine[0]/throttle</property></output>
     <type>noise-spike</type>
     <max-rate-of-change>0.015</max-rate-of-change>
   </filter> 
@@ -1229,7 +1229,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <input>
       <property>/controls/flight/elevator-trim-filterI</property>
     </input>
-    <output>/controls/flight/elevator-trim</output>
+    <output><property>/controls/flight/elevator-trim</property></output>
     <type>noise-spike</type>
     <max-rate-of-change>0.0025</max-rate-of-change>
   </filter>
@@ -1288,18 +1288,18 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	      <value>gleiten</value>
 	    </equals>
 	  </not>
-	  <property>autopilot/locks/couple</property>
+	  <property>/autopilot/locks/couple</property>
 	</and>
       </condition>
     </enable>
     <input>
-      <property>instrumentation/gsdi/drift-v-kt</property>
+      <property>/instrumentation/gsdi/drift-v-kt</property>
     </input>
     <reference>
       <value>0.0</value>
     </reference>
     <output>
-      <property>controls/flight/rudder-trim</property>
+      <property>/controls/flight/rudder-trim</property>
     </output>
     <config>
       <Kp>-0.01</Kp>
@@ -1327,18 +1327,18 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	    <property>/autopilot/locks/heading</property>
 	    <value>dg-heading-hold</value>
 	  </not-equals>
-	  <property>autopilot/locks/couple</property>
+	  <property>/autopilot/locks/couple</property>
 	</and>
       </condition>
     </enable>
     <input>
-      <property>orientation/yaw-rate-degps</property>
+      <property>/orientation/yaw-rate-degps</property>
     </input>
     <reference>
       <value>0.0</value>
     </reference>
     <output>
-      <property>controls/flight/rudder-trim</property>
+      <property>/controls/flight/rudder-trim</property>
     </output>
     <config>
       <Kp>0.035</Kp>
@@ -1366,7 +1366,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	    <property>/autopilot/locks/heading</property>
 	    <value>dg-heading-hold</value>
 	  </equals>
-	  <property>autopilot/locks/couple</property>
+	  <property>/autopilot/locks/couple</property>
 	</and>
       </condition>
     </enable>
@@ -1377,7 +1377,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <value>0.0</value>
     </reference>
     <output>
-      <property>controls/flight/rudder-trimG</property>
+      <property>/controls/flight/rudder-trimG</property>
     </output>
     <config>
       <Kp>-0.035</Kp>
@@ -1407,14 +1407,14 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	    <property>/autopilot/locks/heading</property>
 	    <value>dg-heading-hold</value>
 	  </equals>
-	  <property>autopilot/locks/couple</property>
+	  <property>/autopilot/locks/couple</property>
 	</and>
       </condition>
     </enable>
     <input>
-      <property>controls/flight/rudder-trimG</property>
+      <property>/controls/flight/rudder-trimG</property>
     </input>
-    <output>/controls/flight/rudder-trim</output>
+    <output><property>/controls/flight/rudder-trim</property></output>
     <type>noise-spike</type>
     <max-rate-of-change>0.5</max-rate-of-change>
   </filter>

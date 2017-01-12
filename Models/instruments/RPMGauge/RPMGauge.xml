@@ -26,7 +26,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>rpm_percent_needle_1</object-name>
-		<property>/rotors/main/rpm</property>
+		<property>rotors/main/rpm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -56,7 +56,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>rpm_percent_needle_2</object-name>
-		<property>/rotors/tail/rpm</property>
+		<property>rotors/tail/rpm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>

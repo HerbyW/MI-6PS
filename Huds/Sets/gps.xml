@@ -225,7 +225,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	      <y>35</y>		
 	      <halign>left</halign>
 	      <input>
-		<property>environment/metar/station-id</property>
+		<property>/environment/metar/station-id</property>
 	      </input>
 	    </label>
 	    
@@ -237,7 +237,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	      <format>METAR:%4.1f........................wind direction</format>
 	      <halign>left</halign>
 	      <input>
-		<property>environment/metar/base-wind-dir-deg</property>
+		<property>/environment/metar/base-wind-dir-deg</property>
 	      </input>
 	    </label>
 	    
@@ -249,7 +249,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	      <format>METAR:%4.1f........................wind speed kt</format>
 	      <halign>left</halign>
 	      <input>
-		<property>environment/metar/base-wind-speed-kt</property>
+		<property>/environment/metar/base-wind-speed-kt</property>
 	      </input>
 	    </label>
 	        
@@ -261,7 +261,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	      <format>Cargo Door:%01d.................closed(0) open(1)</format>
 	      <halign>left</halign>
 	      <input>
-		<property>sim/model/door-positions/c/position-norm</property>
+		<property>/sim/model/door-positions/c/position-norm</property>
 	      </input>
 	    </label>
 	    
@@ -273,7 +273,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	      <format>Tow Door:%01d....................closed(0) open(1)</format>
 	      <halign>left</halign>
 	      <input>
-		<property>sim/model/door-positions/BK/position-norm</property>
+		<property>/sim/model/door-positions/BK/position-norm</property>
 	      </input>
 	    </label>
 	    
@@ -309,7 +309,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	      <format>VerticalSpeed:%6.2f..................meter/sec</format>
 	      <halign>left</halign>
 	      <input>
-		<property>velocities/vertical-speed-fps</property>
+		<property>/velocities/vertical-speed-fps</property>
 		<factor>0.3048</factor>
 	      </input>
 	    </label>
@@ -322,7 +322,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	      <format>Collective:....%6.4f......................percent</format>
 	      <halign>left</halign>
 	      <input>
-		<property>controls/engines/engine/throttle</property>
+		<property>/controls/engines/engine/throttle</property>
 	      </input>
 	    </label>
 	        
@@ -334,7 +334,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	      <format>Pitch-Trim:....%6.4f......................Number</format>
 	      <halign>left</halign>
 	      <input>
-		<property>controls/flight/elevator-trim</property>
+		<property>/controls/flight/elevator-trim</property>
 	      </input>
 	    </label>
 	    
@@ -346,7 +346,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	      <format>Aileron-Trim:.%6.4f......................Number</format>
 	      <halign>left</halign>
 	      <input>
-		<property>controls/flight/aileron-trim</property>
+		<property>/controls/flight/aileron-trim</property>
 	      </input>
 	    </label>
 	    
@@ -358,7 +358,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	      <format>Rudder-Trim:.%6.4f......................Number</format>
 	      <halign>left</halign>
 	      <input>
-		<property>controls/flight/rudder-trim</property>
+		<property>/controls/flight/rudder-trim</property>
 	      </input>
 	    </label>
 	    
@@ -370,7 +370,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	      <format>Stab-Trim:.....%6.4f......................Number</format>
 	      <halign>left</halign>
 	      <input>
-		<property>controls/flight/stab</property>
+		<property>/controls/flight/stab</property>
 	      </input>
 	    </label>
 	    

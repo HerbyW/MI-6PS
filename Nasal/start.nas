@@ -6,7 +6,7 @@ setprop("/controls/electric/battery-switch", 1);
 setprop("/controls/switches/gauge-light", 1);
 setprop("/controls/lighting/nav-lights", 1);
 
-setprop("sim/messages/copilot", "Main power and lights are on");
+setprop("/sim/messages/copilot", "Main power and lights are on");
 
 setprop("/instrumentation/adf[0]/power-btn", 1);
 setprop("/instrumentation/adf[1]/power-btn", 1);
@@ -28,7 +28,7 @@ setprop("/controls/switches/fan", 0);
 setprop("/controls/switches/external-suspension", 0);
 setprop("/controls/switches/jettison-cargo", 0);
 
-setprop("sim/messages/copilot", "Instruments are powered");
+setprop("/sim/messages/copilot", "Instruments are powered");
 
 
 

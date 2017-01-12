@@ -19,18 +19,6 @@
 		<object-name>ZT6_Yadro</object-name>
 		<object-name>red_light</object-name>
 	</animation>
-	
-	<animation>
-		<type>range</type>
-		<object-name>Yadro</object-name>
-		<min-m>0</min-m>
-		<max-m>7</max-m>
-	</animation>
 
-       <!--
-       Rotation axis for knobs/dials
-       <x>-0.21639</x>
-       <y<0.0</y>
-       <z>0.97596</z>-->
 </PropertyList>
 

@@ -79,13 +79,13 @@
 					<alpha><value>0.75</value></alpha>
 				</color>
 				<size>
-					<value>22</value>
+					<value>30</value>
 					<spread>0</spread>
 				</size>
 			</end>
 			
 			<life-sec>
-				<value>15</value>
+				<value>17</value>
 			</life-sec>
 			
 			<mass-kg>0.35</mass-kg>

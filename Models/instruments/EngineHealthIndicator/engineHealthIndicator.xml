@@ -22,7 +22,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>leftOilTemperature</object-name>
-		<property>/rotors/main/rpm</property>
+		<property>rotors/main/rpm</property>
 		<interpolation>
 			<entry>
 				<ind>-50</ind>
@@ -52,7 +52,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>leftOilPressure</object-name>
-		<property>/rotors/main/rpm</property>
+		<property>rotors/main/rpm</property>
 		<factor> 0.0703 </factor>
 		<interpolation>
 			<entry>
@@ -83,7 +83,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>rightOilTemperature</object-name>
-		<property>/rotors/main/rpm</property>
+		<property>rotors/main/rpm</property>
 		<interpolation>
 			<entry>
 				<ind>-50</ind>
@@ -113,7 +113,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>rightOilPressure</object-name>
-		<property>/rotors/main/rpm</property>
+		<property>rotors/main/rpm</property>
 		<factor> 0.0703 </factor>
 		<interpolation>
 			<entry>

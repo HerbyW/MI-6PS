@@ -81,12 +81,12 @@
        <!-- Output List -->
 	<output>
 		<name>Main Attitude Indicator</name>
-		<prop>instrumentation/attitude-indicator[0]/spin</prop>
+		<prop>/instrumentation/attitude-indicator[0]/spin</prop>
 	</output>
 	
 	<output>
 		<name>Reserve Attitude Indicator</name>
-		<prop>instrumentation/attitude-indicator[1]/spin</prop>
+		<prop>/instrumentation/attitude-indicator[1]/spin</prop>
 	</output>
 	
 	<!-- connect in power sources -->
@@ -135,7 +135,7 @@
 		<input>Bus27V</input>
 		<output>Main Attitude Indicator</output>
 		<switch>
-			<prop>instrumentation/attitude-indicator[0]/power</prop>
+			<prop>/instrumentation/attitude-indicator[0]/power</prop>
 		</switch>
 	</connector>
 	
@@ -143,7 +143,7 @@
 		<input>Bus27V</input>
 		<output>Reserve Attitude Indicator</output>
 		<switch>
-			<prop>instrumentation/attitude-indicator[1]/power</prop>
+			<prop>/instrumentation/attitude-indicator[1]/power</prop>
 		</switch>
 	</connector>
 	

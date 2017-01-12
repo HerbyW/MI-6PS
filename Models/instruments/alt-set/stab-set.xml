@@ -50,7 +50,7 @@
 <animation>
   <type>rotate</type>
   <object-name>pitch_wheel</object-name>
-  <property>/controls/flight/stab</property>
+  <property>controls/flight/stab</property>
   <center>
     <x-m>0.0</x-m>
     <y-m>0.0</y-m>
@@ -75,7 +75,7 @@
     
     <binding>
       <command>property-adjust</command>
-      <property>/controls/flight/stab</property>
+      <property>controls/flight/stab</property>
       <step>-0.005</step>
       <min>-0.3</min>
       <max>0.3</max>
@@ -87,7 +87,7 @@
 	<command>set-tooltip</command>
 	<tooltip-id>Stab-Pitch</tooltip-id>
 	<label>StabControl: %4.3f</label>
-	<property>/controls/flight/stab</property>	
+	<property>controls/flight/stab</property>	
       </binding>
     </hovered>
 </animation>
@@ -102,7 +102,7 @@
     
     <binding>
       <command>property-adjust</command>
-      <property>/controls/flight/stab</property>
+      <property>controls/flight/stab</property>
       <step>0.005</step>
       <min>-0.3</min>
       <max>0.3</max>
@@ -114,7 +114,7 @@
 	<command>set-tooltip</command>
 	<tooltip-id>Stab-Pitch</tooltip-id>
 	<label>StabControl: %4.3f</label>
-	<property>/controls/flight/stab</property>	
+	<property>controls/flight/stab</property>	
       </binding>
     </hovered>
 </animation>
@@ -127,7 +127,7 @@
     
     <binding>
       <command>property-adjust</command>
-      <property>/controls/flight/stab</property>
+      <property>controls/flight/stab</property>
       <step>-0.025</step>
       <min>-0.3</min>
       <max>0.3</max>
@@ -139,7 +139,7 @@
 	<command>set-tooltip</command>
 	<tooltip-id>Stab-Pitch</tooltip-id>
 	<label>StabControl: %4.3f</label>
-	<property>/controls/flight/stab</property>	
+	<property>controls/flight/stab</property>	
       </binding>
     </hovered>
 </animation>
@@ -152,7 +152,7 @@
     
     <binding>
       <command>property-adjust</command>
-      <property>/controls/flight/stab</property>
+      <property>controls/flight/stab</property>
       <step>0.025</step>
       <min>-0.3</min>
       <max>0.3</max>
@@ -164,7 +164,7 @@
 	<command>set-tooltip</command>
 	<tooltip-id>Stab-Pitch</tooltip-id>
 	<label>StabControl: %4.3f</label>
-	<property>/controls/flight/stab</property>	
+	<property>controls/flight/stab</property>	
       </binding>
     </hovered>
 </animation>

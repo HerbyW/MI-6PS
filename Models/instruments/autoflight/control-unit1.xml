@@ -27,7 +27,7 @@
     <object-name>S1out</object-name>
     <condition>
     <equals>
-     <property>/controls/flight/autoFS1</property>
+     <property>controls/flight/autoFS1</property>
      <value>0</value>
     </equals>
    </condition> 
@@ -49,7 +49,7 @@
     <object-name>S1on</object-name>
     <condition>
     <not-equals>
-     <property>/controls/flight/autoFS1</property>
+     <property>controls/flight/autoFS1</property>
      <value>0</value>
     </not-equals>
    </condition> 
@@ -66,27 +66,27 @@
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoRS2</property>
+      <property>controls/flight/autoRS2</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoSF3</property>
+      <property>controls/flight/autoSF3</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoFM4</property>
+      <property>controls/flight/autoFM4</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoLC5</property>
+      <property>controls/flight/autoLC5</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoRH7</property>
+      <property>controls/flight/autoRH7</property>
       <value>0</value>
     </binding>
     </action>
@@ -110,7 +110,7 @@
     <object-name>S2out</object-name>
     <condition>
     <equals>
-     <property>/controls/flight/autoRS2</property>
+     <property>controls/flight/autoRS2</property>
      <value>0</value>
     </equals>
    </condition> 
@@ -132,7 +132,7 @@
     <object-name>S2on</object-name>
     <condition>
     <not-equals>
-     <property>/controls/flight/autoRS2</property>
+     <property>controls/flight/autoRS2</property>
      <value>0</value>
     </not-equals>
    </condition> 
@@ -149,27 +149,27 @@
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoFS1</property>
+      <property>controls/flight/autoFS1</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoSF3</property>
+      <property>controls/flight/autoSF3</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoFM4</property>
+      <property>controls/flight/autoFM4</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoLC5</property>
+      <property>controls/flight/autoLC5</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoRH7</property>
+      <property>controls/flight/autoRH7</property>
       <value>0</value>
     </binding>
     </action>
@@ -193,7 +193,7 @@
     <object-name>S3out</object-name>
     <condition>
     <equals>
-     <property>/controls/flight/autoSF3</property>
+     <property>controls/flight/autoSF3</property>
      <value>0</value>
     </equals>
    </condition> 
@@ -215,7 +215,7 @@
     <object-name>S3on</object-name>
     <condition>
     <not-equals>
-     <property>/controls/flight/autoSF3</property>
+     <property>controls/flight/autoSF3</property>
      <value>0</value>
     </not-equals>
    </condition> 
@@ -232,27 +232,27 @@
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoRS2</property>
+      <property>controls/flight/autoRS2</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoFS1</property>
+      <property>controls/flight/autoFS1</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoFM4</property>
+      <property>controls/flight/autoFM4</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoLC5</property>
+      <property>controls/flight/autoLC5</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoRH7</property>
+      <property>controls/flight/autoRH7</property>
       <value>0</value>
     </binding>
     </action>
@@ -276,7 +276,7 @@
     <object-name>S4out</object-name>
     <condition>
     <equals>
-     <property>/controls/flight/autoFM4</property>
+     <property>controls/flight/autoFM4</property>
      <value>0</value>
     </equals>
    </condition> 
@@ -298,7 +298,7 @@
     <object-name>S4on</object-name>
     <condition>
     <not-equals>
-     <property>/controls/flight/autoFM4</property>
+     <property>controls/flight/autoFM4</property>
      <value>0</value>
     </not-equals>
    </condition> 
@@ -315,27 +315,27 @@
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoRS2</property>
+      <property>controls/flight/autoRS2</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoSF3</property>
+      <property>controls/flight/autoSF3</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoFS1</property>
+      <property>controls/flight/autoFS1</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoLC5</property>
+      <property>controls/flight/autoLC5</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoRH7</property>
+      <property>controls/flight/autoRH7</property>
       <value>0</value>
     </binding>
     </action>
@@ -359,7 +359,7 @@
     <object-name>S5out</object-name>
     <condition>
     <equals>
-     <property>/controls/flight/autoLC5</property>
+     <property>controls/flight/autoLC5</property>
      <value>0</value>
     </equals>
    </condition> 
@@ -380,7 +380,7 @@
     <object-name>S5on</object-name>
     <condition>
     <not-equals>
-     <property>/controls/flight/autoLC5</property>
+     <property>controls/flight/autoLC5</property>
      <value>0</value>
     </not-equals>
    </condition> 
@@ -397,27 +397,27 @@
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoRS2</property>
+      <property>controls/flight/autoRS2</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoSF3</property>
+      <property>controls/flight/autoSF3</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoFM4</property>
+      <property>controls/flight/autoFM4</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoFS1</property>
+      <property>controls/flight/autoFS1</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoRH7</property>
+      <property>controls/flight/autoRH7</property>
       <value>0</value>
     </binding>
     </action>
@@ -441,7 +441,7 @@
     <object-name>S6out</object-name>
     <condition>
     <equals>
-     <property>/controls/flight/autoRS</property>
+     <property>controls/flight/autoRS</property>
      <value>0</value>
     </equals>
    </condition> 
@@ -462,7 +462,7 @@
     <object-name>S6on</object-name>
     <condition>
     <not-equals>
-     <property>/controls/flight/autoRS</property>
+     <property>controls/flight/autoRS</property>
      <value>0</value>
     </not-equals>
    </condition> 
@@ -479,32 +479,32 @@
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoLC5</property>
+      <property>controls/flight/autoLC5</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoRS2</property>
+      <property>controls/flight/autoRS2</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoSF3</property>
+      <property>controls/flight/autoSF3</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoFM4</property>
+      <property>controls/flight/autoFM4</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoFS1</property>
+      <property>controls/flight/autoFS1</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoRH7</property>
+      <property>controls/flight/autoRH7</property>
       <value>0</value>
     </binding>
     </action>
@@ -528,7 +528,7 @@
     <object-name>S7out</object-name>
     <condition>
     <equals>
-     <property>/controls/flight/autoRH7</property>
+     <property>controls/flight/autoRH7</property>
      <value>0</value>
     </equals>
    </condition> 
@@ -550,7 +550,7 @@
     <object-name>S7on</object-name>
     <condition>
     <not-equals>
-     <property>/controls/flight/autoRH7</property>
+     <property>controls/flight/autoRH7</property>
      <value>0</value>
     </not-equals>
    </condition> 
@@ -567,27 +567,27 @@
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoRS2</property>
+      <property>controls/flight/autoRS2</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoSF3</property>
+      <property>controls/flight/autoSF3</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoFM4</property>
+      <property>controls/flight/autoFM4</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoLC5</property>
+      <property>controls/flight/autoLC5</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoFS1</property>
+      <property>controls/flight/autoFS1</property>
       <value>0</value>
     </binding>
     </action>
@@ -612,27 +612,27 @@
     <condition>
     <or>
     <not-equals>
-     <property>/controls/flight/autoFS1</property>
+     <property>controls/flight/autoFS1</property>
      <value>0</value>
     </not-equals>
     <not-equals>
-     <property>/controls/flight/autoRS2</property>
+     <property>controls/flight/autoRS2</property>
      <value>0</value>
     </not-equals>
     <not-equals>
-     <property>/controls/flight/autoSF3</property>
+     <property>controls/flight/autoSF3</property>
      <value>0</value>
     </not-equals>
     <not-equals>
-     <property>/controls/flight/autoFM4</property>
+     <property>controls/flight/autoFM4</property>
      <value>0</value>
     </not-equals>
     <not-equals>
-     <property>/controls/flight/autoLC5</property>
+     <property>controls/flight/autoLC5</property>
      <value>0</value>
     </not-equals>
     <not-equals>
-     <property>/controls/flight/autoRH7</property>
+     <property>controls/flight/autoRH7</property>
      <value>0</value>
     </not-equals>
     </or>
@@ -656,27 +656,27 @@
     <condition>
     <and>
     <equals>
-     <property>/controls/flight/autoFS1</property>
+     <property>controls/flight/autoFS1</property>
      <value>0</value>
     </equals>
     <equals>
-     <property>/controls/flight/autoRS2</property>
+     <property>controls/flight/autoRS2</property>
      <value>0</value>
     </equals>
     <equals>
-     <property>/controls/flight/autoSF3</property>
+     <property>controls/flight/autoSF3</property>
      <value>0</value>
     </equals>
     <equals>
-     <property>/controls/flight/autoFM4</property>
+     <property>controls/flight/autoFM4</property>
      <value>0</value>
     </equals>
     <equals>
-     <property>/controls/flight/autoLC5</property>
+     <property>controls/flight/autoLC5</property>
      <value>0</value>
     </equals>
     <equals>
-     <property>/controls/flight/autoRH7</property>
+     <property>controls/flight/autoRH7</property>
      <value>0</value>
     </equals>
     </and>
@@ -690,32 +690,32 @@
       <button>0</button>
       <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoFS1</property>
+      <property>controls/flight/autoFS1</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoRS2</property>
+      <property>controls/flight/autoRS2</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoSF3</property>
+      <property>controls/flight/autoSF3</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoFM4</property>
+      <property>controls/flight/autoFM4</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoLC5</property>
+      <property>controls/flight/autoLC5</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/autoRH7</property>
+      <property>controls/flight/autoRH7</property>
       <value>0</value>
     </binding>
     </action>

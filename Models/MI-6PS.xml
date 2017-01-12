@@ -299,7 +299,7 @@
     <texture>MI-6PS.png</texture>
     
     <emission>
-      <factor-prop>/sim/time/sun-angle-rad</factor-prop>
+      <factor-prop>sim/time/sun-angle-rad</factor-prop>
       <red>   0.05 </red>
       <green> 0.05 </green>
       <blue>  0.05 </blue>
@@ -420,7 +420,7 @@
       <effect>
 	<inherits-from>Effects/model-transparent</inherits-from>
 	<condition>
-	  <property>sim/rendering/rembrandt/enabled</property>
+	  <property>/sim/rendering/rembrandt/enabled</property>
 	</condition>
 	<object-name>PilotDoorL.001</object-name>
 	<object-name>PilotDoorR.001</object-name>
@@ -511,7 +511,7 @@
 	<object-name>FGear.003</object-name>
 	<object-name>FGear.000</object-name>
 	<object-name>FGear.004</object-name>
-	<property>/gear/gear[0]/rollspeed-ms</property>
+	<property>sim/multiplay/generic/float[19]</property>
 	<factor> 30 </factor>
 	<center>
 	  <x-m> -3.677 </x-m>
@@ -550,7 +550,7 @@
 	<type>spin</type>
 	<object-name>LGear.002</object-name>
 	<object-name>LGear.002</object-name>
-	<property>/gear/gear[1]/rollspeed-ms</property>
+	<property>sim/multiplay/generic/float[19]</property>
 	<factor> 30 </factor>
 	<center>
 	  <x-m> 5.430 </x-m>
@@ -572,7 +572,7 @@
 	<object-name>RGear</object-name>
 	<object-name>RGear.001</object-name>
 	<object-name>RGear.002</object-name>
-	<property>gear/gear[1]/compression-norm</property>
+	<property>gear/gear[2]/compression-norm</property>
 	<center>
 	  <x-m> 5.430 </x-m>
 	  <y-m> 3.740 </y-m>
@@ -589,7 +589,7 @@
 	<type>spin</type>
 	<object-name>RGear.001</object-name>
 	<object-name>RGear.002</object-name>
-	<property>/gear/gear[1]/rollspeed-ms</property>
+	<property>sim/multiplay/generic/float[19]</property>
 	<factor> 30 </factor>
 	<center>
 	  <x-m> 5.430 </x-m>

@@ -43,7 +43,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
    <condition>
      <not>
      <equals>
-	<property>/rotors/main/tilt/pitch-deg</property>
+	<property>rotors/main/tilt/pitch-deg</property>
 	<value>0</value>
      </equals>
      </not>
@@ -64,7 +64,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <repeatable>false</repeatable>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/tilt</property>
+      <property>controls/flight/tilt</property>
       <value>0.0</value>
     </binding>
   </action>

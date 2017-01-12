@@ -130,7 +130,7 @@
 		<object-name>Pitch</object-name>
 		<object-name>Throttle</object-name>
 		<object-name>Pitchknob</object-name>
-		<property>/controls/engines/engine[0]/throttle</property>
+		<property>controls/engines/engine[0]/throttle</property>
 		<factor>-35</factor>
 		<center>
 			<x-m>-5.053</x-m>
@@ -147,7 +147,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>PitchTri</object-name>
-		<property>/controls/engines/engine[0]/throttle</property>
+		<property>controls/engines/engine[0]/throttle</property>
 		<factor>-65</factor>
 		<center>
 			<x-m>-5.137</x-m>
@@ -166,7 +166,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>PitchStickS</object-name>
-		<property>/controls/engines/engine[0]/throttle</property>
+		<property>controls/engines/engine[0]/throttle</property>
 		<factor>-65</factor>
 		<center>
 			<x-m>-5.137</x-m>
@@ -183,7 +183,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>PitchStickS</object-name>
-		<property>/controls/engines/engine[0]/throttle</property>
+		<property>controls/engines/engine[0]/throttle</property>
 		<factor>15</factor>
 		<center>
 			<x-m>-5.203</x-m>
@@ -200,7 +200,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>PitchStick2</object-name>
-		<property>/controls/engines/engine[0]/throttle</property>
+		<property>controls/engines/engine[0]/throttle</property>
 		<factor>-65</factor>
 		<center>
 			<x-m>-5.137</x-m>
@@ -217,7 +217,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>PitchStick2</object-name>
-		<property>/controls/engines/engine[0]/throttle</property>
+		<property>controls/engines/engine[0]/throttle</property>
 		<factor>75</factor>
 		<center>
 			<x-m>-5.201</x-m>
@@ -234,7 +234,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>PitchStick1</object-name>
-		<property>/controls/engines/engine[0]/throttle</property>
+		<property>controls/engines/engine[0]/throttle</property>
 		<factor>-35</factor>
 		<center>
 			<x-m>-5.053</x-m>
@@ -251,7 +251,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>PitchStick1</object-name>
-		<property>/controls/engines/engine[0]/throttle</property>
+		<property>controls/engines/engine[0]/throttle</property>
 		<factor>35</factor>
 		<center>
 			<x-m>-5.214</x-m>

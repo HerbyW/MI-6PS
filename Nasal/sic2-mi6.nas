@@ -69,25 +69,25 @@ var turbine_timer = aircraft.timer.new("/sim/time/hobbs/turbines", 10);
 aircraft.timer.new("/sim/time/hobbs/helicopter", nil).start();
 
 # engines/rotor =====================================================
-var state = props.globals.getNode("/sim/model/mi6/state");
-var engine = props.globals.getNode("/sim/model/mi6/engine");
-var rotor = props.globals.getNode("/controls/engines/engine/magnetos");
-var rotor2 = props.globals.getNode("/controls/engines/engine[1]/magnetos");
-var rotor_rpm = props.globals.getNode("/rotors/main/rpm");
-var torque = props.globals.getNode("/rotors/gear/total-torque", 1);
-var collective = props.globals.getNode("/controls/engines/engine[0]/throttle");
-var turbine = props.globals.getNode("/sim/model/mi6/turbine-rpm-pct", 1);
-var torque_pct = props.globals.getNode("/sim/model/mi6/torque-pct", 1);
-var stall = props.globals.getNode("/rotors/main/stall", 1);
-var stall_filtered = props.globals.getNode("/rotors/main/stall-filtered", 1);
-var torque_sound_filtered = props.globals.getNode("/rotors/gear/torque-sound-filtered", 1);
-var target_rel_rpm = props.globals.getNode("/controls/rotor/reltarget", 1);
-var max_rel_torque = props.globals.getNode("/controls/rotor/maxreltorque", 1);
-var cone = props.globals.getNode("/rotors/main/cone-deg", 1);
-var cone1 = props.globals.getNode("/rotors/main/cone1-deg", 1);
-var cone2 = props.globals.getNode("/rotors/main/cone2-deg", 1);
-var cone3 = props.globals.getNode("/rotors/main/cone3-deg", 1);
-var cone4 = props.globals.getNode("/rotors/main/cone4-deg", 1);
+var state = props.globals.getNode("sim/model/mi6/state");
+var engine = props.globals.getNode("sim/model/mi6/engine");
+var rotor = props.globals.getNode("controls/engines/engine/magnetos");
+var rotor2 = props.globals.getNode("controls/engines/engine[1]/magnetos");
+var rotor_rpm = props.globals.getNode("rotors/main/rpm");
+var torque = props.globals.getNode("rotors/gear/total-torque", 1);
+var collective = props.globals.getNode("controls/engines/engine[0]/throttle");
+var turbine = props.globals.getNode("sim/model/mi6/turbine-rpm-pct", 1);
+var torque_pct = props.globals.getNode("sim/model/mi6/torque-pct", 1);
+var stall = props.globals.getNode("rotors/main/stall", 1);
+var stall_filtered = props.globals.getNode("rotors/main/stall-filtered", 1);
+var torque_sound_filtered = props.globals.getNode("rotors/gear/torque-sound-filtered", 1);
+var target_rel_rpm = props.globals.getNode("controls/rotor/reltarget", 1);
+var max_rel_torque = props.globals.getNode("controls/rotor/maxreltorque", 1);
+var cone = props.globals.getNode("rotors/main/cone-deg", 1);
+var cone1 = props.globals.getNode("rotors/main/cone1-deg", 1);
+var cone2 = props.globals.getNode("rotors/main/cone2-deg", 1);
+var cone3 = props.globals.getNode("rotors/main/cone3-deg", 1);
+var cone4 = props.globals.getNode("rotors/main/cone4-deg", 1);
 
 # state:
 # 0 off
@@ -145,7 +145,7 @@ var update_state = func {
 }
 
 var engines = func {
-  if (props.globals.getNode("/sim/crashed",1).getBoolValue()) {return; }
+  if (props.globals.getNode("sim/crashed",1).getBoolValue()) {return; }
   var s = state.getValue();
   if (arg[0] == 1) {
     if (s == 0) {
@@ -293,20 +293,20 @@ var update_slide = func {
 var crash = func {
   if (arg[0]) {
     # crash
-    setprop("/rotors/main/rpm", 0);
-    setprop("/rotors/main/blade[0]/flap-deg", -60);
-    setprop("/rotors/main/blade[1]/flap-deg", -50);
-    setprop("/rotors/main/blade[2]/flap-deg", -40);
-    setprop("/rotors/main/blade[3]/flap-deg", -30);
-    setprop("/rotors/main/blade[4]/flap-deg", -20);
-    setprop("/rotors/main/blade[5]/flap-deg", -10);
-    setprop("/rotors/main/blade[0]/incidence-deg", -30);
-    setprop("/rotors/main/blade[1]/incidence-deg", -20);
-    setprop("/rotors/main/blade[2]/incidence-deg", -50);
-    setprop("/rotors/main/blade[3]/incidence-deg", -55);
-    setprop("/rotors/main/blade[4]/incidence-deg", -60);
-    setprop("/rotors/main/blade[5]/incidence-deg", -65);
-    setprop("/rotors/tail/rpm", 0);
+    setprop("rotors/main/rpm", 0);
+    setprop("rotors/main/blade[0]/flap-deg", -60);
+    setprop("rotors/main/blade[1]/flap-deg", -50);
+    setprop("rotors/main/blade[2]/flap-deg", -40);
+    setprop("rotors/main/blade[3]/flap-deg", -30);
+    setprop("rotors/main/blade[4]/flap-deg", -20);
+    setprop("rotors/main/blade[5]/flap-deg", -10);
+    setprop("rotors/main/blade[0]/incidence-deg", -30);
+    setprop("rotors/main/blade[1]/incidence-deg", -20);
+    setprop("rotors/main/blade[2]/incidence-deg", -50);
+    setprop("rotors/main/blade[3]/incidence-deg", -55);
+    setprop("rotors/main/blade[4]/incidence-deg", -60);
+    setprop("rotors/main/blade[5]/incidence-deg", -65);
+    setprop("rotors/tail/rpm", 0);
     strobe_switch.setValue(0);
     beacon_switch.setValue(0);
     nav_light_switch.setValue(0);
@@ -319,11 +319,11 @@ var crash = func {
 
   } else {
     # uncrash (for replay)
-    setprop("/rotors/tail/rpm", 604);
-    setprop("/rotors/main/rpm", 120);
+    setprop("rotors/tail/rpm", 604);
+    setprop("rotors/main/rpm", 120);
     for (i = 0; i < 4; i += 1) {
-      setprop("/rotors/main/blade[" ~ i ~ "]/flap-deg", 0);
-      setprop("/rotors/main/blade[" ~ i ~ "]/incidence-deg", 0);
+      setprop("rotors/main/blade[" ~ i ~ "]/flap-deg", 0);
+      setprop("rotors/main/blade[" ~ i ~ "]/incidence-deg", 0);
     }
     strobe_switch.setValue(1);
     beacon_switch.setValue(1);
@@ -334,13 +334,13 @@ var crash = func {
 }
 
 # "manual" rotor animation for flight data recorder replay ============
-var rotor_step = props.globals.getNode("/sim/model/mi6/rotor-step-deg");
-var blade1_pos = props.globals.getNode("/rotors/main/blade[0]/position-deg", 1);
-var blade2_pos = props.globals.getNode("/rotors/main/blade[1]/position-deg", 1);
-var blade3_pos = props.globals.getNode("/rotors/main/blade[2]/position-deg", 1);
-var blade4_pos = props.globals.getNode("/rotors/main/blade[3]/position-deg", 1);
-var blade5_pos = props.globals.getNode("/rotors/main/blade[4]/position-deg", 1);
-var blade6_pos = props.globals.getNode("/rotors/main/blade[5]/position-deg", 1);
+var rotor_step = props.globals.getNode("sim/model/mi6/rotor-step-deg");
+var blade1_pos = props.globals.getNode("rotors/main/blade[0]/position-deg", 1);
+var blade2_pos = props.globals.getNode("rotors/main/blade[1]/position-deg", 1);
+var blade3_pos = props.globals.getNode("rotors/main/blade[2]/position-deg", 1);
+var blade4_pos = props.globals.getNode("rotors/main/blade[3]/position-deg", 1);
+var blade5_pos = props.globals.getNode("rotors/main/blade[4]/position-deg", 1);
+var blade6_pos = props.globals.getNode("rotors/main/blade[5]/position-deg", 1);
 var rotorangle = 0;
 
 var rotoranim_loop = func {
@@ -457,7 +457,7 @@ setlistener("/sim/signals/fdm-initialized", func {
     crashed = 0;
   });
 
-  setlistener("/sim/crashed", func {
+  setlistener("sim/crashed", func {
     cprint("31;1", "crashed ", cmdarg().getValue());
     turbine_timer.stop();
     if (cmdarg().getBoolValue()) {
@@ -747,7 +747,7 @@ setprop("/controls/flight/autoRH7", 0.0 );
 setprop("/controls/flight/autoRS", 0.0 );
 
 var autotakeoff = func()
-  { if (getprop("/rotors/main/rpm") < 123 or getprop("/position/altitude-agl-ft") > 1)
+  { if (getprop("/rotors/main/rpm") < 123 or getprop("position/altitude-agl-ft") > 1)
    setprop("/sim/messages/copilot", "Start Engines and wait till they have 100% RPM, then push l again");
 
    else {
@@ -762,8 +762,8 @@ var autotakeoff = func()
    setprop("/controls/flight/floating-pitch", 3 );     
    setprop("/autopilot/locks/heading", "wing-leveler");
    setprop("/autopilot/internal/target-roll-deg-wl", 0 );
-   setprop("/instrumentation/magnetic-compass/pitch-offset-deg", getprop("/environment/magnetic-variation-deg-korr"));
-   setprop("/autopilot/settings/heading-bug-deg", getprop("/orientation/heading-magnetic-deg"));
+   setprop("instrumentation/magnetic-compass/pitch-offset-deg", getprop("/environment/magnetic-variation-deg-korr"));
+   setprop("autopilot/settings/heading-bug-deg", getprop("orientation/heading-magnetic-deg"));
    setprop("/autopilot/locks/heading", "dg-heading-hold");
    setprop("/sim/messages/copilot", "All Settings for Auto Take Off in Floating Mode are made.");
    setprop("/sim/messages/copilot", "Use the left compass knob for heading control.");
@@ -773,7 +773,7 @@ var autotakeoff = func()
 
 
 var autotakeoffrunway = func()
-  { if (getprop("/rotors/main/rpm") < 123 or getprop("/position/altitude-agl-ft") > 1)
+  { if (getprop("/rotors/main/rpm") < 123 or getprop("position/altitude-agl-ft") > 1)
    setprop("/sim/messages/copilot", "Start Engines and wait till they have 100% RPM, line up on runway, then push L again");
 
    else {
@@ -792,8 +792,8 @@ var autotakeoffrunway = func()
    interpolate("/controls/flight/elevator-trim", 0.70, 140);
    setprop("/autopilot/locks/heading", "wing-leveler");
    setprop("/autopilot/internal/target-roll-deg-wl", 0 );   
-   setprop("/instrumentation/magnetic-compass/pitch-offset-deg", getprop("/environment/magnetic-variation-deg-korr"));
-   setprop("/autopilot/settings/heading-bug-deg", getprop("/orientation/heading-magnetic-deg"));
+   setprop("instrumentation/magnetic-compass/pitch-offset-deg", getprop("/environment/magnetic-variation-deg-korr"));
+   setprop("autopilot/settings/heading-bug-deg", getprop("orientation/heading-magnetic-deg"));
    setprop("/autopilot/locks/heading", "dg-heading-hold");
    setprop("/autopilot/locks/couple", 1 );
    setprop("/sim/messages/copilot", "All Settings for Auto Take Off on runway are made.");
@@ -807,13 +807,13 @@ setlistener("/controls/flight/autoRS2", func(v) {
   {
    setprop("/autopilot/locks/collective", 1 ); 
    setprop("/autopilot/locks/altitude", "altitude-hold");
-   setprop("/autopilot/settings/target-altitude-ft", getprop("/instrumentation/altimeter/indicated-altitude-ft") + 1800);
+   setprop("/autopilot/settings/target-altitude-ft", getprop("instrumentation/altimeter/indicated-altitude-ft") + 1800);
   }
 });
 
 
 var speedflight = func()
-  {  if (getprop("/position/altitude-agl-ft") < 500)
+  {  if (getprop("position/altitude-agl-ft") < 500)
    setprop("/sim/messages/copilot", "We need 500 ft agl to change to Speed flight");
 
    else {  
@@ -825,18 +825,18 @@ var speedflight = func()
    interpolate("/controls/flight/tilt", -0.2, 75 );
    interpolate("/controls/flight/tilt-roll", -0.2, 75 );
    setprop("/autopilot/locks/altitude", "altitude-hold");
-   setprop("/autopilot/settings/target-altitude-ft", getprop("/instrumentation/altimeter/indicated-altitude-ft"));
+   setprop("/autopilot/settings/target-altitude-ft", getprop("instrumentation/altimeter/indicated-altitude-ft"));
    interpolate("/controls/flight/elevator-trim", 1, 70);
    interpolate("/controls/flight/stab", -0.15, 75);
-   setprop("/instrumentation/magnetic-compass/pitch-offset-deg", getprop("/environment/magnetic-variation-deg-korr"));
-   setprop("/autopilot/settings/heading-bug-deg", getprop("/orientation/heading-magnetic-deg"));
+   setprop("instrumentation/magnetic-compass/pitch-offset-deg", getprop("/environment/magnetic-variation-deg-korr"));
+   setprop("autopilot/settings/heading-bug-deg", getprop("orientation/heading-magnetic-deg"));
    setprop("/autopilot/locks/heading", "dg-heading-hold");
    setprop("/sim/messages/copilot", "All Settings for changing to Speed Flight are made.");
    }
 };
 
 var floatingmode = func()
-  {  if (getprop("/position/altitude-agl-ft") < 100)
+  {  if (getprop("position/altitude-agl-ft") < 100)
    setprop("/sim/messages/copilot", "We need 100 ft agl to change to Floating mode");
 
    else {     
@@ -855,7 +855,7 @@ var floatingmode = func()
 };
 
 var landing = func()
-  { if (getprop("/position/altitude-agl-ft") < 500)
+  { if (getprop("position/altitude-agl-ft") < 500)
    setprop("/sim/messages/copilot", "We need 500 ft agl to change to Landing mode");
 
    else { 
@@ -868,18 +868,18 @@ var landing = func()
    interpolate("/controls/flight/tilt-roll", -0.07, 70 );
 #   interpolate("/controls/flight/stab", 0.0, 60);
    interpolate("/controls/flight/elevator-trim", 0.30, 98);
-   setprop("/instrumentation/magnetic-compass/pitch-offset-deg", getprop("/environment/magnetic-variation-deg-korr"));
-   setprop("/autopilot/settings/heading-bug-deg", getprop("/orientation/heading-magnetic-deg"));
+   setprop("instrumentation/magnetic-compass/pitch-offset-deg", getprop("/environment/magnetic-variation-deg-korr"));
+   setprop("autopilot/settings/heading-bug-deg", getprop("orientation/heading-magnetic-deg"));
    setprop("/autopilot/locks/heading", "dg-heading-hold");
    setprop("/autopilot/locks/altitude", "altitude-hold");
-   setprop("/autopilot/settings/target-altitude-ft", getprop("/instrumentation/altimeter/indicated-altitude-ft"));
+   setprop("/autopilot/settings/target-altitude-ft", getprop("instrumentation/altimeter/indicated-altitude-ft"));
    setprop("/sim/messages/copilot", "All Settings for Landing Configuration are made.");
    setprop("/sim/messages/copilot", "Use vertical speed for descending to the runway");
    }
 };
 
 var holding = func()
-  { if (getprop("/position/altitude-agl-ft") < 50)
+  { if (getprop("position/altitude-agl-ft") < 50)
    setprop("/sim/messages/copilot", "We need 50 ft agl to change to Rescue mode");
 
    else { 
@@ -979,7 +979,7 @@ var update_fuel = maketimer(1, func{
     var amnt = torqueM.getValue() * 0.0000001457;
     interpolate("/engines/fuel-flow-kgph", amnt*2*60*60*4.6459, 1);
   
-  if(getprop("/sim/model/mi6/state")>1)
+  if(getprop("sim/model/mi6/state")>1)
   {
     var lvl1 = Fuel1_Level.getValue();
     var lvl2 = Fuel2_Level.getValue();
@@ -1123,7 +1123,7 @@ setlistener("/sim/model/mi6/state", func(v)
 {
   if (getprop("/sim/model/mi6/state") == 1)
     {  setprop("/controls/rotor/brake", 0 );  }
-  if (getprop("/sim/model/mi6/state") == 0 and getprop("/position/altitude-agl-ft") < 5)
+  if (getprop("/sim/model/mi6/state") == 0 and getprop("position/altitude-agl-ft") < 5)
     {  setprop("/controls/rotor/brake", 1 );
        setprop("/sim/messages/copilot", "Rotor brake on!");
     }
@@ -1200,3 +1200,6 @@ setlistener("/consumables/fuel/finishtanking", func(v)
       setprop("/consumables/fuel/finishtanking", 0.0);
     }
 });
+
+
+

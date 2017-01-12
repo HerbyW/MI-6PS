@@ -81,7 +81,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <desc>Jump signal</desc>
     <binding>
       <command>property-toggle</command>
-      <property>controls/paratroopers/jump-signal</property>
+      <property>/controls/paratroopers/jump-signal</property>
       <value>true</value>
     </binding>
   </key>
@@ -91,7 +91,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <desc>Change Pilot-Engineer-Model View</desc>
     <binding>
       <command>property-cycle</command>
-      <property>sim/current-view/view-number</property>  
+      <property>/sim/current-view/view-number</property>  
       <value>0</value>
       <value>9</value>
       <value>7</value>
@@ -103,7 +103,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <desc>Change Pilot-Navigator-Towing View</desc>
     <binding>
       <command>property-cycle</command>
-      <property>sim/current-view/view-number</property>  
+      <property>/sim/current-view/view-number</property>  
       <value>0</value>
       <value>11</value>
       <value>12</value>

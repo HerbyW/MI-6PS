@@ -43,7 +43,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
    <condition>
      <not>
      <equals>
-	<property>/rotors/main/tilt/roll-deg</property>
+	<property>rotors/main/tilt/roll-deg</property>
 	<value>0</value>
      </equals>
      </not>
@@ -64,7 +64,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <repeatable>false</repeatable>
     <binding>
       <command>property-assign</command>
-      <property>/controls/flight/tilt-roll</property>
+      <property>controls/flight/tilt-roll</property>
       <value>0.0</value>
     </binding>
   </action>

@@ -48,7 +48,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>exhTempR</object-name>
-		<property>/rotors/main/rpm</property>
+		<property>rotors/main/rpm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -74,7 +74,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>exhTempL</object-name>
-		<property>/rotors/main/rpm</property>
+		<property>rotors/main/rpm</property>
 		<factor> 6.5 </factor>
 		<interpolation>
 			<entry>
