@@ -24,7 +24,7 @@
 
 <PropertyList>
   <!--Mi6 Main Model XML File-->
-  <path>mi6-63.ac</path>
+  <path>mi6-64.ac</path>
   
   
   
@@ -548,10 +548,10 @@
       
       <animation>
 	<type>spin</type>
-	<object-name>LGear.002</object-name>
+	<object-name>LGear.000</object-name>
 	<object-name>LGear.002</object-name>
 	<property>sim/multiplay/generic/float[19]</property>
-	<factor> 30 </factor>
+	<factor> 20 </factor>
 	<center>
 	  <x-m> 5.430 </x-m>
 	  <y-m> -3.740 </y-m>
@@ -590,7 +590,7 @@
 	<object-name>RGear.001</object-name>
 	<object-name>RGear.002</object-name>
 	<property>sim/multiplay/generic/float[19]</property>
-	<factor> 30 </factor>
+	<factor> 20 </factor>
 	<center>
 	  <x-m> 5.430 </x-m>
 	  <y-m> 3.740 </y-m>
