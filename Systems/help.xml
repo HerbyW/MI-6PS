@@ -24,10 +24,6 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <desc>Rotor Brake off</desc>
   </key>
   <key>
-    <name>f</name>
-    <desc>Flares on-off</desc>
-  </key>  
-  <key>
     <name>D</name>
     <desc>Open/Close Cargo door</desc>
   </key>
@@ -75,7 +71,7 @@ Made by Moritz Roehrich (Blender3D) 2010-2012
 
 Updated 3D-model, FDM, Animations, Instruments by Herbert Wagner 10-2015 - 12-2016
 
-Version: 4.0.6
+Version: 4.0.7
 
                                   ABOUT
 
@@ -192,6 +188,7 @@ Latest Update: Now with 6 different modes for starting, landing, changing the fl
 	       Now with beacon and strobe lights and switches
 	       Now with Autorotation Automatic Settings
 	       Now with fuel system, tank animation, fuel consumption
+	       Now with wing function
 
 Values for setting the rotor-tilt and the rotor-roll-tilt:
    In floating mode:     4.50/-0.62 (speed 3)

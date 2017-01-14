@@ -66,16 +66,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <script>doors.BK.toggle();</script>
     </binding>
   </key>
-  
-  <key n="102">
-    <name>f</name>
-    <desc>Flares On-Off</desc>
-    <binding>
-      <command>property-toggle</command>
-      <property>sim/multiplay/generic/int[8]</property>
-    </binding>    
-  </key>
-  
+
   <key n="61"> 
     <name>=</name>
     <desc>Jump signal</desc>

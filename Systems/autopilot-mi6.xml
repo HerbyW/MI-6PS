@@ -55,10 +55,18 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <debug>false</debug>
     <enable>
       <condition>
-	<equals>
-	  <property>/autopilot/locks/heading</property>
-	  <value>dg-heading-hold</value>
-	</equals>
+	<and>
+	  <equals>
+	    <property>/autopilot/locks/heading</property>
+	    <value>dg-heading-hold</value>
+	  </equals>
+	  <not>
+	    <equals>
+	      <property>/autopilot/locks/altitude</property>
+	      <value>gleiten</value>
+	    </equals>
+	  </not>
+	</and>
       </condition>
     </enable>
     <input>
@@ -72,6 +80,40 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </output>
     <config>
       <Kp>-1.0</Kp>
+      <Ki>0.0</Ki>
+      <u_min>-20</u_min>
+      <u_max>20</u_max>
+    </config>
+  </pi-simple-controller>
+  
+  <pi-simple-controller>
+    <name>Heading Bug Hold (DG based) HDG in gliding conditions</name>
+    <debug>false</debug>
+    <enable>
+      <condition>
+	<and>
+	  <equals>
+	    <property>/autopilot/locks/heading</property>
+	    <value>dg-heading-hold</value>
+	  </equals>
+	  <equals>
+	    <property>/autopilot/locks/altitude</property>
+	    <value>gleiten</value>
+	  </equals>
+	</and>
+      </condition>
+    </enable>
+    <input>
+      <property>/orientation/roll-deg</property>
+    </input>
+    <reference>
+      <value>0.0</value>
+    </reference>
+    <output>
+      <property>/autopilot/internal/target-roll-filter</property>
+    </output>
+    <config>
+      <Kp>2.0</Kp>
       <Ki>0.0</Ki>
       <u_min>-20</u_min>
       <u_max>20</u_max>
@@ -1162,7 +1204,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <prop>/orientation/pitch-deg</prop>
     </input>
     <reference>
-      <value>3.0</value>
+      <value>2.5</value>
     </reference>
     <output>
       <prop>/controls/flight/stab</prop>
@@ -1262,8 +1304,8 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
       <!-- unfiltered derivative error -->
-      <Ti>5.50</Ti>        <!-- integrator time -->
-      <Td>0.00001</Td>     <!-- derivator time -->
+      <Ti>15.50</Ti>        <!-- integrator time -->
+      <Td>0.000001</Td>     <!-- derivator time -->
       <u_min>-0.075</u_min> <!-- minimum output clamp -0.5-->
       <u_max>0.185</u_max>  <!-- maximum output clamp 0.5-->
     </config>
@@ -1380,11 +1422,11 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <property>/controls/flight/rudder-trimG</property>
     </output>
     <config>
-      <Kp>-0.035</Kp>
+      <Kp>-0.0185</Kp>
       <beta>1.0</beta>
       <alpha>0.1</alpha>
       <gamma>0.0</gamma>
-      <Ti>5</Ti>
+      <Ti>15</Ti>
       <Td>0.00001</Td>
       <u_min>-1.0</u_min>
       <u_max>1.0</u_max>

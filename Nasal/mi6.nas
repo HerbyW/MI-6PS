@@ -19,6 +19,7 @@
 #    Removing this header is probited.    
 #############################################################################################################
 setprop("/sim/model/mi6/wings", 0);
+setprop("/controls/flight/flaps", 1);
 
 setlistener("/sim/model/livery/file", func
 {
@@ -28,6 +29,16 @@ setlistener("/sim/model/livery/file", func
       setprop("/sim/model/mi6/wings", 1);
 }
 );
+
+setlistener("/sim/model/mi6/wings", func
+{
+  if (getprop("/sim/model/mi6/wings") == 1)
+      setprop("/controls/flight/flaps", 0);
+    else
+      setprop("/controls/flight/flaps", 1);
+}
+);
+
 
 
 #############################################################################################################
@@ -781,6 +792,7 @@ var autotakeoffrunway = func()
    interpolate("/controls/flight/autoRS2", 10, 140 );  
    setprop("/controls/gear/brake-parking", 0 );
    setprop("/autopilot/locks/collective", 0 );
+   setprop("/autopilot/locks/couple", 1 );
    setprop("/controls/flight/floating-pitch", 0.0 );
    interpolate("/controls/flight/tilt", -0.08, 10 );
    interpolate("/controls/flight/tilt-roll", -0.08, 100 );
@@ -795,7 +807,6 @@ var autotakeoffrunway = func()
    setprop("/instrumentation/magnetic-compass/pitch-offset-deg", getprop("/environment/magnetic-variation-deg-korr"));
    setprop("/autopilot/settings/heading-bug-deg", getprop("/orientation/heading-magnetic-deg"));
    setprop("/autopilot/locks/heading", "dg-heading-hold");
-   setprop("/autopilot/locks/couple", 1 );
    setprop("/sim/messages/copilot", "All Settings for Auto Take Off on runway are made.");
    setprop("/sim/messages/copilot", "Use the rudder to hold the runway heading.");
    setprop("/sim/messages/copilot", "We will climb 3000 ft, just use the elevator to hold a pitch of not more than 10 degree");
@@ -841,12 +852,12 @@ var floatingmode = func()
 
    else {     
   
-   interpolate("/controls/flight/autoFM4", 10, 35 );
+   interpolate("/controls/flight/autoFM4", 10, 55 );
    setprop("/autopilot/locks/collective", 1 );
    setprop("/autopilot/locks/couple", 1 );
-   interpolate("/controls/flight/tilt", 0.1, 35 );
-   interpolate("/controls/flight/tilt-roll", -0.015, 35 );
-   interpolate("/controls/flight/stab", 0.0, 35);
+   interpolate("/controls/flight/tilt", 0.1, 55 );
+   interpolate("/controls/flight/tilt-roll", -0.015, 55 );
+   interpolate("/controls/flight/stab", 0.0, 55);
    setprop("/autopilot/locks/altitude", "gleiten");
    setprop("/controls/flight/floating-pitch", -3 );
    setprop("/sim/messages/copilot", "All Settings for changing to Floating Mode are made.");
@@ -864,8 +875,8 @@ var landing = func()
    setprop("/autopilot/locks/collective", 1 );
    setprop("/autopilot/locks/couple", 1 );
    setprop("/controls/flight/floating-pitch", 0.0 );
-   interpolate("/controls/flight/tilt",  -0.07 , 70 );
-   interpolate("/controls/flight/tilt-roll", -0.07, 70 );
+   interpolate("/controls/flight/tilt",  -0.07 , 90 );
+   interpolate("/controls/flight/tilt-roll", -0.07, 90 );
 #   interpolate("/controls/flight/stab", 0.0, 60);
    interpolate("/controls/flight/elevator-trim", 0.30, 98);
    setprop("/instrumentation/magnetic-compass/pitch-offset-deg", getprop("/environment/magnetic-variation-deg-korr"));
