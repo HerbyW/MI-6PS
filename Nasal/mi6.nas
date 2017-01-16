@@ -875,8 +875,8 @@ var landing = func()
    setprop("/autopilot/locks/collective", 1 );
    setprop("/autopilot/locks/couple", 1 );
    setprop("/controls/flight/floating-pitch", 0.0 );
-   interpolate("/controls/flight/tilt",  -0.07 , 90 );
-   interpolate("/controls/flight/tilt-roll", -0.07, 90 );
+   interpolate("/controls/flight/tilt",  -0.07 , 80 );
+   interpolate("/controls/flight/tilt-roll", -0.07, 80 );
 #   interpolate("/controls/flight/stab", 0.0, 60);
    interpolate("/controls/flight/elevator-trim", 0.30, 98);
    setprop("/instrumentation/magnetic-compass/pitch-offset-deg", getprop("/environment/magnetic-variation-deg-korr"));

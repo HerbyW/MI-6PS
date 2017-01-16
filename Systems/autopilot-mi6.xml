@@ -1204,7 +1204,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <prop>/orientation/pitch-deg</prop>
     </input>
     <reference>
-      <value>2.5</value>
+      <value>3.0</value>
     </reference>
     <output>
       <prop>/controls/flight/stab</prop>
