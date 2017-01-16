@@ -1211,3 +1211,24 @@ setlistener("/consumables/fuel/finishtanking", func(v)
       setprop("/consumables/fuel/finishtanking", 0.0);
     }
 });
+
+
+
+
+setlistener("/yasim/gross-weight-lbs", func
+{
+  if (getprop("/yasim/gross-weight-lbs") < 65000 and 
+    (
+      getprop("/autopilot/locks/altitude") == 1 or
+      getprop("/autopilot/locks/heading") == 1 or
+      getprop("/autopilot/locks/speed") == 1 or
+      getprop("/autopilot/locks/couple") == 1 or
+      getprop("/autopilot/locks/collective") == 1         
+    )
+  )
+  { setprop("/sim/messages/copilot", "Gross weight minimum! Only manual flight!");
+      setprop("/sim/messages/copilot", "Shutting down all automatic flight systems!");
+      reset();
+  }
+}
+);
