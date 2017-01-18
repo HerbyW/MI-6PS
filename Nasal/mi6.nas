@@ -792,7 +792,7 @@ var autotakeoffrunway = func()
    interpolate("/controls/flight/autoRS2", 10, 140 );  
    setprop("/controls/gear/brake-parking", 0 );
    setprop("/autopilot/locks/collective", 0 );
-   setprop("/autopilot/locks/couple", 1 );
+   setprop("/autopilot/locks/couple", 0 );
    setprop("/controls/flight/floating-pitch", 0.0 );
    interpolate("/controls/flight/tilt", -0.08, 10 );
    interpolate("/controls/flight/tilt-roll", -0.08, 100 );
