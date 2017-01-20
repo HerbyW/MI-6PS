@@ -789,19 +789,19 @@ var autotakeoffrunway = func()
 
    else {
   
-   interpolate("/controls/flight/autoRS2", 10, 140 );  
+   interpolate("/controls/flight/autoRS2", 10, 145 );  
    setprop("/controls/gear/brake-parking", 0 );
    setprop("/autopilot/locks/collective", 0 );
    setprop("/autopilot/locks/couple", 0 );
    setprop("/controls/flight/floating-pitch", 0.0 );
    interpolate("/controls/flight/tilt", -0.08, 10 );
-   interpolate("/controls/flight/tilt-roll", -0.08, 100 );
-   setprop("/controls/engines/engine/throttle", 0.75 );
+   interpolate("/controls/flight/tilt-roll", -0.08, 105 );
+   setprop("/controls/engines/engine/throttle", 0.95 );
    setprop("/controls/engines/engine/throttle-filter", 0.29 );
-   interpolate("/controls/engines/engine/throttle", 0.29 , 140 );
+   interpolate("/controls/engines/engine/throttle",0.75, 5, 0.29 , 140 );
    interpolate("/controls/flight/stab", 0.0, 10);
    setprop("/controls/flight/elevator-trim", -0.15 );
-   interpolate("/controls/flight/elevator-trim", 0.70, 140);
+   interpolate("/controls/flight/elevator-trim", 0.70, 145);
    setprop("/autopilot/locks/heading", "wing-leveler");
    setprop("/autopilot/internal/target-roll-deg-wl", 0 );   
    setprop("/instrumentation/magnetic-compass/pitch-offset-deg", getprop("/environment/magnetic-variation-deg-korr"));

@@ -26,7 +26,8 @@
     
     <view n="2">
       <config>
-	<target-z-offset-m archive="y" type="double"> 30 </target-z-offset-m>
+	<pitch-offset-deg> 10 </pitch-offset-deg>
+        <target-z-offset-m archive="y" type="double"> 0 </target-z-offset-m>
       </config>
     </view>
     
