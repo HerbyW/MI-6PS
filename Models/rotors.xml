@@ -357,7 +357,8 @@
 	<animation>
 		<type>spin</type>
 		<object-name>Tailrotor</object-name>
-		<property>rotors/main/rpm</property>
+		<property>rotors/tail/rpm</property>
+		<factor> 0.30 </factor>
 		<center>
 			<x-m>25.068</x-m>
 			<y-m>1.421</y-m>
