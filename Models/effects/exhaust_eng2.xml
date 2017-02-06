@@ -16,6 +16,10 @@
 					<property>environment/temperature-degc</property>
 					<value>30</value>
 				</less-than>
+				<greater-than>
+					<property>sim/multiplay/generic/int[4]</property>
+					<value>0</value>
+				</greater-than>
 			</and>
 		</condition>
 		
