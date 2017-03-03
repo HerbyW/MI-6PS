@@ -1065,6 +1065,24 @@
     </offsets>
   </model>
   
+  <!-- VavLights: green-right, red-left -->
+  <model>
+    <path>Aircraft/MI-6PS/Models/light/RedLight.xml</path>
+    <offsets>
+      <x-m>  4.398 </x-m>
+      <y-m> -6.961 </y-m>
+      <z-m>  4.483 </z-m>
+    </offsets>
+  </model>  
+  <model>
+    <path>Aircraft/MI-6PS/Models/light/GreenLight.xml</path>
+    <offsets>
+      <x-m>  4.342 </x-m>
+      <y-m>  6.712 </y-m>
+      <z-m>  4.483 </z-m>
+    </offsets>
+  </model>
+  
   <!-- Ambient special effect lamps-->
   <model>
     <path>Aircraft/MI-6PS/Models/light/BlueAmbientLight.xml</path>

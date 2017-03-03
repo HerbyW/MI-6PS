@@ -1296,20 +1296,41 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <value>0.5</value>
     </reference>
     <output>
-      <prop>/controls/flight/elevator-trim</prop>
+      <prop>/controls/flight/elevator-trimF</prop>
     </output>
     <config>
-      <Kp>-2.80</Kp>        <!-- proportional gain -->
+      <Kp>-2.8</Kp>        <!-- proportional gain -->
       <beta>1.0</beta>     <!-- input value weighing factor -->
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
       <!-- unfiltered derivative error -->
-      <Ti>15.50</Ti>        <!-- integrator time -->
+      <Ti>12.50</Ti>        <!-- integrator time -->
       <Td>0.000001</Td>     <!-- derivator time -->
       <u_min>-0.075</u_min> <!-- minimum output clamp -0.5-->
       <u_max>0.185</u_max>  <!-- maximum output clamp 0.5-->
     </config>
-  </pid-controller>  
+  </pid-controller> 
+  
+  <filter>
+    <name>Elevator Trimm FILTER</name>
+    <debug>false</debug>
+    <feedback-if-disabled>false</feedback-if-disabled>                                                <!-- true -->
+    <initialize-to>output</initialize-to>
+    <enable>
+      <condition>
+	<equals>
+	  <property>/autopilot/locks/altitude</property>
+	  <value>gleiten</value>
+	</equals>
+      </condition>
+    </enable>
+    <input>
+      <property>/controls/flight/elevator-trimF</property>
+    </input>
+    <output><property>/controls/flight/elevator-trim</property></output>
+    <type>noise-spike</type>
+    <max-rate-of-change>0.6</max-rate-of-change>
+  </filter>
   
   
   

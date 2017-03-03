@@ -489,6 +489,35 @@ setlistener("/sim/signals/fdm-initialized", func {
   main_loop();
 });
 
+
+setlistener("/sim/crashed", func {
+    if (getprop("/sim/crashed") == 1 )
+    {
+    setprop("/rotors/main/rpm", 0);
+    setprop("/rotors/main/blade[0]/flap-deg", -60);
+    setprop("/rotors/main/blade[1]/flap-deg", -50);
+    setprop("/rotors/main/blade[2]/flap-deg", -40);
+    setprop("/rotors/main/blade[3]/flap-deg", -30);
+    setprop("/rotors/main/blade[4]/flap-deg", -20);
+    setprop("/rotors/main/blade[5]/flap-deg", -10);
+    setprop("/rotors/main/blade[0]/incidence-deg", -30);
+    setprop("/rotors/main/blade[1]/incidence-deg", -20);
+    setprop("/rotors/main/blade[2]/incidence-deg", -50);
+    setprop("/rotors/main/blade[3]/incidence-deg", -55);
+    setprop("/rotors/main/blade[4]/incidence-deg", -60);
+    setprop("/rotors/main/blade[5]/incidence-deg", -65);
+    setprop("/rotors/tail/rpm", 0);
+    strobe_switch.setValue(0);
+    beacon_switch.setValue(0);
+    nav_light_switch.setValue(0);
+    rotor.setValue(0);
+    rotor2.setValue(0);
+    torque_pct.setValue(torque_val = 0);
+    stall_filtered.setValue(stall_val = 0);
+    state.setValue(0);
+    mi6.engines(0); 
+    }
+});
 #############################################################################################################
 #
 # wind drift angle calculations, with help from: D-LEON

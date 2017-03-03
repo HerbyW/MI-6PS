@@ -74,7 +74,7 @@
   <property>engines/fuel-flow-kgph</property>
   <interpolation>
     <entry><ind>  0.0</ind><dep>  0   </dep></entry>
-    <entry><ind> 7000</ind><dep> 315</dep></entry>
+    <entry><ind> 7500</ind><dep> 315</dep></entry>
   </interpolation>
   <center>
    <x-m>0.0</x-m>

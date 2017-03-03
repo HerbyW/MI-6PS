@@ -189,6 +189,7 @@ Removing this header is probited.
 	<int type="int" n="15" alias="/sim/initialized"/>
 	<int type="int" n="16" alias="/controls/lighting/beacon-state/state"/>
 	<int type="int" n="17" alias="/controls/lighting/strobe-state/state"/>
+	<int type="int" n="18" alias="/controls/lighting/nav-lights"/>
 	
 	<float n="0" alias="/sim/model/door-positions/n/position-norm"/>
 	<float n="1" alias="/sim/model/door-positions/pr/position-norm"/>
