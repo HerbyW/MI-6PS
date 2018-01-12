@@ -12,13 +12,6 @@ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 <!--
     #######################################################################################################
     Arcraft development for Flightgear by Herbert Wagner 2014-2015                            Model: MI-6PS
-    Antonov AN-12BK, AN-22A, AN-225-Mrija,
-    Tuplev Tu-95MR,
-    Mil Mi-6PS
-    Yak 58, Yak-53,
-    Berijev Be-200Altair
-    SpaceShuttle
-    Development is ongoing, see latest versions: www.github.com/HerbyW
     
     This file is licenced under the terms mentioned in the LICENCE.txt file.
     Mi6dev was initially started by Moritz Röhrich (Blender3D) 2010-2012 as CC 3.0 BY NC SA.
