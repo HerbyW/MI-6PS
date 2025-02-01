@@ -13,7 +13,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
   <!--Wing Leveler Mode
   
   /orientation/model/roll-deg               
-  /autopilot/internal/target-roll-deg-wl=0    PSC
+  /autopilot/internal/target-roll-deg-wl    PSC
   autopilot/internal/target-roll-filter     Filter
   /autopilot/internal/target-roll-deg       PC
   /controls/flight/aileron-trim-filter      Filter
@@ -622,7 +622,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <reference>
       <prop>/autopilot/settings/vertical-speed-fpm</prop>
-      <scale>0.0167</scale>                                      <!-- alter Wert: 0.03334 -->
+      <scale>0.03334</scale>
     </reference>
     <output>
       <prop>/autopilot/internal/target-climb-rate-fps-filter</prop>
@@ -771,8 +771,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 	  </greater-than>
 	  <or>
 	    <equals>
-	      <property>/autopilot/locks/altitude</property>
-          <value>altitude-hold</value>
+	      <property>/autopilot/locks/altitude</property><value>altitude-hold</value>
         </equals>
 	    <equals>
 	      <property>/autopilot/locks/altitude</property>
@@ -953,13 +952,13 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <reference>
       <prop>/controls/flight/floating-pitch</prop>
-      <scale>3.0</scale>                                      <!-- alter Wert: 7 -->
+      <scale>5.0</scale>                                      <!-- alter Wert: 7 -->
     </reference>
     <output>
       <prop>/controls/engines/engine[0]/throttle-filterG</prop>
     </output>
     <config>
-      <Kp>-0.004</Kp>        <!-- proportional gain -->                                      <!-- alter Wert: -0.0005 0.004letzter-->
+      <Kp>-0.004</Kp>        <!-- proportional gain -->                                      <!-- alter Wert: -0.0005 -->
       <beta>1.0</beta>     <!-- input value weighing factor -->
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
@@ -1160,16 +1159,10 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <initialize-to>output</initialize-to>
     <enable>
       <condition>
-	<and>
-          <greater-than>
-            <property>/position/gear-agl-ft</property>
-            <value>1</value>
-          </greater-than>
-          <equals>
-            <property>/autopilot/locks/altitude</property>
-            <value>gleiten</value>
-          </equals>
-        </and>
+	<equals>
+	  <property>/autopilot/locks/altitude</property>
+	  <value>gleiten</value>
+	</equals>
       </condition>
     </enable>
     <input>

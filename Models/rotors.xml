@@ -29,7 +29,7 @@
 	<animation>
 	  	<type>range</type>
 	  	<min-m>0</min-m>
-	  	<max-m>1250</max-m>
+	  	<max-m>5250</max-m>
     	</animation>
 	
 	<!--Main Rotor-->

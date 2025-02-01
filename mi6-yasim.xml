@@ -16,8 +16,8 @@
     The 3D-model still holds the CC 3.0 BY NC SA license, everything else is GNU GPL v3 License.
     
     This version is now going forward and will give you a full automatic flight control-system,
-    lots of animations, instrumentation and full Multiplayer support for Parachuters and Elephant transport.
-    Liveries, Fire fighting and SAR rescue is in preparation.
+    lots of animations, instrumentation and full Multiplayer support for Parachuters and Elephant transport,
+    Liveries, Fire fighting and watercanon.
     Removing this header is probited.    
     ########################################################################################################
 -->
@@ -80,7 +80,7 @@
        downwashfactor="1.0"
        tiltcenterx="-3.661" tiltcentery="0" tiltcenterz="6.367"
        mintiltpitch="-5"  maxtiltpitch="5" mintiltroll="-5"  maxtiltroll="5">
-  <control-input axis="/controls/flight/aileron-trim" control="CYCLICAIL" src0="-1" src1="1" dst0="-0.025" dst1="0.025"/>
+  <control-input axis="/controls/flight/aileron-trim" control="CYCLICAIL" src0="-1" src1="1" dst0="-0.030" dst1="0.030"/>
   <control-input axis="/controls/flight/aileron" control="CYCLICAIL" src0="-1" src1="1" dst0="-0.0455" dst1="0.0455"/>  
   <control-input axis="/controls/flight/elevator-trim" control="CYCLICELE" src0="-1" src1="1" dst0="-0.07" dst1="0.07"/>
   <control-input axis="/controls/flight/elevator" control="CYCLICELE" src0="-1" src1="1" dst0="-0.06" dst1="0.06"/>  

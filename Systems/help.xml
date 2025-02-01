@@ -62,6 +62,10 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
   <key>
     <name>E</name>
     <desc>Rescue Holding</desc> 
+  </key>
+  <key>
+    <name>s</name>
+    <desc>Lazy start up of everything</desc> 
   </key>  
 
 <text>Welcome to Mil-Mi6-Poschar heavy cargo helicoptor by HerbyW and Moritz Roehrich
@@ -71,7 +75,7 @@ Made by Moritz Roehrich (Blender3D) 2010-2012
 
 Updated 3D-model, FDM, Animations, Instruments by Herbert Wagner 10-2015 - 12-2016
 
-Version: 4.0.7
+Version: 4.0.8 01/2025
 
                                   ABOUT
 
@@ -97,7 +101,9 @@ Altitude and/or pressure settings in the Altimeters in inHG, mmHG or hPa (as too
 Check cargo and/or payload: press y to switch to the towing control and open the red box, for loading cargo (elephant) and/or paratroopers.
 
 The Autopilot in the cockpit will control most of your flight, do not use the generic one or mix them together.
+At 90 and 130 kn there are changes of controlers, be aware! Also under 90 kn the Autoflight system need some help to get stable.
 
+Main logic is as follows
 Rudder Control with : Couple
 Elevator-Trim with  : IAS and Floating Pitch
 Collective(Throttle): ALT, VS, APPR and Floating Pitch
@@ -111,7 +117,7 @@ There is now a new wheel for controlling the tail horizontal stabilisator from -
 
 In all flight situations the Coup (rudder-trim control) should be active.
 Use the rudder to set your heading in floating conditions.
-For more speed than 90 kt the elevator-trim has to be at the top (+1) position, with a rotor tilt of -5 and rotor-roll-tilt: -5.0. You will get 160-180 kt speed then.
+For more speed than 90 kt the elevator-trim has to be at the top (+1) position, with a rotor tilt of -5 and rotor-roll-tilt: -3.0. You will get 160-180 kt speed then. More than 160 kn leeds to uncontrolable situations.
 Use the elevator-trim to reduce the speed before approaching or let this be done by the IAS, then change to Floating-Pitch control and use only the rudder for heading and rotor tilt for speed control.
 
 For additional comfort the HUD will show you the values of the controlled axis and some more information.
@@ -200,6 +206,17 @@ Values for setting the rotor-tilt and the rotor-roll-tilt:
    for landing          -1.88/-1.25 (speed 115)
                         -1.25/-1.00 (speed 100)
    for starting         -1.88/-1.88 (speed 70) or -2/-2 (speed 90)
+   
+Floating Startup and Runway Startup: Press the button and then hold the rudder so that the aileron-trimm is near the middle position.
+Speed Flight: After Runway Startup or holding a speed of 110-130 you may engage this button.
+Floating Mode: After Floating Startup or hoding a speed of 20-50 you may engage this button. Result is a speed of 20-35.
+Landing Setup: From Speed flight or or holding a speed of 70-110 you may engage this button.
+R = Reset: Setting all Systems to a normal flight or landing situation.
+Rescue Holding: In floating mode or very low speed you will be able to hoover at 0 speed.
+Clear: Clears some systems, best use befor changing the flight mode.
+
+In all modes it is important not to hurry up things.
+VS down more than 500 fpm will get you in troubble.
 
 Have fun and get the latest version at: https://github.com/HerbyW/MI-6PS
 For An-12BK, An-22A, An-225-Mrija, Tu-95MR and Yak-53 look to: github.com/HerbyW

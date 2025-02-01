@@ -2,7 +2,7 @@
 
 <!--
 #######################################################################################################
-Arcraft development for Flightgear by Herbert Wagner 2014-2016                            Model: MI-6PS
+Arcraft development for Flightgear by Herbert Wagner 2014-2016, 2025                      Model: MI-6PS
 Antonov AN-12BK, AN-22A, AN-225-Mrija,
 Tuplev Tu-95MR,
 Mil Mi-6PS
@@ -130,7 +130,7 @@ Removing this header is probited.
     <author>Herbert Wagner, Moritz Roehrich</author>
     <flight-model>yasim</flight-model>
     <aero>mi6-yasim</aero>
-    <version>4.0.7</version>
+    <version>4.0.8</version>
     
     <fuel-fraction>0.8</fuel-fraction>
     
@@ -159,7 +159,7 @@ Removing this header is probited.
 	<flares type="int">0</flares>
 	<waterpipe type="int">0</waterpipe>
 	<watercanon type="int">0</watercanon>
-	<version type="string">4.0.7</version>
+	<version type="string">4.0.8</version>
 	<wings type="int">1</wings>
 	<anti-ice-alpha type="float">1</anti-ice-alpha>
 	<anti-ice-rotor type="float">1</anti-ice-rotor>

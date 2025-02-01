@@ -13,12 +13,12 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
   <!--Wing Leveler Mode
   
   /orientation/model/roll-deg               
-  /autopilot/internal/target-roll-deg-wl=0    PSC
+  /autopilot/internal/target-roll-deg-wl    PSC
   autopilot/internal/target-roll-filter     Filter
   /autopilot/internal/target-roll-deg       PC
   /controls/flight/aileron-trim-filter      Filter
   /controls/flight/aileron-trim
-                                                 slowspeed: 0 1 4 only  -->
+  -->
   
   <!--pisimple controller for target-roll-deg  -->
   
@@ -36,13 +36,13 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <property>/orientation/roll-deg</property>
     </input>
     <reference>
-      <value>0.0</value><!-- 0.0 -->
+      <property>/autopilot/internal/target-roll-deg-wl</property><!-- 0.0 -->
     </reference>
     <output>
       <property>/autopilot/internal/target-roll-deg</property>
     </output>
     <config>
-      <Kp>0.65</Kp>                                      <!-- alter Wert: 1.0 -->
+      <Kp>0.65</Kp>
       <Ki>0.0</Ki>
       <u_min>-20</u_min>
       <u_max>20</u_max>
@@ -180,115 +180,115 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <gamma>0.0</gamma>
       <Ti>10.0</Ti><!-- 10.0 -->
       <Td>0.001</Td><!-- 0.00001 -->
-      <u_min>-1</u_min>                                      <!-- alter Wert: 0.85 -->
+      <u_min>-1</u_min>
       <u_max>1</u_max>
     </config>
   </pid-controller>
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  <pid-controller>
+    <name>Aileron Trim-110 110-130kts</name>    
+    <enable>
+      <condition>
+	<and>
+	  <equals>
+	    <property>/controls/flight/slowspeed</property> 
+	    <value>3</value>
+	  </equals>
+	  <or>
+	    <equals>
+	      <property>/autopilot/locks/heading</property>
+	      <value>wing-leveler</value>
+	    </equals>
+	    <equals>
+	      <property>/autopilot/locks/heading</property>
+	      <value>dg-heading-hold</value>
+	    </equals>
+	    <equals>
+	      <property>/autopilot/locks/heading</property>
+	      <value>true-heading-hold</value>
+	    </equals>
+	    <equals>
+	      <property>/autopilot/locks/heading</property>
+	      <value>nav1-hold</value>
+	    </equals>
+	  </or>
+	</and>
+      </condition>
+    </enable>
+    <input>
+      <prop>/orientation/roll-deg</prop>
+    </input>
+    <reference>
+      <prop>/autopilot/internal/target-roll-deg</prop>
+    </reference>
+    <output>
+      <prop>/controls/flight/aileron-trim-filter</prop>
+    </output>
+    <config>
+      <Kp>0.070</Kp><!-- 0.015 -->
+      <beta>1.0</beta>
+      <alpha>0.1</alpha>
+      <gamma>0.0</gamma>
+      <Ti>10.0</Ti><!-- 10.0 -->
+      <Td>0.001</Td><!-- 0.00001 -->
+      <u_min>-0.95</u_min>
+      <u_max>0.95</u_max>
+    </config>
+  </pid-controller>
   
   <pid-controller>
-    <name>Aileron Trim-90 90-100 kts</name>  <!-- 90-130 neu -->  
+    <name>Aileron Trim-100 100-110 kts</name>    
+    <enable>
+      <condition>
+	<and>
+	  <equals>
+	    <property>/controls/flight/slowspeed</property> 
+	    <value>2</value>
+	  </equals>
+	  <or>
+	    <equals>
+	      <property>/autopilot/locks/heading</property>
+	      <value>wing-leveler</value>
+	    </equals>
+	    <equals>
+	      <property>/autopilot/locks/heading</property>
+	      <value>dg-heading-hold</value>
+	    </equals>
+	    <equals>
+	      <property>/autopilot/locks/heading</property>
+	      <value>true-heading-hold</value>
+	    </equals>
+	    <equals>
+	      <property>/autopilot/locks/heading</property>
+	      <value>nav1-hold</value>
+	    </equals>
+	  </or>
+	</and>
+      </condition>
+    </enable>
+    <input>
+      <prop>/orientation/roll-deg</prop>
+    </input>
+    <reference>
+      <prop>/autopilot/internal/target-roll-deg</prop>
+    </reference>
+    <output>
+      <prop>/controls/flight/aileron-trim-filter</prop>
+    </output>
+    <config>
+      <Kp>0.080</Kp><!-- 0.015 -->
+      <beta>1.0</beta>
+      <alpha>0.1</alpha>
+      <gamma>0.0</gamma>
+      <Ti>10.0</Ti><!-- 10.0 -->
+      <Td>0.001</Td><!-- 0.00001 -->
+      <u_min>-0.90</u_min>
+      <u_max>0.90</u_max>
+    </config>
+  </pid-controller>
+  
+  <pid-controller>
+    <name>Aileron Trim-90 90-100 kts</name>    
     <enable>
       <condition>
 	<and>
@@ -333,8 +333,8 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <gamma>0.0</gamma>
       <Ti>10.0</Ti><!-- 10.0 -->
       <Td>0.001</Td><!-- 0.00001 -->
-      <u_min>-1</u_min>                                      <!-- alter Wert: 0.5 -->
-      <u_max>1</u_max>
+      <u_min>-0.90</u_min>
+      <u_max>0.90</u_max>
     </config>
   </pid-controller>
   
@@ -364,14 +364,14 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <prop>/controls/flight/aileron-trim-filter</prop>
     </output>
     <config>
-      <Kp>25</Kp><!-- 0.015 -->                                      <!-- alter Wert: 25 -->
+      <Kp>25</Kp><!-- 0.015 -->
       <beta>1.0</beta>
       <alpha>0.1</alpha>
       <gamma>0.0</gamma>
       <Ti>10.0</Ti><!-- 10.0 -->
       <Td>0.001</Td><!-- 0.00001 -->
-      <u_min>-1</u_min>                                      <!-- alter Wert: 0.45 -->
-      <u_max>1</u_max>
+      <u_min>-0.65</u_min>
+      <u_max>0.65</u_max>
     </config>
   </pid-controller>
   
@@ -411,21 +411,21 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <prop>/controls/flight/aileron-trim-filter</prop>
     </output>
     <config>
-      <Kp>25</Kp><!-- 0.015 -->
+      <Kp>2.5</Kp><!-- 0.015 -->
       <beta>1.0</beta>
       <alpha>0.1</alpha>
       <gamma>0.0</gamma>
       <Ti>15</Ti><!-- 10.0 -->
       <Td>0.00001</Td><!-- 0.00001 -->
-      <u_min>-1</u_min>                                      <!-- alter Wert: 0.35 -->
-      <u_max>1</u_max>
+      <u_min>-0.55</u_min>
+      <u_max>0.55</u_max>
     </config>
   </pid-controller>
  
   <!--filter for aileron-trim  -->
   
   <filter>
-    <name>AILERON Trim FILTER Speed more than 100 kts, slowspeed=4</name><!-- neu: 130+ -->    
+    <name>AILERON Trim FILTER Speed more than 100 kts, slowspeed=1</name>    
     <initialize-to>output</initialize-to>
     <enable>
       <condition>
@@ -460,7 +460,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output><property>/controls/flight/aileron-trim</property></output>
     <type>noise-spike</type>
-    <max-rate-of-change>1.5</max-rate-of-change>                                      <!-- alter Wert: 0.5 -->
+    <max-rate-of-change>1.5</max-rate-of-change>
   </filter>
   
   <filter>
@@ -499,7 +499,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output><property>/controls/flight/aileron-trim</property></output>
     <type>noise-spike</type>
-    <max-rate-of-change>1.5</max-rate-of-change>                                      <!-- alter Wert: 0.15 -->
+    <max-rate-of-change>1.5</max-rate-of-change>
   </filter>
   
   <filter>
@@ -538,7 +538,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output><property>/controls/flight/aileron-trim</property></output>
     <type>noise-spike</type>
-    <max-rate-of-change>0.05</max-rate-of-change>                                      <!-- alter Wert: 0.05 -->
+    <max-rate-of-change>0.05</max-rate-of-change>
   </filter>
   
   
@@ -576,9 +576,9 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <prop>/autopilot/internal/target-climb-rate-fps-filter</prop>
     </output>
     <config>
-      <Kp>0.06</Kp>          <!-- proportional gain -->                                      <!-- alter Wert: 0.06 -->
+      <Kp>0.06</Kp>          <!-- proportional gain -->
       <Ki>0.0</Ki>          <!-- integral gain -->
-      <u_min>-25.0</u_min> <!-- minimum output clamp -->                                      <!-- alter Wert: 25 bei allen geändert! -->
+      <u_min>-25.0</u_min> <!-- minimum output clamp -->
       <u_max>25.0</u_max>   <!-- maximum output clamp -->
     </config>
   </pi-simple-controller>
@@ -622,7 +622,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <reference>
       <prop>/autopilot/settings/vertical-speed-fpm</prop>
-      <scale>0.0167</scale>                                      <!-- alter Wert: 0.03334 -->
+      <scale>0.03334</scale>
     </reference>
     <output>
       <prop>/autopilot/internal/target-climb-rate-fps-filter</prop>
@@ -669,7 +669,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output>/autopilot/internal/target-climb-rate-fps</output>
     <type>noise-spike</type>
-    <max-rate-of-change>1</max-rate-of-change>                                      <!-- alter Wert: 0.175 -->
+    <max-rate-of-change>1</max-rate-of-change>
   </filter>
   
   <filter>
@@ -705,7 +705,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output>/autopilot/internal/target-climb-rate-fps</output>
     <type>noise-spike</type>
-    <max-rate-of-change>1</max-rate-of-change>                                      <!-- alter Wert: 1.75 -->
+    <max-rate-of-change>1</max-rate-of-change>
   </filter>
   
   <pid-controller>
@@ -741,13 +741,13 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <prop>/controls/engines/engine[0]/throttle-filter</prop>
     </output>
     <config>
-      <Kp>-0.0083</Kp>      <!-- proportional gain -1.0  -0.001-->                                      <!-- alter Wert: 0.001 -->
+      <Kp>-0.00083</Kp>      <!-- proportional gain -1.0  -0.001-->
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
       <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->                                      <!-- alter Wert: 5 -->
-      <Td>0.00001</Td>    <!-- derivator time 0.00001-->
+      <Ti>10.0</Ti>       <!-- integrator time -->
+      <Td>0.001</Td>    <!-- derivator time 0.00001-->
       <u_min>0.03</u_min> <!-- minimum output clamp src0="0" src1="1" dst0=".15" dst1="-.01"-->
       <u_max>1.0</u_max>  <!-- maximum output clamp -->
     </config>
@@ -760,20 +760,19 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <enable>
       <condition>
 	<and>
-      <equals>
-	    <property>/controls/flight/slowspeed</property><value>0</value>
-	  </equals>
 	  <less-than>
-	    <property>/controls/flight/autoRS2</property><value>10</value>
+	    <property>/controls/flight/autoRS2</property> 
+	    <value>10</value>
 	  </less-than>
 	  <greater-than>
-	    <property>/controls/flight/autoRS2</property><value>0</value>
+	    <property>/controls/flight/autoRS2</property> 
+	    <value>0</value>
 	  </greater-than>
 	  <or>
 	    <equals>
 	      <property>/autopilot/locks/altitude</property>
-          <value>altitude-hold</value>
-        </equals>
+	      <value>altitude-hold</value>
+	    </equals>
 	    <equals>
 	      <property>/autopilot/locks/altitude</property>
 	      <value>gs1-hold</value>
@@ -792,7 +791,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output><property>/controls/engines/engine[0]/throttle</property></output>
     <type>noise-spike</type>
-    <max-rate-of-change>0.025</max-rate-of-change>                                      <!-- alter Wert: 0.0035 -->
+    <max-rate-of-change>0.025</max-rate-of-change>                                                      <!-- 0.05 -->
   </filter>
   
   
@@ -839,7 +838,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output><property>/controls/engines/engine[0]/throttle</property></output>
     <type>noise-spike</type>
-    <max-rate-of-change>0.025</max-rate-of-change>                                      <!-- alter Wert: 0.005 -->
+    <max-rate-of-change>0.025</max-rate-of-change>                                                      <!-- 0.05 -->
   </filter>   
   
   <filter>
@@ -889,11 +888,11 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output><property>/controls/engines/engine[0]/throttle</property></output>
     <type>noise-spike</type>
-    <max-rate-of-change>0.025</max-rate-of-change>                                      <!-- alter Wert: 0.012 -->
+    <max-rate-of-change>0.025</max-rate-of-change>                                                    <!-- 0.075 -->
   </filter> 
   
   <filter>
-    <name>INPUT THROTTLE FILTER Speed more than 130, slowspeed=4</name>        
+    <name>INPUT THROTTLE FILTER Speed more than 130, slowspeed=2</name>        
     <initialize-to>output</initialize-to>    
     <enable>
       <condition>
@@ -935,7 +934,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output><property>/controls/engines/engine[0]/throttle</property></output>
     <type>noise-spike</type>
-    <max-rate-of-change>0.025</max-rate-of-change>                                      <!-- alter Wert: 0.015 -->
+    <max-rate-of-change>0.025</max-rate-of-change>
   </filter> 
   
   <pid-controller>
@@ -953,13 +952,13 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <reference>
       <prop>/controls/flight/floating-pitch</prop>
-      <scale>3.0</scale>                                      <!-- alter Wert: 7 -->
+      <scale>4.0</scale>
     </reference>
     <output>
       <prop>/controls/engines/engine[0]/throttle-filterG</prop>
     </output>
     <config>
-      <Kp>-0.004</Kp>        <!-- proportional gain -->                                      <!-- alter Wert: -0.0005 0.004letzter-->
+      <Kp>-0.005</Kp>        <!-- proportional gain -->
       <beta>1.0</beta>     <!-- input value weighing factor -->
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
@@ -987,7 +986,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output>/controls/engines/engine[0]/throttle</output>
     <type>noise-spike</type>
-    <max-rate-of-change>0.0075</max-rate-of-change>                                      <!-- alter Wert: 0.008 -->
+    <max-rate-of-change>0.0075</max-rate-of-change><!-- 0.006 -->
   </filter>
   
   <!-- =============================================================== -->
@@ -1025,7 +1024,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
       <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>        <!-- integrator time -->                                      <!-- alter Wert: 3 -->
+      <Ti>10.0</Ti>        <!-- integrator time -->
       <Td>0.001</Td>     <!-- derivator time -->
       <u_min>-0.150</u_min> <!-- minimum output clamp -0.5-->
       <u_max>0.150</u_max>  <!-- maximum output clamp 0.5-->
@@ -1057,7 +1056,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
       <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>        <!-- integrator time -->                                      <!-- alter Wert: 3 -->
+      <Ti>10.0</Ti>        <!-- integrator time -->
       <Td>0.001</Td>     <!-- derivator time -->
       <u_min>-0.10</u_min> <!-- minimum output clamp -0.5-->
       <u_max>0.10</u_max>  <!-- maximum output clamp 0.5-->
@@ -1089,7 +1088,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
       <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>        <!-- integrator time -->                                      <!-- alter Wert: 20 -->
+      <Ti>10.0</Ti>        <!-- integrator time -->
       <Td>0.001</Td>     <!-- derivator time -->
       <u_min>-0.15</u_min> <!-- minimum output clamp -0.5-->
       <u_max>1.0</u_max>  <!-- maximum output clamp 0.5-->
@@ -1121,34 +1120,28 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <name>Elevator Trim Gleiten</name>    
     <enable>
       <condition>
-        <and>
-          <greater-than>
-            <property>/position/gear-agl-ft</property>
-            <value>1</value>
-          </greater-than>
-          <equals>
-            <property>/autopilot/locks/altitude</property>
-            <value>gleiten</value>
-          </equals>
-        </and>
+	<equals>
+	  <property>/autopilot/locks/altitude</property>
+	  <value>gleiten</value>
+	</equals>
       </condition>
     </enable>
     <input>
       <prop>/orientation/pitch-deg</prop>
     </input>
     <reference>
-      <value>-1</value>
+      <value>0.5</value>
     </reference>
     <output>
       <prop>/controls/flight/elevator-trimF</prop>
     </output>
     <config>
-      <Kp>-2.8</Kp>        <!-- proportional gain -->                                      <!-- alter Wert: -2.8 -->
+      <Kp>-2.8</Kp>        <!-- proportional gain -->
       <beta>1.0</beta>     <!-- input value weighing factor -->
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
       <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>        <!-- integrator time 12.5-->                                      <!-- alter Wert: 5.5 -->
+      <Ti>10.0</Ti>        <!-- integrator time 12.5-->
       <Td>0.001</Td>     <!-- derivator time -->
       <u_min>-0.075</u_min> <!-- minimum output clamp -0.5-->
       <u_max>0.185</u_max>  <!-- maximum output clamp 0.5-->
@@ -1160,16 +1153,10 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     <initialize-to>output</initialize-to>
     <enable>
       <condition>
-	<and>
-          <greater-than>
-            <property>/position/gear-agl-ft</property>
-            <value>1</value>
-          </greater-than>
-          <equals>
-            <property>/autopilot/locks/altitude</property>
-            <value>gleiten</value>
-          </equals>
-        </and>
+	<equals>
+	  <property>/autopilot/locks/altitude</property>
+	  <value>gleiten</value>
+	</equals>
       </condition>
     </enable>
     <input>
@@ -1177,7 +1164,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output><property>/controls/flight/elevator-trim</property></output>
     <type>noise-spike</type>
-    <max-rate-of-change>15</max-rate-of-change>                                      <!-- alter Wert: 1.5? -->
+    <max-rate-of-change>0.5</max-rate-of-change>
   </filter>
   
   
@@ -1212,11 +1199,11 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <property>/controls/flight/rudder-trim</property>
     </output>
     <config>
-      <Kp>-0.1</Kp>                                      <!-- alter Wert: -0.01 -->
+      <Kp>-0.1</Kp>
       <beta>1.0</beta>
       <alpha>0.1</alpha>
       <gamma>0.0</gamma>
-      <Ti>10</Ti>                                      <!-- alter Wert: 1.0 -->
+      <Ti>10</Ti>
       <Td>0.001</Td>
       <u_min>-1.0</u_min>
       <u_max>1.0</u_max>
@@ -1250,11 +1237,11 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <property>/controls/flight/rudder-trim</property>
     </output>
     <config>
-      <Kp>0.05</Kp>                                      <!-- alter Wert: 0.035 -->
+      <Kp>0.05</Kp>
       <beta>1.0</beta>
       <alpha>0.1</alpha>
       <gamma>0.0</gamma>
-      <Ti>10</Ti>                                      <!-- alter Wert: 5 -->
+      <Ti>10</Ti>
       <Td>0.001</Td>
       <u_min>-1.0</u_min>
       <u_max>1.0</u_max>
@@ -1288,7 +1275,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <property>/controls/flight/rudder-trimG</property>
     </output>
     <config>
-      <Kp>-0.045</Kp>                                      <!-- alter Wert: -0.035 -->
+      <Kp>-0.045</Kp><!-- -0.0185 -->
       <beta>1.0</beta>
       <alpha>0.1</alpha>
       <gamma>0.0</gamma>
@@ -1322,7 +1309,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output><property>/controls/flight/rudder-trim</property></output>
     <type>noise-spike</type>
-    <max-rate-of-change>5</max-rate-of-change>                                      <!-- alter Wert: 0.5 -->
+    <max-rate-of-change>5</max-rate-of-change>
   </filter>
   
   </PropertyList>

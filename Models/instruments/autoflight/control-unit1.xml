@@ -16,9 +16,9 @@
     <object-name>S1out</object-name>
     <emission>
       <factor-prop>controls/switches/gauge-light</factor-prop>
-      <red>   0.35 </red>
-      <green> 0.35 </green>
-      <blue>  0.35 </blue>
+      <red>   0.20 </red>
+      <green> 0.20 </green>
+      <blue>  0.20 </blue>
     </emission>
   </animation>
   
@@ -99,9 +99,9 @@
     <object-name>S2out</object-name>
     <emission>
       <factor-prop>controls/switches/gauge-light</factor-prop>
-      <red>   0.35 </red>
-      <green> 0.35 </green>
-      <blue>  0.35 </blue>
+      <red>   0.20 </red>
+      <green> 0.20 </green>
+      <blue>  0.20 </blue>
     </emission>
   </animation>
   
@@ -182,9 +182,9 @@
     <object-name>S3out</object-name>
     <emission>
       <factor-prop>controls/switches/gauge-light</factor-prop>
-      <red>   0.35 </red>
-      <green> 0.35 </green>
-      <blue>  0.35 </blue>
+      <red>   0.20 </red>
+      <green> 0.20 </green>
+      <blue>  0.20 </blue>
     </emission>
   </animation>
   
@@ -265,9 +265,9 @@
     <object-name>S4out</object-name>
     <emission>
       <factor-prop>controls/switches/gauge-light</factor-prop>
-      <red>   0.35 </red>
-      <green> 0.35 </green>
-      <blue>  0.35 </blue>
+      <red>   0.20 </red>
+      <green> 0.20 </green>
+      <blue>  0.20 </blue>
     </emission>
   </animation>
   
@@ -348,9 +348,9 @@
     <object-name>S5out</object-name>
     <emission>
       <factor-prop>controls/switches/gauge-light</factor-prop>
-      <red>   0.35 </red>
-      <green> 0.35 </green>
-      <blue>  0.35 </blue>
+      <red>   0.20 </red>
+      <green> 0.20 </green>
+      <blue>  0.20 </blue>
     </emission>
   </animation>
   
@@ -430,9 +430,9 @@
     <object-name>S6out</object-name>
     <emission>
       <factor-prop>controls/switches/gauge-light</factor-prop>
-      <red>   0.35 </red>
-      <green> 0.35 </green>
-      <blue>  0.35 </blue>
+      <red>   0.20 </red>
+      <green> 0.20 </green>
+      <blue>  0.20 </blue>
     </emission>
   </animation>
   
@@ -517,9 +517,9 @@
     <object-name>S7out</object-name>
     <emission>
       <factor-prop>controls/switches/gauge-light</factor-prop>
-      <red>   0.35 </red>
-      <green> 0.35 </green>
-      <blue>  0.35 </blue>
+      <red>   0.20 </red>
+      <green> 0.20 </green>
+      <blue>  0.20 </blue>
     </emission>
   </animation>
   
@@ -593,16 +593,16 @@
     </action>
   </animation>
   
-  <!--Reset 8 -->
+  <!--Clear 8 -->
   
   <animation>
     <type>material</type>
     <object-name>S8out</object-name>
     <emission>
       <factor-prop>controls/switches/gauge-light</factor-prop>
-      <red>   0.35 </red>
-      <green> 0.35 </green>
-      <blue>  0.35 </blue>
+      <red>   0.20 </red>
+      <green> 0.20 </green>
+      <blue>  0.20 </blue>
     </emission>
   </animation>
   
@@ -610,33 +610,33 @@
     <type>select</type>
     <object-name>S8out</object-name>
     <condition>
-    <or>
-    <not-equals>
-     <property>controls/flight/autoFS1</property>
-     <value>0</value>
-    </not-equals>
-    <not-equals>
-     <property>controls/flight/autoRS2</property>
-     <value>0</value>
-    </not-equals>
-    <not-equals>
-     <property>controls/flight/autoSF3</property>
-     <value>0</value>
-    </not-equals>
-    <not-equals>
-     <property>controls/flight/autoFM4</property>
-     <value>0</value>
-    </not-equals>
-    <not-equals>
-     <property>controls/flight/autoLC5</property>
-     <value>0</value>
-    </not-equals>
-    <not-equals>
-     <property>controls/flight/autoRH7</property>
-     <value>0</value>
-    </not-equals>
-    </or>
-   </condition> 
+        <or>
+          <not-equals>
+            <property>controls/flight/autoFS1</property>
+            <value>0</value>
+          </not-equals>
+          <not-equals>
+            <property>controls/flight/autoRS2</property>
+            <value>0</value>
+          </not-equals>
+          <not-equals>
+            <property>controls/flight/autoSF3</property>
+            <value>0</value>
+          </not-equals>
+          <not-equals>
+            <property>controls/flight/autoFM4</property>
+            <value>0</value>
+          </not-equals>
+          <not-equals>
+            <property>controls/flight/autoLC5</property>
+            <value>0</value>
+          </not-equals>
+          <not-equals>
+            <property>controls/flight/autoRH7</property>
+            <value>0</value>
+          </not-equals>
+        </or>        
+    </condition> 
   </animation>
   
   <animation>
