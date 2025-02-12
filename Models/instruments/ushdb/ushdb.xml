@@ -76,7 +76,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
 
 
 
-<!-- Controls -->
+<!-- Controls
 
 <animation>
   <type>knob</type>
@@ -91,8 +91,35 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
       <wrap>true</wrap>
     </binding>
   </action>
-</animation>
+</animation> -->
 
+<!--Controls-->
+
+<animation>
+  <type>knob</type>
+  <object-name>hs</object-name>
+  <visible>false</visible>
+  <action>
+    <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/ushdb/compass</property>
+      <factor>1</factor>
+      <min>0</min>
+      <max>360</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
+  
+  <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>RW-Kurs</tooltip-id>      
+      <label>%3.0f</label>
+      <property>instrumentation/ushdb/compass</property> 
+    </binding>
+  </hovered>
+  
+</animation>
 
 </PropertyList>
 

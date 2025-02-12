@@ -792,7 +792,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output><property>/controls/engines/engine[0]/throttle</property></output>
     <type>noise-spike</type>
-    <max-rate-of-change>0.025</max-rate-of-change>                                      <!-- alter Wert: 0.0035 -->
+    <max-rate-of-change>0.0035</max-rate-of-change>                                      <!-- alter Wert: 0.0035 -->
   </filter>
   
   
@@ -839,7 +839,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output><property>/controls/engines/engine[0]/throttle</property></output>
     <type>noise-spike</type>
-    <max-rate-of-change>0.025</max-rate-of-change>                                      <!-- alter Wert: 0.005 -->
+    <max-rate-of-change>0.005</max-rate-of-change>                                      <!-- alter Wert: 0.005 -->
   </filter>   
   
   <filter>
@@ -889,7 +889,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output><property>/controls/engines/engine[0]/throttle</property></output>
     <type>noise-spike</type>
-    <max-rate-of-change>0.025</max-rate-of-change>                                      <!-- alter Wert: 0.012 -->
+    <max-rate-of-change>0.012</max-rate-of-change>                                      <!-- alter Wert: 0.012 -->
   </filter> 
   
   <filter>
@@ -935,7 +935,7 @@ see Read-Me.txt for all copyrights in the base folder of this aircraft
     </input>
     <output><property>/controls/engines/engine[0]/throttle</property></output>
     <type>noise-spike</type>
-    <max-rate-of-change>0.025</max-rate-of-change>                                      <!-- alter Wert: 0.015 -->
+    <max-rate-of-change>0.015</max-rate-of-change>                                      <!-- alter Wert: 0.015 -->
   </filter> 
   
   <pid-controller>
